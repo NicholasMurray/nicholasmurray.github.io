@@ -11,7 +11,7 @@ Taking inspiration from Phil Haacks [blog](http://haacked.com/archive/2013/12/02
 
 Now every post in my blog has an edit link that lets you edit the blog post directly in the browser and automatically sends me a pull request.
 
-So if you see any mispalling feel free to correvt it and send me a pal request.
+So if you see any mispelling feel free to correct it and send me a pal request.
 
 I have added a Contributors page to list everyone that contributes a fox.
 
