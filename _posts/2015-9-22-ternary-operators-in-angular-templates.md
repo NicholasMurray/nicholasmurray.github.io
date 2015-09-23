@@ -27,13 +27,13 @@ var currentMember = {
   name: 'Joe Bloggs',
   isGoldMember: true
 };
-console.log("Price: " + (currentMember.isMember ? "£5.00" : "£10.00"));
+console.log("Price: " + (currentMember.isGoldMember ? "£5.00" : "£10.00"));
 {% endhighlight %}
 
 The output is
 
 {% highlight html %}
-Price: £10.00
+Price: £5.00
 {% endhighlight %}
 
 
