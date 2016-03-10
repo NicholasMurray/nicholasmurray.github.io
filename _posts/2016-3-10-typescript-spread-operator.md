@@ -91,6 +91,3 @@ export class TodoService{
 {% endhighlight %}
 
 Photo Credit: <a href="https://www.flickr.com/photos/71256895@N00/5491842479/">tomylees</a> via <a href="http://compfight.com">Compfight</a> <a href="https://creativecommons.org/licenses/by-nc-sa/2.0/">cc</a>
-
-https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Operators/Spread_operator
-https://basarat.gitbooks.io/typescript/content/docs/spread-operator.html
