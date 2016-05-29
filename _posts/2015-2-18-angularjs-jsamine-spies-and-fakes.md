@@ -5,7 +5,7 @@ title: AngularJS Jasmine Spies and Fakes
 
 ![alt text ]({{ site.baseurl }}/images/spiesandfakes.jpg "AngularJS Jasmine Spies and Fakes")
 
-#One of the great things about angular is it's testability.
+# One of the great things about angular is it's testability.
 
 Say we have a directive that uses geolocation to display this information to the user if it is available
 and to display a message if it is not available.

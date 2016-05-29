@@ -77,7 +77,7 @@ And it's Goodnight
 
 
 
-##Executing a custom directive link function where there is a value to be evaluated in ngBind
+## Executing a custom directive link function where there is a value to be evaluated in ngBind
 
 One way around this issue would be to move the variable to the built in [ngBind](https://docs.angularjs.org/api/ng/directive/ngBind) directive and then watch for the value
 to be evaluated and then executing our code.
@@ -114,7 +114,7 @@ And it's Goodnight from me!
 {% endhighlight %}
 
 
-##Executing a custom directive link function where there is a value to be evaluated in ngBind
+## Executing a custom directive link function where there is a value to be evaluated in ngBind
 
 If we are not able to or, do not wish to, move the variable to an ngBind element attribute we can still watch the 
 variable being evaluated using a combination of a compile function and the [$interpolate](https://docs.angularjs.org/api/ng/service/$interpolate) service.
@@ -153,10 +153,3 @@ Gaining the ouput that we require.
 {% highlight html %}
 And it's Goodnight from him!
 {% endhighlight %}
-
-
-
-{% highlight html %}
-
-{% endhighlight %}
-

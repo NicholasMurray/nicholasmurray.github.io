@@ -23,7 +23,7 @@ lawn or walking the dog gets irritating especially when you have to stop to fish
 
 ![alt text ]({{ site.baseurl }}/images/pebble.jpg "Pebble Watch")
 
-##Pebble Watch
+## Pebble Watch
 
 I have owned a smart watch in the form of a Pebble Watch from the first iteration that I 
 backed on kickstarter. An it has served me well for nearly three years. The notification 
@@ -62,7 +62,7 @@ general inertia I was not keen on switching, but if that was the only way to gai
 functionality I would if needed.  
 
 
-##Swipe up to glance at now playing
+## Swipe up to glance at now playing
 
 The Apple watch allows companion apps to implement a glance interface on the watch which is 
 accessed by swiping up on the watch face screen. Glances are quick summaries of 
@@ -72,18 +72,18 @@ While exploring the glances functionality of the Apple watch I came across the n
 glance that gave a hint that it could control podcast playback without the need for a 
 dedicated watch app.
 
-###Now playing glance
+### Now playing glance
 ![alt text ]({{ site.baseurl }}/images/now-playing-not-playing.png "Apple Watch now playing glance")
 
 I started a podcast to investigate would the now playing glance expose the skip functionality?, 
 to my delight it did. Also it allowed the adjusting of volume through the on screen 
 touch enabled plus and minus buttons as well as via the digital crown.
 
-###Apple Podcast now playing glance
+### Apple Podcast now playing glance
 ![alt text ]({{ site.baseurl }}/images/now-playing-apple-podcast-app.png "Apple Watch now playing a podcast now playing glance")
 
 
-###Overcast Podcast now playing glance
+### Overcast Podcast now playing glance
 
 The same now playing information summary is also available for the Overcast App, which puts it 
 on an even footing with the other official and third party music and podcast players.
@@ -91,9 +91,9 @@ on an even footing with the other official and third party music and podcast pla
 ![alt text ]({{ site.baseurl }}/images/now-playing-overcast-app.png "Apple Watch now playing an Overcast podcast now playing glance")
 
 
-##Apple watch podcast now playing glance pros and cons
+## Apple watch podcast now playing glance pros and cons
 
-###Podcast glance pros
+### Podcast glance pros
 
 Skip forward and back functionality. 
 
@@ -104,6 +104,6 @@ Changing of volume through on screen touch enabled plus and minus buttons.
 Ability to change volume via the digital crown. 
 
 
-###Podcast glance drawbacks
+### Podcast glance drawbacks
 
 No indication of how long is left of the podcast.

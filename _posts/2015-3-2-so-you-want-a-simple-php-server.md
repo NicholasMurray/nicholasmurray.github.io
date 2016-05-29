@@ -7,12 +7,12 @@ title: So you want a simple PHP Server?
 
 # 5 steps to create a simple PHP Server
 
-##Step 1.
+## Step 1.
 
 Install PHP 5 http://php.net/manual/en/install.php
 
 
-##Step 2.
+## Step 2.
 
 On a mac Open up a terminal and type:
 
@@ -25,12 +25,12 @@ c:\Users\CurrentFolder>cd \Users\somedir
 c:\Users\CurrentFolder>php -S 127.0.0.1:80 -t .
 
 
-##Step 3.
+## Step 3.
 
 Create a new index.html page in somedir then visit http://127.0.0.1:80
 
 
-##Step 4.
+## Step 4.
 
 View the http requests in your terminal/console
 
@@ -43,6 +43,6 @@ Press Ctrl-C to quit.
 [Mon Mar  2 08:33:40 2015] 127.0.0.1:51468 [404]: /js/libs/require-2.1.5.min.js 
 
 
-##Step 5. 
+## Step 5. 
 
 There is no step 5. Simples!

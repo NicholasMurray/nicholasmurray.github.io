@@ -5,7 +5,7 @@ title: Collabocats
 
 ![alt text ]({{ site.baseurl }}/images/collabocats.jpg "Collabocats")
 
-#Open for edits
+# Open for edits
 
 Taking inspiration from Phil Haacks [blog](http://haacked.com/archive/2013/12/02/dr-jekyll-and-mr-haack/) I have added a edit link to my blog posts.
 

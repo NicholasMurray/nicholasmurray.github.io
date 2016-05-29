@@ -5,7 +5,7 @@ title: Angular2 - Unit Testing a component
 
 ![alt text ]({{ site.baseurl }}/images/High_voltage_test_set.jpg "Angular2 - unit Testing a component")
 
-#Angular2  - Components
+# Angular2  - Components
 
 In Angular2 Components are the way we add behaviour to new DOM elements that we add to an application whereas 
 Directives add behaviour to existing elements. Components allow us to break down an application into smaller 
@@ -13,7 +13,7 @@ pieces of code that can encapsulate behaviour and functionality. This allows us 
 separately from the rest of the application. The component that we will unit test renders a supplied club 
 members fullname in a span tag.
 
-##Club Member Model
+## Club Member Model
 
 The club member component requires a club member to be supplied, so we will create a club member model 
 that we can use to pass a club member as input to the component. The club member model needs two properties - 
@@ -36,7 +36,7 @@ export class ClubMemberModel {
 {% endhighlight %}
 
 
-##Club Member Model Unit Test
+## Club Member Model Unit Test
 
 The club member renderer component is going to have an Input property that is in the form of a club member 
 model. So as the club member renderer component relies on the club member model we should unit test our 
@@ -75,7 +75,7 @@ describe('ClubMemberModel', () => {
 {% endhighlight %}
 
 
-##Club Member Renderer
+## Club Member Renderer
 
 The club member renderer component comprises of a *selector*, a *template* and has a databound *Input* property 
 of clubmember. The selector parameter is the replacement for the naming conventions that were previously 
@@ -99,7 +99,7 @@ export class ClubMemberRenderer {
 {% endhighlight %}
 
 
-##Club Member Renderer Unit Test
+## Club Member Renderer Unit Test
 
 A component requires more setup than our previous model test. Intially we will have to import *describe*, 
 *it*, *expect*, *inject*, *beforeEach*, *beforeEachProviders* and *TestComponentBuilder* from 
@@ -163,7 +163,7 @@ describe('ClubMemberRenderer: component', () => {
 
 
 
-##Club Member Renderer in action
+## Club Member Renderer in action
 
 So how is the club member renderer used in the context of an Angular2 app? First we create an app component 
 that imports *Component* and *Input* from *angular2/core*, *ClubMemberModel* from *club-member-model* and 
@@ -199,7 +199,7 @@ export class App {
 {% endhighlight %}
 
 
-##Plunker Links
+## Plunker Links
 
 The code for the *ClubMemberRenderer* unit tests are available in this <a href="https://plnkr.co/XcBugFIxCpS7ARyEHBXK" target="_blank">plnkr</a> 
 and the *ClubMemberRenderer* in action code is available in this <a href="https://plnkr.co/QYMkClDh6t7nYPfbcaZO" target="_blank">plnkr</a>. 

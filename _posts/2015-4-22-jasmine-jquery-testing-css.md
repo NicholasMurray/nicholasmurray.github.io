@@ -6,7 +6,7 @@ title: Testing CSS classes with Jasmine-JQuery
 ![alt text ](http://i.imgur.com/NmVNJdW.jpg, "Now test your CSS classess")
 
 
-#If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.
+# If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.
 
 jasmine-jquery provides two extensions for the [Jasmine](http://jasmine.github.io/) JavaScript Testing Framework:
 

@@ -10,7 +10,7 @@ title: Self Executing Anonymous Functions in AngularJS
 
 A common pattern you will see in AngularJS is angular code being wrapped in a Self Executing Anonymous Function (SEAF) such as a directive  being attached to an angular module. A SEAF is also known as an IIFE which is short for Immediately-Invoked Function Expression.
 
-##What is a Self Executing Anonymous Function (SEAF)?
+## What is a Self Executing Anonymous Function (SEAF)?
 
 In order to create modular code in javascript one technique is to wrap your code in a SEAF.
 
@@ -50,7 +50,7 @@ and the two brackets at the end that immediately executes the code contained in 
 
 Although the SEAF describes the anonymous function as being *executed* the IIFE description of *invoked* is more accurate.
 
-##Anonymous Function
+## Anonymous Function
 
 The use of the anonymous function creates a closure which prevents access to the variables and functions that it contains.
  
@@ -90,7 +90,7 @@ Exception: ReferenceError: salutation is not defineded
 {% endhighlight %}
 
 
-##The SEAF pattern in jQuery
+## The SEAF pattern in jQuery
 
 This SEAF pattern is used extensively by jQuery developers when wishing to pass the jQuery object into an anonymous function to create and attach objects as properties or methods that can be accessed without exposing the objects publicly. It also prevents any variable naming collisions by keeping the variables private and internal to the anonymous function.
 
@@ -113,7 +113,7 @@ This SEAF pattern is used extensively by jQuery developers when wishing to pass 
 
 {% endhighlight %}
 
-##The SEAF pattern in AngularJS
+## The SEAF pattern in AngularJS
 
 The typical example would be a controller being added to an angular module being wrapped in a self executing anonymous function. In the example below the wrapping SEAF is not being utalised as the code block is being wrapped in an anonymous function which is encapsulating 
 the code within its local function scope. 

@@ -6,7 +6,7 @@ title: Creating an AngularJS pulse directive
 ![alt text ]({{ site.baseurl }}/images/pulse.jpg "Creating an AngularJS pulse directive")
 
 
-##Using animations to alert the user to value changes
+## Using animations to alert the user to value changes
 
 When highlighting to the user a change of a value on a page with a noisy layout you are faced with two possibilities, 
 either use a colour to highlight the change or add an animation to emphasize the transition 
@@ -19,7 +19,7 @@ significance of the value then an animation can be effective.
 One of the animations types we will explore is a CSS pulse animation.
 
 
-##Pulse CSS with keyframes
+## Pulse CSS with keyframes
 
 The pulse animation will take the form of 3d scaling up the chosen element by 25% at the halfway point in the animation and 
 then gradually transforming the element back to its initial state at the end of the animation. CSS3 us allows to use keyframes 
@@ -50,7 +50,7 @@ creating a smoother animation.
 {% endhighlight %}
 
 
-##ngAnimate
+## ngAnimate
 
 In this AngularJS app we will have a dependency on <a href="https://docs.angularjs.org/api/ngAnimate" target="_blank">ngAnimate</a> 
 so lets inject it into our app via dependency injection.
@@ -61,7 +61,7 @@ var app = angular.module("app", ["ngAnimate"]);
 
 
 
-##Control the value in the controller
+## Control the value in the controller
 
 As usual in an AngularJS app the value that we will be manipulating should have any operations located in the controller. So the 
 currentVote variable will be initialised, incremented and decremented from our controller. 
@@ -91,12 +91,12 @@ with the vm (view model).
 {% endhighlight %}
 
 
-##To use a directive or not use a directive
+## To use a directive or not use a directive
 
 We could also invoke the animation from our *controller*, first by injecting $animation into the anonymous function and then 
 by adding code to the plusOne and minusOne functions like below.
 
-####Code Smell
+#### Code Smell
 
 In AngularJS this would give our code a 'code smell' as searching for elements by id or class is an anti-pattern as 
 directives have been supplied to deal with this scenario. The *controller* should be controlling the value and the *directive* 
@@ -129,7 +129,7 @@ controlling the element to animate.
 
 
 
-##Watch the variable from our directive
+## Watch the variable from our directive
 
 We will create a directive called pulseOnChange that will watch for value changes in an element. Injecting $animate and 
 $timeout provide the functionality to add the pulse class to the element on change and then to remove the pulse class after 
@@ -152,7 +152,7 @@ $timeout provide the functionality to add the pulse class to the element on chan
 
 
 
-##Lets create the HTML
+## Lets create the HTML
 
 There are fours part to our HTML
 
@@ -186,7 +186,7 @@ styles and icons to our app.
 {% endhighlight %}
 
 
-##Lets view the end product
+## Lets view the end product
 
 As we can see all the moving parts come together to highlight the change in value to the user without adding any additional 
 visual noise to the page.

@@ -6,7 +6,7 @@ title: Shuffle a Javascript Array
 ![alt text ](http://i.imgur.com/DAqGSop.jpg, "Shuffle a Javascript Array")
 
 
-##Sorting
+## Sorting
 
 When you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand.
 
@@ -27,7 +27,7 @@ frequencyArray.sort(function(a,b) { return a.n - b.n; });
 
 
 
-##Random Sorting
+## Random Sorting
 
 A simple way of randomly sorting a simple array of numbers is
 
@@ -46,7 +46,7 @@ numbers.sort(function() {
 
 but this is the least efficient and <a href="http://jsfiddle.net/rcmp0aLL/" target="_blank">biased</a> way of sorting randomly as it has a strong bias toward keeping each element in its initial starting position in addition to the edges of the array having slightly more bias than the middle.
 
-##Random Shuffling An Array the Fisher-Yates (aka Knuth) Way
+## Random Shuffling An Array the Fisher-Yates (aka Knuth) Way
 
 Originally designed by Fisher and Yates as pencil and paper method using a table of random numbers for randomness and then popularized by Donald E. Knuth in The Art of Computer Programming (<a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle" target="_blank">source</a>). This shuffling algorithm provides with a more efficient and more random result set.
 

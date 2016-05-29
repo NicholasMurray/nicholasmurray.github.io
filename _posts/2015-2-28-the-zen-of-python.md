@@ -5,7 +5,7 @@ title: The Zen of Python
 
 ![alt text ]({{ site.baseurl }}/images/zen-python.jpg "The Zen of Python")
 
-#Computer languages should give more prominence to their core philosophy like Python
+# Computer languages should give more prominence to their core philosophy like Python
 
 The Zen of Python, by Tim Peters, is only one command away
 

@@ -5,7 +5,7 @@ title: Typescript Spread Operator
 
 ![alt text ]({{ site.baseurl }}/images/spread-operator.jpg "Typescript Spread Operator")
 
-#Spread Operator
+# Spread Operator
 
 Angular2 is now in beta and the Angular Team have built it upon Typescript. Typescript is a
 typed superset of Javascript created and maintained by Microsoft. The usage of types allows the
@@ -14,7 +14,7 @@ code written in Typescript to have the advantage of compile time checking, code 
 While working through some introductory tutorials on Angular2 and Typescript a new operator
 came to my attention which takes the form of an ellipsis and is called the Spread Operator.
 
-##ES6
+## ES6
 
 ECMAScript 6 was finalized in June 2015 and it introduced the spread operator as a better version of the the existing apply method.
 
@@ -44,7 +44,7 @@ console.log("A", "B", "C");
 
 {% endhighlight %}
 
-##Angular2 and Typescript
+## Angular2 and Typescript
 
 When creating an Angular2 application using Typescript the spread operator becomes very useful. When updating an object in for example a todo list array it is recommended to replace the  array rather than to update it so any pipes that filter the array contents are informed that the contents have changed. In the toggle function below we can use splice combined with the spread operator to neatly update a todo object within our array of todo objects.
 

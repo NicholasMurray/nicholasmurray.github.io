@@ -6,7 +6,7 @@ title: Unit Testing arrays with QUnit
 
 ![alt text ]({{ site.baseurl }}/images/comparingpears.png "Are these pears the same as these pears")
 
-#How to test Array equality
+# How to test Array equality
 
 When testing arrays with QUnit you may wish to assert that one array is equal to another array.
 

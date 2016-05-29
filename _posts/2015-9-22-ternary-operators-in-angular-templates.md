@@ -6,7 +6,7 @@ title: Ternary Operators in Angular Templates
 ![alt text ](http://i.imgur.com/zwRgfKG.jpg, "There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke")
 
 
-#Ternary Operators in Angular Templates
+# Ternary Operators in Angular Templates
 
 Ternary Operators are part of the toolset of most programming languages and are available of course in Javascript.
 
@@ -37,13 +37,13 @@ Price: £5.00
 {% endhighlight %}
 
 
-##How to use ternary operators in angular templates
+## How to use ternary operators in angular templates
 
 The most useful use case I have found for ternary operators is within angular directives such as ng-class and ng-style.
 
 Ternary operators were added to Angular [1.1.5](https://github.com/angular/angular.js/commit/6798fec4390a72b7943a49505f8a245b6016c84b) and can be used from version 1.1.5 and up.
 
-###Using a ternary operator within ng-style
+### Using a ternary operator within ng-style
 
 In the example we wish to apply to highlight every third item in a list.
 
@@ -141,6 +141,6 @@ Like so
 A working demo of our example can be found on [codepen](http://codepen.io/NicholasMurray/pen/MajgQZ).
 
 
-###Credits
+### Credits
 
 The ternary joke used in the meme I found [here](https://www.allegro.cc/forums/thread/611052/2)

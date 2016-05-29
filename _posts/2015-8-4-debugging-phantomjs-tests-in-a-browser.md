@@ -6,7 +6,7 @@ title: How to debug phantomjs tests in a browser
 
 ![alt text ]({{ site.baseurl }}/images/phantomjs.png "How to debug phantomjs tests in a browser")
 
-#What can you do if your karma unit tests are failing or throwing an error?
+# What can you do if your karma unit tests are failing or throwing an error?
 
 Coding unit tests creates a similar set of problems as programming the code you wish to test.
 
@@ -15,7 +15,7 @@ Coding unit tests creates a similar set of problems as programming the code you 
 3. Unexpectantly failing a test
 4. Just plain failing
 
-###Running karma with phantomjs
+### Running karma with phantomjs
 
 When running your javascript unit tests having them running as fast as possible is very desirable and phantomjs, the headless webkit
 browser, allows your tests to be run at speed with the output being returned to your console.
@@ -34,7 +34,7 @@ in your karma config.
 {% endhighlight %}
 
 
-###But if it is a headless browser running in a console how do debug it?
+### But if it is a headless browser running in a console how do debug it?
 
 Phantomjs is a headless browser that runs in your console which, is great when your tests are all passing.
 
@@ -52,7 +52,7 @@ PhantomJS 1.9.8 (Mac OS X 0.0.0) dropboxController should import the file, refre
         Expected spy $emit to have been called with [ 'document.refresh' ] but it was never called.
 {% endhighlight %}
 
-###You can with karma
+### You can with karma
 
 Even though, using karma as your test runner and phantomjs as the headless browser, you can still step through your 
 code in another browsers Developer Tools.

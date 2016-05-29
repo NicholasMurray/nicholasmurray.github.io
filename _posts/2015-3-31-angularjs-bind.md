@@ -4,14 +4,15 @@ title: AngularJS - ngBind - Now you see it - now you don't...
 ---
 
 
-<a href="http://www.amazon.com/Now-You-See-Dont-Lessons/dp/0394722027/ref=sr_1_1?s=books&ie=UTF8&qid=1427822892&sr=1-1&keywords=Now+you+see+it+-+now+you+don%27t"  target="_blank">	<img src="{{ site.baseurl }}/images/nowyouseeit.jpg" />
+<a href="http://www.amazon.com/Now-You-See-Dont-Lessons/dp/0394722027/ref=sr_1_1?s=books&ie=UTF8&qid=1427822892&sr=1-1&keywords=Now+you+see+it+-+now+you+don%27t"  target="_blank">
+	<img src="{{ site.baseurl }}/images/nowyouseeit.jpg" />
 </a>
 
   
 
-#Prevent AngularJS displaying curly braces when your page is loading
+# Prevent AngularJS displaying curly braces when your page is loading
 
-##The problem
+## The problem
 When your AngularJS website is loading if you are using double curly braces within a element to bind to a variable.
 
 {% highlight html %}
@@ -30,7 +31,7 @@ until the compilation occurs
 	Hello Nicholas!
 {% endhighlight %}
 
-##ngBind - solution 1
+## ngBind - solution 1
 ngBind does not show the curly braces before compilation as it is attribute based
 
 {% highlight html %}
@@ -53,7 +54,7 @@ compiled
 {% endraw %}
 
 
-##ngBindTemplate - solution 2
+## ngBindTemplate - solution 2
 
 Unlike ngBind, the ngBindTemplate can contain multiple {{ }} expressions.
 

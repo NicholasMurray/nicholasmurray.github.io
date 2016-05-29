@@ -5,13 +5,13 @@ title: How to debug AngularJS $scope in a browser console
 
 ![alt text ]({{ site.baseurl }}/images/angular-scope.png "How to debug AngularJS $scope in a browser console")
 
-#Inspect an element
+# Inspect an element
 
 All of the major browsers including, Chrome, Internet Explorer, Firefox, Safari and Opera include in their development tools the ability to
 inspect an element. This allows you to right click on a web page, select "inspect element" from the context menu which will in turn open the 
 browsers development tools to allow you to view the HTML, DOM tree and CSS associated with that element.
 
-#Referencing an element
+# Referencing an element
 
 If you have inspected an element, the currently selected element is available via the reference **$0**. The developer tools will make available via 
 references the last five elements (or heap objects) selected through the properties named **$0**, **$1**, **$2**, **$3**, **$4**. The most recently selected element or 
@@ -35,7 +35,7 @@ transparent;">
 {% endhighlight %}
 
 
-#Angular.element
+# Angular.element
 
 When needing to find the scope of an element on a page when developing or debugging an angular application there are tools available 
 such as [Batarang](https://github.com/angular/batarang) which allow you to visually click through a hierarchy of scopes. Although this is 
@@ -50,7 +50,7 @@ s
 {% endhighlight %}
 
 
-#allrecipes.com
+# allrecipes.com
 
 For instance, if we went to [allrecipes.com](http://allrecipes.com), inspected a recipe on the home page to find out if we were 
 a registered as user in the current scope, we could type the following in the console.

@@ -5,7 +5,7 @@ title: How to check for an empty AngularJS $scope object
 
 ![alt text ]({{ site.baseurl }}/images/empty-property.jpg "How to check for an empty AngularJS $scope object")
 
-#Creating an empty $scope object
+# Creating an empty $scope object
 
 In AngularJS there are many cases where you will create a $scope object and initialise it as an empty object.
 
@@ -20,7 +20,7 @@ vm.showAddPersonModal = function() {
 };
 {% endhighlight %}
 
-#Checking if object is still empty
+# Checking if object is still empty
 
 One of the ways in which a modal can be dismissed is by clicking outside the modal area and that can leave us with an empty object 
 if no data has been entered and saved.
