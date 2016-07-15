@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to debug phantomjs tests in a browser
+title: How to debug phantomjs tests in another browser
 ---
 
 
