@@ -13,6 +13,16 @@ A simple react component that creates a Slack like avatar.
 
 Live demo: [reactrandomsquaresavatar-demo.firebaseapp.com/](https://reactrandomsquaresavatar-demo.firebaseapp.com/){:target="_blank"}
 
+## Github
+
+Github repo:
+[https://github.com/NicholasMurray/react-random-squares-avatar](https://github.com/NicholasMurray/react-random-squares-avatar){:target="_blank"}
+
+## NPM
+
+NPM Package:
+[https://www.npmjs.com/package/react-random-squares-avatar/](https://www.npmjs.com/package/react-random-squares-avatar/){:target="_blank"}
+
 
 To build and test locally, run:
 
