@@ -10,8 +10,12 @@ class Contributors extends React.Component {
       <Layout location={this.props.location}>
         <SEO title="Contributors" />
         <Bio />
-        <h1>Contributors</h1>
-        <p>The Contributors page</p>
+        <div>
+          <h1>Contributors</h1>
+          <p>The Contributors page</p>   
+          <p>Every post in my blog has an edit link that lets you edit the blog post directly in the browser and automatically sends me a pull request.</p>
+          <p>Or <a href="">visit my repository</a> and send me a pull request the old fashioned way.</p>       
+        </div>
       </Layout>
     )
   }

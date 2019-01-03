@@ -2,13 +2,13 @@
 const preferDefault = m => m && m.default || m
 
 exports.components = {
-  "component---src-templates-blog-post-js": () => import("/Users/nicholasmurray/Documents/blog/my-blog-starter/src/templates/blog-post.js" /* webpackChunkName: "component---src-templates-blog-post-js" */),
-  "component---cache-dev-404-page-js": () => import("/Users/nicholasmurray/Documents/blog/my-blog-starter/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
-  "component---src-pages-404-js": () => import("/Users/nicholasmurray/Documents/blog/my-blog-starter/src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
-  "component---src-pages-about-js": () => import("/Users/nicholasmurray/Documents/blog/my-blog-starter/src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */),
-  "component---src-pages-contributors-js": () => import("/Users/nicholasmurray/Documents/blog/my-blog-starter/src/pages/contributors.js" /* webpackChunkName: "component---src-pages-contributors-js" */),
-  "component---src-pages-index-js": () => import("/Users/nicholasmurray/Documents/blog/my-blog-starter/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */)
+  "component---src-templates-blog-post-js": () => import("/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/templates/blog-post.js" /* webpackChunkName: "component---src-templates-blog-post-js" */),
+  "component---cache-dev-404-page-js": () => import("/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/.cache/dev-404-page.js" /* webpackChunkName: "component---cache-dev-404-page-js" */),
+  "component---src-pages-404-js": () => import("/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/pages/404.js" /* webpackChunkName: "component---src-pages-404-js" */),
+  "component---src-pages-about-js": () => import("/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/pages/about.js" /* webpackChunkName: "component---src-pages-about-js" */),
+  "component---src-pages-contributors-js": () => import("/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/pages/contributors.js" /* webpackChunkName: "component---src-pages-contributors-js" */),
+  "component---src-pages-index-js": () => import("/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/pages/index.js" /* webpackChunkName: "component---src-pages-index-js" */)
 }
 
-exports.data = () => import(/* webpackChunkName: "pages-manifest" */ "/Users/nicholasmurray/Documents/blog/my-blog-starter/.cache/data.json")
+exports.data = () => import(/* webpackChunkName: "pages-manifest" */ "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/.cache/data.json")
 
