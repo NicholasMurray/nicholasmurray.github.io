@@ -8,4 +8,5 @@ Gemfile.lock
 node_modules
 package.json
 .idea/
-.cache/
+.cache
+public
