@@ -1,0 +1,77 @@
+//
+// IMPORTS
+//
+
+@import "./../scss/_variables";
+
+
+.posts > .post {
+  padding-bottom: 2em;
+  border-bottom: 1px solid $lightGray;
+}
+
+.posts > .post:last-child {
+  padding-bottom: 1em;
+  border-bottom: none;
+}
+
+.post {
+  blockquote {
+    margin: 1.8em .8em;
+    border-left: 2px solid $gray;
+    padding: 0.1em 1em;
+    color: $gray;
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  .comments {
+    margin-top: 10px;
+  }
+
+  .readMore {
+    text-transform: uppercase;
+    font-size: 15px;
+  }
+}
+
+.date {
+  font-style: italic;
+  color: $gray;
+  display: inline;
+}
+
+.date:before {
+  content: "\f073";
+}
+
+.date:before {
+  color: #ccc;
+  font: 1.3em FontAwesome;
+  left: 0;
+  margin-right: 5px;
+}
+
+.edit {
+  font-style: italic;
+  color: $gray;
+  display: inline;
+}
+
+.edit a {
+  font-style: italic;
+  color: $gray;
+  box-shadow: none;
+}
+
+.edit:before {
+  content: "\f044";
+}
+
+.edit:before {
+  color: #ccc;
+  font: 1.3em FontAwesome;
+  left: 0;
+  margin-left: 10px;
+  margin-right: 5px;
+}
