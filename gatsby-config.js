@@ -8,7 +8,6 @@ module.exports = {
       twitter: `theemurray`,
     },
   },
-  pathPrefix: "/nicholasmurray.github.io",
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,

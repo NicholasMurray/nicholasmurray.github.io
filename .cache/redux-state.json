@@ -2388,14 +2388,12 @@
       },
       "port": "8000",
       "host": "localhost",
-      "pathPrefix": "/nicholasmurray.github.io",
-      "polyfill": true,
       "buildTime": "2019-01-04T20:33:21.899Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "a541b9f19ef18ee66496078818e557af",
+        "contentDigest": "105823e2481daa1d5742db1c4d8a53db",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
