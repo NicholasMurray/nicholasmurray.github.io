@@ -1,6 +1,6 @@
 var plugins = [{
       plugin: require('/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[]},
+      options: {"plugins":[],"trackingId":"UA-46833496-2","head":true},
     },{
       plugin: require('/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/node_modules/gatsby-plugin-feed/gatsby-ssr'),
       options: {"plugins":[]},
@@ -13,9 +13,6 @@ var plugins = [{
     },{
       plugin: require('/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/utils/typography"},
-    },{
-      plugin: require('/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-46833496-2","head":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
