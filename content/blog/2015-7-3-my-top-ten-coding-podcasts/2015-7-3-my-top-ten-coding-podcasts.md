@@ -3,7 +3,7 @@ title: My Top Ten Coding Podcasts
 date: '2015-07-03T00:00:00.000Z'
 ---
 
-![alt text ](http://i.imgur.com/BIvWLez.png, "My Top 10 Podcasts for Coders")
+![alt text ](https://i.imgur.com/BIvWLez.png, "My Top 10 Podcasts for Coders")
 
 
 Here are my top 10 podcasts for coding

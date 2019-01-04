@@ -3,7 +3,7 @@ title: So you want a simple HTTPServer?
 date: '2014-04-04T00:00:00.000Z'
 ---
 
-![alt text ](http://i.imgur.com/gdzl8OD.jpg, 'Python simpleHTTPServer Simples')
+![alt text ](https://i.imgur.com/gdzl8OD.jpg, 'Python simpleHTTPServer Simples')
 
 # 5 steps to create a simple HTTP Server with python
 

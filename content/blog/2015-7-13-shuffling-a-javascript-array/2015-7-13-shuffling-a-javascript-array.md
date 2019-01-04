@@ -3,7 +3,7 @@ title: Shuffle a Javascript Array
 date: '2015-07-13T00:00:00.000Z'
 ---
 
-![alt text ](http://i.imgur.com/DAqGSop.jpg, "Shuffle a Javascript Array")
+![alt text ](https://i.imgur.com/DAqGSop.jpg, "Shuffle a Javascript Array")
 
 
 ## Sorting

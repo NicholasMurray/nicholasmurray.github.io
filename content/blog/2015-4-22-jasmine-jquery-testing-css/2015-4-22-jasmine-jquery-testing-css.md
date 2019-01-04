@@ -3,7 +3,7 @@ title: Testing CSS classes with Jasmine-JQuery
 date: '2015-04-03T00:00:00.000Z'
 ---
 
-![alt text ](http://i.imgur.com/NmVNJdW.jpg, "Now test your CSS classess")
+![alt text ](https://i.imgur.com/NmVNJdW.jpg, "Now test your CSS classess")
 
 
 # If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.

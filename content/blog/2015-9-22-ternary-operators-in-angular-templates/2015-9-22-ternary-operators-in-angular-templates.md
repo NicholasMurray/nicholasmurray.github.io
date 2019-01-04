@@ -3,7 +3,7 @@ title: Ternary Operators in Angular Templates
 date: '2015-05-22T00:00:00.000Z'
 ---
 
-![alt text ](http://i.imgur.com/zwRgfKG.jpg, "There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke")
+![alt text ](https://i.imgur.com/zwRgfKG.jpg, "There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke")
 
 
 # Ternary Operators in Angular Templates

@@ -3,7 +3,7 @@ title: So you want a simple Node HTTP Server?
 date: '2016-01-06T00:00:00.000Z'
 ---
 
-![alt text ](http://i.imgur.com/hquoVFO.jpg, "Node HTTP-Server Simples")
+![alt text ](https://i.imgur.com/hquoVFO.jpg, "Node HTTP-Server Simples")
 
 # 5 steps to create a simple Node HTTP Server
 
