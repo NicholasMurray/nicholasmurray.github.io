@@ -2390,12 +2390,12 @@
       "host": "localhost",
       "pathPrefix": "",
       "polyfill": true,
-      "buildTime": "2019-01-04T21:14:54.114Z",
+      "buildTime": "2019-01-04T21:46:49.458Z",
       "id": "Site",
       "parent": "SOURCE",
       "children": [],
       "internal": {
-        "contentDigest": "5115d004aaa33a95c9f06b8ea90bd039",
+        "contentDigest": "4f169a89b5cd046ee3c4d7efa48cf783",
         "type": "Site",
         "owner": "internal-data-bridge"
       }
@@ -2405,7 +2405,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "8bd0248ee343bcec188c441a2ba7fc09",
+        "contentDigest": "3d589cff0f952c249e065b685b38ec29",
         "type": "Directory",
         "description": "Directory \"content/blog\"",
         "owner": "gatsby-source-filesystem"
@@ -2417,7 +2417,7 @@
       "size": 1024,
       "prettySize": "1.02 kB",
       "modifiedTime": "2019-01-04T19:50:58.597Z",
-      "accessTime": "2019-01-04T21:15:00.584Z",
+      "accessTime": "2019-01-04T21:46:53.072Z",
       "changeTime": "2019-01-04T19:50:58.597Z",
       "birthTime": "2019-01-04T19:50:58.578Z",
       "root": "/",
@@ -2435,11 +2435,11 @@
       "blksize": 4096,
       "ino": 8607707258,
       "blocks": 0,
-      "atimeMs": 1546636500584.2568,
+      "atimeMs": 1546638413071.8955,
       "mtimeMs": 1546631458597.2168,
       "ctimeMs": 1546631458597.2168,
       "birthtimeMs": 1546631458577.8438,
-      "atime": "2019-01-04T21:15:00.584Z",
+      "atime": "2019-01-04T21:46:53.072Z",
       "mtime": "2019-01-04T19:50:58.597Z",
       "ctime": "2019-01-04T19:50:58.597Z",
       "birthtime": "2019-01-04T19:50:58.578Z"
@@ -2449,7 +2449,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "65c4a350700f1d527d5f9773858cedaa",
+        "contentDigest": "5768eb9bf1e2244f683d85ec2e988cca",
         "type": "Directory",
         "description": "Directory \"content/blog/2014-3-3-so-you-want-a-simple-httpserver\"",
         "owner": "gatsby-source-filesystem"
@@ -2461,7 +2461,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.578Z",
-      "accessTime": "2019-01-04T21:15:00.603Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.578Z",
       "birthTime": "2019-01-04T19:50:58.578Z",
       "root": "/",
@@ -2479,11 +2479,11 @@
       "blksize": 4096,
       "ino": 8607707259,
       "blocks": 0,
-      "atimeMs": 1546636500603.4407,
+      "atimeMs": 1546638413088.8567,
       "mtimeMs": 1546631458578.0654,
       "ctimeMs": 1546631458578.0654,
       "birthtimeMs": 1546631458577.9387,
-      "atime": "2019-01-04T21:15:00.603Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.578Z",
       "ctime": "2019-01-04T19:50:58.578Z",
       "birthtime": "2019-01-04T19:50:58.578Z"
@@ -2493,7 +2493,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "7e77bbc182dada08a8dfd9355ad2a5d8",
+        "contentDigest": "44bcd9a1717c387421010546c535c546",
         "type": "Directory",
         "description": "Directory \"content/blog/2014-4-4-unit-testing-arrays-with-qunit\"",
         "owner": "gatsby-source-filesystem"
@@ -2505,7 +2505,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.579Z",
-      "accessTime": "2019-01-04T21:15:00.603Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.579Z",
       "birthTime": "2019-01-04T19:50:58.579Z",
       "root": "/",
@@ -2523,11 +2523,11 @@
       "blksize": 4096,
       "ino": 8607707261,
       "blocks": 0,
-      "atimeMs": 1546636500603.4512,
+      "atimeMs": 1546638413088.8696,
       "mtimeMs": 1546631458578.7349,
       "ctimeMs": 1546631458578.7349,
       "birthtimeMs": 1546631458578.6208,
-      "atime": "2019-01-04T21:15:00.603Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.579Z",
       "ctime": "2019-01-04T19:50:58.579Z",
       "birthtime": "2019-01-04T19:50:58.579Z"
@@ -2537,7 +2537,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "ace2c67aa36fa0ddcf569b99de1b0b6a",
+        "contentDigest": "f6fa7416bfd6dadaab03f8d654749e02",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-10-2-debugging-angularjs-$scope-in-a-browser-console\"",
         "owner": "gatsby-source-filesystem"
@@ -2549,7 +2549,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.580Z",
-      "accessTime": "2019-01-04T21:15:00.603Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.580Z",
       "birthTime": "2019-01-04T19:50:58.580Z",
       "root": "/",
@@ -2567,11 +2567,11 @@
       "blksize": 4096,
       "ino": 8607707263,
       "blocks": 0,
-      "atimeMs": 1546636500603.461,
+      "atimeMs": 1546638413088.8826,
       "mtimeMs": 1546631458579.7346,
       "ctimeMs": 1546631458579.7346,
       "birthtimeMs": 1546631458579.616,
-      "atime": "2019-01-04T21:15:00.603Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.580Z",
       "ctime": "2019-01-04T19:50:58.580Z",
       "birthtime": "2019-01-04T19:50:58.580Z"
@@ -2581,7 +2581,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "9e9b2ca8b9f298d83e38c9f7ba3982da",
+        "contentDigest": "0c6a2bffd2dd10228c0f04e49a579ec2",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ngBind-or-interpolation\"",
         "owner": "gatsby-source-filesystem"
@@ -2593,7 +2593,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.581Z",
-      "accessTime": "2019-01-04T21:15:00.603Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.581Z",
       "birthTime": "2019-01-04T19:50:58.580Z",
       "root": "/",
@@ -2611,11 +2611,11 @@
       "blksize": 4096,
       "ino": 8607707265,
       "blocks": 0,
-      "atimeMs": 1546636500603.4707,
+      "atimeMs": 1546638413088.8945,
       "mtimeMs": 1546631458580.5664,
       "ctimeMs": 1546631458580.5664,
       "birthtimeMs": 1546631458580.4236,
-      "atime": "2019-01-04T21:15:00.603Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.581Z",
       "ctime": "2019-01-04T19:50:58.581Z",
       "birthtime": "2019-01-04T19:50:58.580Z"
@@ -2625,7 +2625,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "e6952b41f6a53fdad08b0cabccdd4633",
+        "contentDigest": "17431388f33afa911edaf91588bea7ea",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-11-4-angularjs-empty-$scope-object-check\"",
         "owner": "gatsby-source-filesystem"
@@ -2637,7 +2637,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.581Z",
-      "accessTime": "2019-01-04T21:15:00.603Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.581Z",
       "birthTime": "2019-01-04T19:50:58.581Z",
       "root": "/",
@@ -2655,11 +2655,11 @@
       "blksize": 4096,
       "ino": 8607707267,
       "blocks": 0,
-      "atimeMs": 1546636500603.4817,
+      "atimeMs": 1546638413088.9072,
       "mtimeMs": 1546631458581.3464,
       "ctimeMs": 1546631458581.3464,
       "birthtimeMs": 1546631458581.2126,
-      "atime": "2019-01-04T21:15:00.603Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.581Z",
       "ctime": "2019-01-04T19:50:58.581Z",
       "birthtime": "2019-01-04T19:50:58.581Z"
@@ -2669,7 +2669,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "cc746a56731a20e0f426acacbaab7dfa",
+        "contentDigest": "aa4387d56e9aa7e962c7dc9e9557cccc",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-2-18-angularjs-jsamine-spies-and-fakes\"",
         "owner": "gatsby-source-filesystem"
@@ -2681,7 +2681,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.583Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.583Z",
       "birthTime": "2019-01-04T19:50:58.583Z",
       "root": "/",
@@ -2699,11 +2699,11 @@
       "blksize": 4096,
       "ino": 8607707271,
       "blocks": 0,
-      "atimeMs": 1546636500603.5007,
+      "atimeMs": 1546638413088.9277,
       "mtimeMs": 1546631458582.6667,
       "ctimeMs": 1546631458582.6667,
       "birthtimeMs": 1546631458582.5635,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.583Z",
       "ctime": "2019-01-04T19:50:58.583Z",
       "birthtime": "2019-01-04T19:50:58.583Z"
@@ -2713,7 +2713,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "453b1cc8acb6eb5d6e77cc8c0b6ed542",
+        "contentDigest": "5dc297cba8feec5c5789e86598d7b4c4",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-12-2-git-add\"",
         "owner": "gatsby-source-filesystem"
@@ -2725,7 +2725,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.582Z",
-      "accessTime": "2019-01-04T21:15:00.603Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.582Z",
       "birthTime": "2019-01-04T19:50:58.582Z",
       "root": "/",
@@ -2743,11 +2743,11 @@
       "blksize": 4096,
       "ino": 8607707269,
       "blocks": 0,
-      "atimeMs": 1546636500603.4915,
+      "atimeMs": 1546638413088.918,
       "mtimeMs": 1546631458582.0254,
       "ctimeMs": 1546631458582.0254,
       "birthtimeMs": 1546631458581.9297,
-      "atime": "2019-01-04T21:15:00.603Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.582Z",
       "ctime": "2019-01-04T19:50:58.582Z",
       "birthtime": "2019-01-04T19:50:58.582Z"
@@ -2757,7 +2757,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "6b393795dec9b2a5acf6d8c21eedc2e6",
+        "contentDigest": "a2b9870ff94b785a6499a049cbbbf5d6",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-2-28-the-zen-of-python\"",
         "owner": "gatsby-source-filesystem"
@@ -2769,7 +2769,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.583Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.583Z",
       "birthTime": "2019-01-04T19:50:58.583Z",
       "root": "/",
@@ -2787,11 +2787,11 @@
       "blksize": 4096,
       "ino": 8607707273,
       "blocks": 0,
-      "atimeMs": 1546636500603.5098,
+      "atimeMs": 1546638413088.9382,
       "mtimeMs": 1546631458583.373,
       "ctimeMs": 1546631458583.373,
       "birthtimeMs": 1546631458583.2134,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.583Z",
       "ctime": "2019-01-04T19:50:58.583Z",
       "birthtime": "2019-01-04T19:50:58.583Z"
@@ -2801,7 +2801,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "553fe86c38d5222f693afdcdab719014",
+        "contentDigest": "ef016b6f6310246236df9435327bff4b",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-2-7-psst-wanna-monkey-patch\"",
         "owner": "gatsby-source-filesystem"
@@ -2813,7 +2813,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.584Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.584Z",
       "birthTime": "2019-01-04T19:50:58.584Z",
       "root": "/",
@@ -2831,11 +2831,11 @@
       "blksize": 4096,
       "ino": 8607707275,
       "blocks": 0,
-      "atimeMs": 1546636500603.519,
+      "atimeMs": 1546638413088.9482,
       "mtimeMs": 1546631458583.9773,
       "ctimeMs": 1546631458583.9773,
       "birthtimeMs": 1546631458583.887,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.584Z",
       "ctime": "2019-01-04T19:50:58.584Z",
       "birthtime": "2019-01-04T19:50:58.584Z"
@@ -2845,7 +2845,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "751e10380cbf821fc15a0d882847bc10",
+        "contentDigest": "07a6fb0ad5fbfad497bc6e7f4bbcfb75",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-3-2-so-you-want-a-simple-php-server\"",
         "owner": "gatsby-source-filesystem"
@@ -2857,7 +2857,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.584Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.584Z",
       "birthTime": "2019-01-04T19:50:58.584Z",
       "root": "/",
@@ -2875,11 +2875,11 @@
       "blksize": 4096,
       "ino": 8607707277,
       "blocks": 0,
-      "atimeMs": 1546636500603.5286,
+      "atimeMs": 1546638413088.959,
       "mtimeMs": 1546631458584.4807,
       "ctimeMs": 1546631458584.4807,
       "birthtimeMs": 1546631458584.3904,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.584Z",
       "ctime": "2019-01-04T19:50:58.584Z",
       "birthtime": "2019-01-04T19:50:58.584Z"
@@ -2889,7 +2889,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "430cefda6bd0ff5ca6c75939ccbc3809",
+        "contentDigest": "b19f8c78d2e772a406427ab7eb7efd3d",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-3-23-directives-all-the-way-down\"",
         "owner": "gatsby-source-filesystem"
@@ -2901,7 +2901,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.585Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.585Z",
       "birthTime": "2019-01-04T19:50:58.585Z",
       "root": "/",
@@ -2919,11 +2919,11 @@
       "blksize": 4096,
       "ino": 8607707279,
       "blocks": 0,
-      "atimeMs": 1546636500603.538,
+      "atimeMs": 1546638413088.9692,
       "mtimeMs": 1546631458585.1013,
       "ctimeMs": 1546631458585.1013,
       "birthtimeMs": 1546631458584.957,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.585Z",
       "ctime": "2019-01-04T19:50:58.585Z",
       "birthtime": "2019-01-04T19:50:58.585Z"
@@ -2933,7 +2933,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "02878bd61ea73093d0f95d63d22939fd",
+        "contentDigest": "2c3916b3c1d72cceb03675d666654861",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-3-31-angularjs-bind\"",
         "owner": "gatsby-source-filesystem"
@@ -2945,7 +2945,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.586Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.586Z",
       "birthTime": "2019-01-04T19:50:58.586Z",
       "root": "/",
@@ -2963,11 +2963,11 @@
       "blksize": 4096,
       "ino": 8607707281,
       "blocks": 0,
-      "atimeMs": 1546636500603.5515,
+      "atimeMs": 1546638413088.98,
       "mtimeMs": 1546631458585.7546,
       "ctimeMs": 1546631458585.7546,
       "birthtimeMs": 1546631458585.635,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.586Z",
       "ctime": "2019-01-04T19:50:58.586Z",
       "birthtime": "2019-01-04T19:50:58.586Z"
@@ -2977,7 +2977,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "7684665491a56fbdf70e028e9724b38e",
+        "contentDigest": "92daa4399aa384148edb9a67b4509850",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-4-3-collabocats\"",
         "owner": "gatsby-source-filesystem"
@@ -2989,7 +2989,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.587Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.587Z",
       "birthTime": "2019-01-04T19:50:58.587Z",
       "root": "/",
@@ -3007,11 +3007,11 @@
       "blksize": 4096,
       "ino": 8607707285,
       "blocks": 0,
-      "atimeMs": 1546636500603.572,
+      "atimeMs": 1546638413089.0024,
       "mtimeMs": 1546631458587.1743,
       "ctimeMs": 1546631458587.1743,
       "birthtimeMs": 1546631458587.0383,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.587Z",
       "ctime": "2019-01-04T19:50:58.587Z",
       "birthtime": "2019-01-04T19:50:58.587Z"
@@ -3021,7 +3021,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "3e5bc1dd8ebbe122a1fc466b65c95aff",
+        "contentDigest": "48d57e0330f513c34e43676a448f8a6e",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-4-22-jasmine-jquery-testing-css\"",
         "owner": "gatsby-source-filesystem"
@@ -3033,7 +3033,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.586Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.586Z",
       "birthTime": "2019-01-04T19:50:58.586Z",
       "root": "/",
@@ -3051,11 +3051,11 @@
       "blksize": 4096,
       "ino": 8607707283,
       "blocks": 0,
-      "atimeMs": 1546636500603.562,
+      "atimeMs": 1546638413088.9915,
       "mtimeMs": 1546631458586.4421,
       "ctimeMs": 1546631458586.4421,
       "birthtimeMs": 1546631458586.2917,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.586Z",
       "ctime": "2019-01-04T19:50:58.586Z",
       "birthtime": "2019-01-04T19:50:58.586Z"
@@ -3065,7 +3065,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "fcc09e3341d95ff3917f33d7507b9661",
+        "contentDigest": "9694eb498c29346c4a07598c8032b65c",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-5-12-angularjs-service-v-factory\"",
         "owner": "gatsby-source-filesystem"
@@ -3077,7 +3077,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.588Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.588Z",
       "birthTime": "2019-01-04T19:50:58.588Z",
       "root": "/",
@@ -3095,11 +3095,11 @@
       "blksize": 4096,
       "ino": 8607707287,
       "blocks": 0,
-      "atimeMs": 1546636500603.5825,
+      "atimeMs": 1546638413089.0127,
       "mtimeMs": 1546631458587.76,
       "ctimeMs": 1546631458587.76,
       "birthtimeMs": 1546631458587.6611,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.588Z",
       "ctime": "2019-01-04T19:50:58.588Z",
       "birthtime": "2019-01-04T19:50:58.588Z"
@@ -3109,7 +3109,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "64e79238eacd91bd1b30c89ddd51a93d",
+        "contentDigest": "0e59552e27339fd5426dcc9f070377b9",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-5-4-so-you-want-a-simple-node-http-server\"",
         "owner": "gatsby-source-filesystem"
@@ -3121,7 +3121,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.588Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.588Z",
       "birthTime": "2019-01-04T19:50:58.588Z",
       "root": "/",
@@ -3139,11 +3139,11 @@
       "blksize": 4096,
       "ino": 8607707289,
       "blocks": 0,
-      "atimeMs": 1546636500603.5913,
+      "atimeMs": 1546638413089.0237,
       "mtimeMs": 1546631458588.3718,
       "ctimeMs": 1546631458588.3718,
       "birthtimeMs": 1546631458588.2139,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.588Z",
       "ctime": "2019-01-04T19:50:58.588Z",
       "birthtime": "2019-01-04T19:50:58.588Z"
@@ -3153,7 +3153,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "719b3c98dbf0513ab17b3bd4ac5af48e",
+        "contentDigest": "ee717c92ace603b14a10def777b41b07",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-7-13-shuffling-a-javascript-array\"",
         "owner": "gatsby-source-filesystem"
@@ -3165,7 +3165,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.589Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.589Z",
       "birthTime": "2019-01-04T19:50:58.589Z",
       "root": "/",
@@ -3183,11 +3183,11 @@
       "blksize": 4096,
       "ino": 8607707291,
       "blocks": 0,
-      "atimeMs": 1546636500603.6023,
+      "atimeMs": 1546638413089.0356,
       "mtimeMs": 1546631458589.0945,
       "ctimeMs": 1546631458589.0945,
       "birthtimeMs": 1546631458588.9736,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.589Z",
       "ctime": "2019-01-04T19:50:58.589Z",
       "birthtime": "2019-01-04T19:50:58.589Z"
@@ -3197,7 +3197,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "48ca1e7d17d87c1dac48f8e2db372f22",
+        "contentDigest": "c486dab073447032983792891592315f",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-7-3-my-top-ten-coding-podcasts\"",
         "owner": "gatsby-source-filesystem"
@@ -3209,7 +3209,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.590Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.590Z",
       "birthTime": "2019-01-04T19:50:58.590Z",
       "root": "/",
@@ -3227,11 +3227,11 @@
       "blksize": 4096,
       "ino": 8607707293,
       "blocks": 0,
-      "atimeMs": 1546636500603.6125,
+      "atimeMs": 1546638413089.0479,
       "mtimeMs": 1546631458589.6638,
       "ctimeMs": 1546631458589.6638,
       "birthtimeMs": 1546631458589.549,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.590Z",
       "ctime": "2019-01-04T19:50:58.590Z",
       "birthtime": "2019-01-04T19:50:58.590Z"
@@ -3241,7 +3241,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "195e5760a2228656037d0e0b08879e48",
+        "contentDigest": "e852074481156c61f32a531930f348b0",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-8-4-debugging-phantomjs-tests-in-a-browser\"",
         "owner": "gatsby-source-filesystem"
@@ -3253,7 +3253,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.590Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.590Z",
       "birthTime": "2019-01-04T19:50:58.590Z",
       "root": "/",
@@ -3271,11 +3271,11 @@
       "blksize": 4096,
       "ino": 8607707295,
       "blocks": 0,
-      "atimeMs": 1546636500603.6233,
+      "atimeMs": 1546638413089.0725,
       "mtimeMs": 1546631458590.2793,
       "ctimeMs": 1546631458590.2793,
       "birthtimeMs": 1546631458590.1558,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.590Z",
       "ctime": "2019-01-04T19:50:58.590Z",
       "birthtime": "2019-01-04T19:50:58.590Z"
@@ -3285,7 +3285,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "56336c14b42a88ed55b9835d49a8748c",
+        "contentDigest": "9ed0038dcf406565468bb719dfbeaf93",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-01-16-self-executing-anonymous-function-in-angularjs\"",
         "owner": "gatsby-source-filesystem"
@@ -3297,7 +3297,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.592Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.592Z",
       "birthTime": "2019-01-04T19:50:58.592Z",
       "root": "/",
@@ -3315,11 +3315,11 @@
       "blksize": 4096,
       "ino": 8607707299,
       "blocks": 0,
-      "atimeMs": 1546636500603.642,
+      "atimeMs": 1546638413089.0928,
       "mtimeMs": 1546631458591.6274,
       "ctimeMs": 1546631458591.6274,
       "birthtimeMs": 1546631458591.5085,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.592Z",
       "ctime": "2019-01-04T19:50:58.592Z",
       "birthtime": "2019-01-04T19:50:58.592Z"
@@ -3329,7 +3329,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "bfe8115cdff00659dc2125bea28b7d86",
+        "contentDigest": "219007989775d87966ff6542c655aa2d",
         "type": "Directory",
         "description": "Directory \"content/blog/2015-9-22-ternary-operators-in-angular-templates\"",
         "owner": "gatsby-source-filesystem"
@@ -3341,7 +3341,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.591Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.591Z",
       "birthTime": "2019-01-04T19:50:58.591Z",
       "root": "/",
@@ -3359,11 +3359,11 @@
       "blksize": 4096,
       "ino": 8607707297,
       "blocks": 0,
-      "atimeMs": 1546636500603.6326,
+      "atimeMs": 1546638413089.0828,
       "mtimeMs": 1546631458591.0056,
       "ctimeMs": 1546631458591.0056,
       "birthtimeMs": 1546631458590.8757,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.591Z",
       "ctime": "2019-01-04T19:50:58.591Z",
       "birthtime": "2019-01-04T19:50:58.591Z"
@@ -3373,7 +3373,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "0c69d5a0e9cc609756f9bd85c56189fd",
+        "contentDigest": "a32d0831b1d2aae199f9739fffe68411",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-01-6-creating-an-angularjs-pulse-directive\"",
         "owner": "gatsby-source-filesystem"
@@ -3385,7 +3385,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.592Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.592Z",
       "birthTime": "2019-01-04T19:50:58.592Z",
       "root": "/",
@@ -3403,11 +3403,11 @@
       "blksize": 4096,
       "ino": 8607707301,
       "blocks": 0,
-      "atimeMs": 1546636500603.652,
+      "atimeMs": 1546638413089.1047,
       "mtimeMs": 1546631458592.2158,
       "ctimeMs": 1546631458592.2158,
       "birthtimeMs": 1546631458592.1099,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.592Z",
       "ctime": "2019-01-04T19:50:58.592Z",
       "birthtime": "2019-01-04T19:50:58.592Z"
@@ -3417,7 +3417,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "273b856e111ade5e7cb6ac03ae5e3564",
+        "contentDigest": "d9e191e5326b9d520b7032e507b92e97",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-2-15-theres-an-app-for-that-kadence\"",
         "owner": "gatsby-source-filesystem"
@@ -3429,7 +3429,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.593Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.593Z",
       "birthTime": "2019-01-04T19:50:58.593Z",
       "root": "/",
@@ -3447,11 +3447,11 @@
       "blksize": 4096,
       "ino": 8607707303,
       "blocks": 0,
-      "atimeMs": 1546636500603.6626,
+      "atimeMs": 1546638413089.117,
       "mtimeMs": 1546631458592.8381,
       "ctimeMs": 1546631458592.8381,
       "birthtimeMs": 1546631458592.7107,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.593Z",
       "ctime": "2019-01-04T19:50:58.593Z",
       "birthtime": "2019-01-04T19:50:58.593Z"
@@ -3461,7 +3461,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "f32ea9579453ed34ed91ee4c6548eb90",
+        "contentDigest": "fe0d203d06c6362907f764e0a0380ed7",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-3-10-typescript-spread-operator\"",
         "owner": "gatsby-source-filesystem"
@@ -3473,7 +3473,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.594Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.594Z",
       "birthTime": "2019-01-04T19:50:58.593Z",
       "root": "/",
@@ -3491,11 +3491,11 @@
       "blksize": 4096,
       "ino": 8607707305,
       "blocks": 0,
-      "atimeMs": 1546636500603.6724,
+      "atimeMs": 1546638413089.1284,
       "mtimeMs": 1546631458593.5347,
       "ctimeMs": 1546631458593.5347,
       "birthtimeMs": 1546631458593.4404,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.594Z",
       "ctime": "2019-01-04T19:50:58.594Z",
       "birthtime": "2019-01-04T19:50:58.593Z"
@@ -3505,7 +3505,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "a16fb06d314f9c81013edffd9971a99f",
+        "contentDigest": "b43b35a04c2c4eea06fdf1c588652ed4",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-4-14-angular2-unit-testing-a-component\"",
         "owner": "gatsby-source-filesystem"
@@ -3517,7 +3517,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.594Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.594Z",
       "birthTime": "2019-01-04T19:50:58.594Z",
       "root": "/",
@@ -3535,11 +3535,11 @@
       "blksize": 4096,
       "ino": 8607707307,
       "blocks": 0,
-      "atimeMs": 1546636500603.6821,
+      "atimeMs": 1546638413089.139,
       "mtimeMs": 1546631458594.1401,
       "ctimeMs": 1546631458594.1401,
       "birthtimeMs": 1546631458594.0396,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.594Z",
       "ctime": "2019-01-04T19:50:58.594Z",
       "birthtime": "2019-01-04T19:50:58.594Z"
@@ -3549,7 +3549,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "450163b19a92a84bfae19c1c4c466603",
+        "contentDigest": "1b9d9d6aaa5e3d0de38979057db0f36e",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-5-9-windows-deleting-node-modules\"",
         "owner": "gatsby-source-filesystem"
@@ -3561,7 +3561,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.596Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.596Z",
       "birthTime": "2019-01-04T19:50:58.595Z",
       "root": "/",
@@ -3579,11 +3579,11 @@
       "blksize": 4096,
       "ino": 8607707311,
       "blocks": 0,
-      "atimeMs": 1546636500603.7007,
+      "atimeMs": 1546638413089.1587,
       "mtimeMs": 1546631458595.5117,
       "ctimeMs": 1546631458595.5117,
       "birthtimeMs": 1546631458595.3982,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.596Z",
       "ctime": "2019-01-04T19:50:58.596Z",
       "birthtime": "2019-01-04T19:50:58.595Z"
@@ -3593,7 +3593,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "16e97d02c25c0c9b33bba5ed05740f15",
+        "contentDigest": "3e27ce6608dc1898c323a5d61acf83d7",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-5-29-the-apple-watch-at-a-glance\"",
         "owner": "gatsby-source-filesystem"
@@ -3605,7 +3605,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.595Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.595Z",
       "birthTime": "2019-01-04T19:50:58.595Z",
       "root": "/",
@@ -3623,11 +3623,11 @@
       "blksize": 4096,
       "ino": 8607707309,
       "blocks": 0,
-      "atimeMs": 1546636500603.691,
+      "atimeMs": 1546638413089.1487,
       "mtimeMs": 1546631458594.7551,
       "ctimeMs": 1546631458594.7551,
       "birthtimeMs": 1546631458594.6448,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.595Z",
       "ctime": "2019-01-04T19:50:58.595Z",
       "birthtime": "2019-01-04T19:50:58.595Z"
@@ -3637,7 +3637,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "597a80d2674aa348bf5af9ffad2a3e7e",
+        "contentDigest": "400c850c428decf29f2ea151286bac2b",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-7-14-es6-string-template-literals\"",
         "owner": "gatsby-source-filesystem"
@@ -3649,7 +3649,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.596Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.596Z",
       "birthTime": "2019-01-04T19:50:58.596Z",
       "root": "/",
@@ -3667,11 +3667,11 @@
       "blksize": 4096,
       "ino": 8607707313,
       "blocks": 0,
-      "atimeMs": 1546636500603.71,
+      "atimeMs": 1546638413089.168,
       "mtimeMs": 1546631458596.133,
       "ctimeMs": 1546631458596.133,
       "birthtimeMs": 1546631458596.0234,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.596Z",
       "ctime": "2019-01-04T19:50:58.596Z",
       "birthtime": "2019-01-04T19:50:58.596Z"
@@ -3681,7 +3681,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "224f3668ed66ce28b108af8739b0c289",
+        "contentDigest": "6be4f08ed2fa707f0773fb1438276dc8",
         "type": "Directory",
         "description": "Directory \"content/blog/2016-8-04-es6-let-there-be-let\"",
         "owner": "gatsby-source-filesystem"
@@ -3693,7 +3693,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.597Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.597Z",
       "birthTime": "2019-01-04T19:50:58.596Z",
       "root": "/",
@@ -3711,11 +3711,11 @@
       "blksize": 4096,
       "ino": 8607707315,
       "blocks": 0,
-      "atimeMs": 1546636500603.719,
+      "atimeMs": 1546638413089.1775,
       "mtimeMs": 1546631458596.6267,
       "ctimeMs": 1546631458596.6267,
       "birthtimeMs": 1546631458596.493,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.597Z",
       "ctime": "2019-01-04T19:50:58.597Z",
       "birthtime": "2019-01-04T19:50:58.596Z"
@@ -3725,7 +3725,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "3860295fbef3e967db9e23e44d05b95b",
+        "contentDigest": "86364364743c0e6b148d5a327aee1e05",
         "type": "Directory",
         "description": "Directory \"content/blog/2017-3-18-react-random-squares-avatar\"",
         "owner": "gatsby-source-filesystem"
@@ -3737,7 +3737,7 @@
       "size": 96,
       "prettySize": "96 B",
       "modifiedTime": "2019-01-04T19:50:58.597Z",
-      "accessTime": "2019-01-04T21:15:00.604Z",
+      "accessTime": "2019-01-04T21:46:53.089Z",
       "changeTime": "2019-01-04T19:50:58.597Z",
       "birthTime": "2019-01-04T19:50:58.597Z",
       "root": "/",
@@ -3755,11 +3755,11 @@
       "blksize": 4096,
       "ino": 8607707317,
       "blocks": 0,
-      "atimeMs": 1546636500603.729,
+      "atimeMs": 1546638413089.1875,
       "mtimeMs": 1546631458597.3123,
       "ctimeMs": 1546631458597.3123,
       "birthtimeMs": 1546631458597.2043,
-      "atime": "2019-01-04T21:15:00.604Z",
+      "atime": "2019-01-04T21:46:53.089Z",
       "mtime": "2019-01-04T19:50:58.597Z",
       "ctime": "2019-01-04T19:50:58.597Z",
       "birthtime": "2019-01-04T19:50:58.597Z"
@@ -5754,7 +5754,7 @@
       "children": [],
       "parent": "___SOURCE___",
       "internal": {
-        "contentDigest": "44af72039882cd9ab1f964ec6eed69f9",
+        "contentDigest": "4a4477f80d192d049cac3dc64c003f4f",
         "type": "Directory",
         "description": "Directory \"content/assets\"",
         "owner": "gatsby-source-filesystem"
@@ -5766,7 +5766,7 @@
       "size": 128,
       "prettySize": "128 B",
       "modifiedTime": "2019-01-04T19:50:58.576Z",
-      "accessTime": "2019-01-04T21:15:00.711Z",
+      "accessTime": "2019-01-04T21:46:53.193Z",
       "changeTime": "2019-01-04T19:50:58.576Z",
       "birthTime": "2019-01-04T19:50:58.575Z",
       "root": "/",
@@ -5784,11 +5784,11 @@
       "blksize": 4096,
       "ino": 8607707255,
       "blocks": 0,
-      "atimeMs": 1546636500711.1694,
+      "atimeMs": 1546638413193.3691,
       "mtimeMs": 1546631458576.3408,
       "ctimeMs": 1546631458576.3408,
       "birthtimeMs": 1546631458574.924,
-      "atime": "2019-01-04T21:15:00.711Z",
+      "atime": "2019-01-04T21:46:53.193Z",
       "mtime": "2019-01-04T19:50:58.576Z",
       "ctime": "2019-01-04T19:50:58.576Z",
       "birthtime": "2019-01-04T19:50:58.575Z"
@@ -5905,6 +5905,181 @@
         "contentDigest": "56b2f03073943d24849b803659f3190a",
         "type": "ImageSharp",
         "owner": "gatsby-transformer-sharp"
+      }
+    },
+    "33e3d4eb-f3bb-519f-a1fe-8d4c9453ebe3": {
+      "id": "33e3d4eb-f3bb-519f-a1fe-8d4c9453ebe3",
+      "children": [],
+      "parent": "a390fc6e-ae40-5b0b-9b09-6d1b52ecf05c",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/BIvWLez.png, \"My Top 10 Podcasts for Coders\")\n\n\nHere are my top 10 podcasts for coding\n\n1. [Techzing](http://techzinglive.com/) Jason and Justin present a podcast that has the right mix of coding, tech stories and the projects that they are currently working on. They also sometimes have interviews episodes and on their 100 show they interviewed Jason Calacanis.\n\n2. [Dev Hell](http://devhell.info/) Presented by Chris Hartjes and Ed Finkler this podcast has a php slant which is saved by Chris getting on his unit testing hobby horse. Ed's native advertisements for the sponsors are both simultaneously hilarious and cringeworthy.\n\n3. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) A weekly talk show taking a pragmatic look at the art and business of Software Development and related technologies.\n\n4. [Adventures in Angular](http://devchat.tv/adventures-in-angular/) Adventures in Angular</a> A weekly show dedicated to the AngularJS framework.\n\n5. [Javascript Jabber](http://devchat.tv/js-jabber/) A weekly podcast about JavaScript, including Node.js, Front-End Technologies, Careers, Teams and more.\n\n6. [.Net Rocks](http://dotnetrocks.com/) Carl Franklin's and Richard Campbell's internet audio talk show for .Net Developers that's not just .Net Related.\t\n\n7. [HanselMinutes](http://hanselminutes.com/) Scott Hanselman provides 30 mins of fresh air for developers by interviewing the tech community about tech.\n\n8. [This Developers Life](http://thisdeveloperslife.com/) This Developers Life</a> Created in the style of This American Life, Rob Conery and Scott Hanselman get deep about developers and their lives.\n\n9. [Lately in Javascript](http://www.jsclasses.org/blog/category/podcast/) Lately in Javascript</a> Manuel Lemos and Arturs Sosins discuss the latest in javascript related developments.\n\n\n10. [Yet Another Podcast](http://jesseliberty.com/podcast/) Yet Another Podcast</a> Jessie Liberty's easy going interview style makes the podcast easy to listen to but informative.\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "738d302a3f40b6da7e0be315bd51890f",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "My Top Ten Coding Podcasts",
+        "date": "2015-07-03T00:00:00.000Z",
+        "_PARENT": "a390fc6e-ae40-5b0b-9b09-6d1b52ecf05c"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/BIvWLez.png, \"My Top 10 Podcasts for Coders\")\n\n\nHere are my top 10 podcasts for coding\n\n1. [Techzing](http://techzinglive.com/) Jason and Justin present a podcast that has the right mix of coding, tech stories and the projects that they are currently working on. They also sometimes have interviews episodes and on their 100 show they interviewed Jason Calacanis.\n\n2. [Dev Hell](http://devhell.info/) Presented by Chris Hartjes and Ed Finkler this podcast has a php slant which is saved by Chris getting on his unit testing hobby horse. Ed's native advertisements for the sponsors are both simultaneously hilarious and cringeworthy.\n\n3. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) A weekly talk show taking a pragmatic look at the art and business of Software Development and related technologies.\n\n4. [Adventures in Angular](http://devchat.tv/adventures-in-angular/) Adventures in Angular</a> A weekly show dedicated to the AngularJS framework.\n\n5. [Javascript Jabber](http://devchat.tv/js-jabber/) A weekly podcast about JavaScript, including Node.js, Front-End Technologies, Careers, Teams and more.\n\n6. [.Net Rocks](http://dotnetrocks.com/) Carl Franklin's and Richard Campbell's internet audio talk show for .Net Developers that's not just .Net Related.\t\n\n7. [HanselMinutes](http://hanselminutes.com/) Scott Hanselman provides 30 mins of fresh air for developers by interviewing the tech community about tech.\n\n8. [This Developers Life](http://thisdeveloperslife.com/) This Developers Life</a> Created in the style of This American Life, Rob Conery and Scott Hanselman get deep about developers and their lives.\n\n9. [Lately in Javascript](http://www.jsclasses.org/blog/category/podcast/) Lately in Javascript</a> Manuel Lemos and Arturs Sosins discuss the latest in javascript related developments.\n\n\n10. [Yet Another Podcast](http://jesseliberty.com/podcast/) Yet Another Podcast</a> Jessie Liberty's easy going interview style makes the podcast easy to listen to but informative.\n",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-7-3-my-top-ten-coding-podcasts/2015-7-3-my-top-ten-coding-podcasts.md",
+      "fields": {
+        "slug": "/2015-7-3-my-top-ten-coding-podcasts/2015-7-3-my-top-ten-coding-podcasts/"
+      }
+    },
+    "50b779f3-9727-572c-ad45-794b56460173": {
+      "id": "50b779f3-9727-572c-ad45-794b56460173",
+      "children": [],
+      "parent": "1ef95bf8-2e55-50ca-8ad1-fdf3d3cec3e3",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/DAqGSop.jpg, \"Shuffle a Javascript Array\")\n\n\n## Sorting\n\nWhen you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand.\n\nIf you call sort on a simple array of strings or numbers it will sort them alphabetically or numerically. Also, if you pass in an optional anonymous function parameter you can custom sort the array as long as your function returns a negative, zero or positive value.\n\n```\nvar colours = ['Red', 'Yellow', 'Blue'];\ncolours.sort();\n// results\n// [\"Blue\", \"Red\", \"Yellow\"]\n\nvar frequencyArray = [{ n: 3, name: 'Brown' }, { n: 2, name: 'Blue' }, { n: 4, name: 'Red'  }];\nfrequencyArray.sort(function(a,b) { return a.n - b.n; });\n\n// results\n// [{ n: 2, name: 'Blue' }, { n: 3, name: 'Brown' }, { n: 4, name: 'Red'  }];\n```\n\n\n\n## Random Sorting\n\nA simple way of randomly sorting a simple array of numbers is\n\n```\nvar numbers = [12,4,16,3];\nnumbers.sort(function() {\n  return .5 - Math.random();\n});\n// results from sorting 5 times\n//[3, 16, 4, 12]\n//[16, 4, 3, 12]\n//[16, 12, 4, 3]\n//[16, 12, 3, 4]\n//[3, 12, 16, 4]\n```\n\nbut this is the least efficient and <a href=\"http://jsfiddle.net/rcmp0aLL/\" target=\"_blank\">biased</a> way of sorting randomly as it has a strong bias toward keeping each element in its initial starting position in addition to the edges of the array having slightly more bias than the middle.\n\n## Random Shuffling An Array the Fisher-Yates (aka Knuth) Way\n\nOriginally designed by Fisher and Yates as pencil and paper method using a table of random numbers for randomness and then popularized by Donald E. Knuth in The Art of Computer Programming (<a href=\"https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle\" target=\"_blank\">source</a>). This shuffling algorithm provides with a more efficient and more random result set.\n\n```\nfunction shuffle(array) {\n  var currentIndex = array.length, temporaryValue, randomIndex ;\n\n  // While there remain elements to shuffle...\n  while (0 !== currentIndex) {\n\n    // Pick a remaining element...\n    randomIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex -= 1;\n\n    // And swap it with the current element.\n    temporaryValue = array[currentIndex];\n    array[currentIndex] = array[randomIndex];\n    array[randomIndex] = temporaryValue;\n  }\n\n  return array;\n}\n\nvar arr = [2, 11, 37, 42];\nshuffle(arr);\n// results\n// [42, 2, 37, 11]\n```",
+        "type": "MarkdownRemark",
+        "contentDigest": "fb22f80e9f84c83ebf1a068a4ce3e565",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "Shuffle a Javascript Array",
+        "date": "2015-07-13T00:00:00.000Z",
+        "_PARENT": "1ef95bf8-2e55-50ca-8ad1-fdf3d3cec3e3"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/DAqGSop.jpg, \"Shuffle a Javascript Array\")\n\n\n## Sorting\n\nWhen you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand.\n\nIf you call sort on a simple array of strings or numbers it will sort them alphabetically or numerically. Also, if you pass in an optional anonymous function parameter you can custom sort the array as long as your function returns a negative, zero or positive value.\n\n```\nvar colours = ['Red', 'Yellow', 'Blue'];\ncolours.sort();\n// results\n// [\"Blue\", \"Red\", \"Yellow\"]\n\nvar frequencyArray = [{ n: 3, name: 'Brown' }, { n: 2, name: 'Blue' }, { n: 4, name: 'Red'  }];\nfrequencyArray.sort(function(a,b) { return a.n - b.n; });\n\n// results\n// [{ n: 2, name: 'Blue' }, { n: 3, name: 'Brown' }, { n: 4, name: 'Red'  }];\n```\n\n\n\n## Random Sorting\n\nA simple way of randomly sorting a simple array of numbers is\n\n```\nvar numbers = [12,4,16,3];\nnumbers.sort(function() {\n  return .5 - Math.random();\n});\n// results from sorting 5 times\n//[3, 16, 4, 12]\n//[16, 4, 3, 12]\n//[16, 12, 4, 3]\n//[16, 12, 3, 4]\n//[3, 12, 16, 4]\n```\n\nbut this is the least efficient and <a href=\"http://jsfiddle.net/rcmp0aLL/\" target=\"_blank\">biased</a> way of sorting randomly as it has a strong bias toward keeping each element in its initial starting position in addition to the edges of the array having slightly more bias than the middle.\n\n## Random Shuffling An Array the Fisher-Yates (aka Knuth) Way\n\nOriginally designed by Fisher and Yates as pencil and paper method using a table of random numbers for randomness and then popularized by Donald E. Knuth in The Art of Computer Programming (<a href=\"https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle\" target=\"_blank\">source</a>). This shuffling algorithm provides with a more efficient and more random result set.\n\n```\nfunction shuffle(array) {\n  var currentIndex = array.length, temporaryValue, randomIndex ;\n\n  // While there remain elements to shuffle...\n  while (0 !== currentIndex) {\n\n    // Pick a remaining element...\n    randomIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex -= 1;\n\n    // And swap it with the current element.\n    temporaryValue = array[currentIndex];\n    array[currentIndex] = array[randomIndex];\n    array[randomIndex] = temporaryValue;\n  }\n\n  return array;\n}\n\nvar arr = [2, 11, 37, 42];\nshuffle(arr);\n// results\n// [42, 2, 37, 11]\n```",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-7-13-shuffling-a-javascript-array/2015-7-13-shuffling-a-javascript-array.md",
+      "fields": {
+        "slug": "/2015-7-13-shuffling-a-javascript-array/2015-7-13-shuffling-a-javascript-array/"
+      }
+    },
+    "dc83c82d-04da-58bd-80ed-584c75f2e619": {
+      "id": "dc83c82d-04da-58bd-80ed-584c75f2e619",
+      "children": [],
+      "parent": "ffc10a40-885b-5a83-ac74-769c6039eaa7",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/rtSu3eu.jpg, \"PHP Server Simples\")\n\n# 5 steps to create a simple PHP Server\n\n## Step 1.\n\nInstall PHP 5 http://php.net/manual/en/install.php\n\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ sudo php -S 127.0.0.1:80 -t .\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>php -S 127.0.0.1:80 -t .\n\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:80\n\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nPHP 5.5.14 Development Server started at Mon Mar  2 08:33:26 2015   \nListening on http://127.0.0.1:80   \nDocument root is /../../../test   \nPress Ctrl-C to quit.   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51466 [200]: /     \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51467 [200]: /lib/jasmine-1.3.1/jasmine.css   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51468 [404]: /js/libs/require-2.1.5.min.js \n\n\n## Step 5. \n\nThere is no step 5. Simples!\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "0fc729590386000a90d2b9f150b21eca",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "So you want a simple PHP Server?",
+        "date": "2015-03-02T00:00:00.000Z",
+        "_PARENT": "ffc10a40-885b-5a83-ac74-769c6039eaa7"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/rtSu3eu.jpg, \"PHP Server Simples\")\n\n# 5 steps to create a simple PHP Server\n\n## Step 1.\n\nInstall PHP 5 http://php.net/manual/en/install.php\n\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ sudo php -S 127.0.0.1:80 -t .\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>php -S 127.0.0.1:80 -t .\n\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:80\n\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nPHP 5.5.14 Development Server started at Mon Mar  2 08:33:26 2015   \nListening on http://127.0.0.1:80   \nDocument root is /../../../test   \nPress Ctrl-C to quit.   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51466 [200]: /     \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51467 [200]: /lib/jasmine-1.3.1/jasmine.css   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51468 [404]: /js/libs/require-2.1.5.min.js \n\n\n## Step 5. \n\nThere is no step 5. Simples!\n",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-3-2-so-you-want-a-simple-php-server/2015-3-2-so-you-want-a-simple-php-server.md",
+      "fields": {
+        "slug": "/2015-3-2-so-you-want-a-simple-php-server/2015-3-2-so-you-want-a-simple-php-server/"
+      }
+    },
+    "0d617aa5-4a55-5fff-9318-70a3c718c3d9": {
+      "id": "0d617aa5-4a55-5fff-9318-70a3c718c3d9",
+      "children": [],
+      "parent": "737c9853-6239-58a6-9e89-16f59d252225",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/NmVNJdW.jpg, \"Now test your CSS classess\")\n\n\n# If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.\n\njasmine-jquery provides two extensions for the [Jasmine](http://jasmine.github.io/) JavaScript Testing Framework:\n\n- a set of custom matchers for jQuery framework\n- an API for handling HTML, CSS, and JSON fixtures in your specs\n\nUsing the loadStyleFixtures or setStyleFixtures global shortcuts we can add the css we want to test either from a relative url\n\n```\n  loadStyleFixtures('css/stylesheet.css');\n```\n\nor append the classes directly to the document head\n\n```\n  setStyleFixtures('.btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }');\n```\n\nThen load the fixtures using the loadFixtures or setFixtures global shortcuts either from a relative url\n\n```\n  loadFixtures('templates/success.html');\n```\n\nor append the fixture directly to the document body\n\n```\n  fixture = setFixtures('<button type=\"button\" class=\"btn btn-success\">Success</button>');\n```\n\nThen use the custom matchers to retrieve the element you would like to test against\n\n```\n  var successButton = fixture.find('.btn-success');\n```\n\nand then test against your expectation\n\n```\n  expect(successButton.css('color')).toEqual('rgb(255, 255, 255)');\n```\n\nYou can see the test below working in this  [jsfiddle](https://jsfiddle.net/Nicholas_Murray/2488cm7k/)\n\n<script src=\"https://gist.github.com/NicholasMurray/ca68a50a7c6a3954d74a.js\"></script>\n\nwith all tests passing\n\n<iframe width=\"320\" height=\"240\" style=\"width: 100%; height: 240px;\" src=\"https://jsfiddle.net/Nicholas_Murray/2488cm7k/embedded/result/\"></iframe>\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "469020e44b1ba633d9beff130695fe1a",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "Testing CSS classes with Jasmine-JQuery",
+        "date": "2015-04-03T00:00:00.000Z",
+        "_PARENT": "737c9853-6239-58a6-9e89-16f59d252225"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/NmVNJdW.jpg, \"Now test your CSS classess\")\n\n\n# If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.\n\njasmine-jquery provides two extensions for the [Jasmine](http://jasmine.github.io/) JavaScript Testing Framework:\n\n- a set of custom matchers for jQuery framework\n- an API for handling HTML, CSS, and JSON fixtures in your specs\n\nUsing the loadStyleFixtures or setStyleFixtures global shortcuts we can add the css we want to test either from a relative url\n\n```\n  loadStyleFixtures('css/stylesheet.css');\n```\n\nor append the classes directly to the document head\n\n```\n  setStyleFixtures('.btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }');\n```\n\nThen load the fixtures using the loadFixtures or setFixtures global shortcuts either from a relative url\n\n```\n  loadFixtures('templates/success.html');\n```\n\nor append the fixture directly to the document body\n\n```\n  fixture = setFixtures('<button type=\"button\" class=\"btn btn-success\">Success</button>');\n```\n\nThen use the custom matchers to retrieve the element you would like to test against\n\n```\n  var successButton = fixture.find('.btn-success');\n```\n\nand then test against your expectation\n\n```\n  expect(successButton.css('color')).toEqual('rgb(255, 255, 255)');\n```\n\nYou can see the test below working in this  [jsfiddle](https://jsfiddle.net/Nicholas_Murray/2488cm7k/)\n\n<script src=\"https://gist.github.com/NicholasMurray/ca68a50a7c6a3954d74a.js\"></script>\n\nwith all tests passing\n\n<iframe width=\"320\" height=\"240\" style=\"width: 100%; height: 240px;\" src=\"https://jsfiddle.net/Nicholas_Murray/2488cm7k/embedded/result/\"></iframe>\n",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-4-22-jasmine-jquery-testing-css/2015-4-22-jasmine-jquery-testing-css.md",
+      "fields": {
+        "slug": "/2015-4-22-jasmine-jquery-testing-css/2015-4-22-jasmine-jquery-testing-css/"
+      }
+    },
+    "7a1ab2e9-b483-564d-87ca-212b8f390895": {
+      "id": "7a1ab2e9-b483-564d-87ca-212b8f390895",
+      "children": [],
+      "parent": "eeb97cd3-7636-5e8d-b30e-4cd04200d212",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/hquoVFO.jpg, \"Node HTTP-Server Simples\")\n\n# 5 steps to create a simple Node HTTP Server\n\n## Step 1.\n\nOpen a terminal and install NPM if you don't have it yet\n\n```\ncurl https://npmjs.org/install.sh | sh\n```\n\n\n## Step 2.\n\nInstall the Node HTTP Server\n\n```\nnpm install http-server -g\n```\n\n\n## Step 3.\n\nRun the Node HTTP Server\n\n```\nhttp-server\n```\n\n\n## Step 4.\n\nCreate a new index.html page in your current directory then visit http://127.0.0.1:8080\n\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "c970f96d5465e2993302e98d1976e75e",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "So you want a simple Node HTTP Server?",
+        "date": "2016-01-06T00:00:00.000Z",
+        "_PARENT": "eeb97cd3-7636-5e8d-b30e-4cd04200d212"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/hquoVFO.jpg, \"Node HTTP-Server Simples\")\n\n# 5 steps to create a simple Node HTTP Server\n\n## Step 1.\n\nOpen a terminal and install NPM if you don't have it yet\n\n```\ncurl https://npmjs.org/install.sh | sh\n```\n\n\n## Step 2.\n\nInstall the Node HTTP Server\n\n```\nnpm install http-server -g\n```\n\n\n## Step 3.\n\nRun the Node HTTP Server\n\n```\nhttp-server\n```\n\n\n## Step 4.\n\nCreate a new index.html page in your current directory then visit http://127.0.0.1:8080\n\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server.md",
+      "fields": {
+        "slug": "/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/"
+      }
+    },
+    "c56b307a-db98-58fe-83d2-2c4e93f69fea": {
+      "id": "c56b307a-db98-58fe-83d2-2c4e93f69fea",
+      "children": [],
+      "parent": "1c1f9700-2f38-51b3-95e3-b3b6547d4a1a",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/gdzl8OD.jpg, 'Python simpleHTTPServer Simples')\n\n# 5 steps to create a simple HTTP Server with python\n\n## Step 1.\n\nInstall Python 2.7 https://wiki.python.org/moin/BeginnersGuide/Download\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ python -m SimpleHTTPServer\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>python -m SimpleHTTPServer\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:8000/\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nServing HTTP on 0.0.0.0 port 8000 ...  \n127.0.0.1 - - [15/Feb/2014 14:13:45] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:38] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:39] \"GET /hello_world.gif HTTP/1.1\" 200 -\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
+        "type": "MarkdownRemark",
+        "contentDigest": "351788e6ce41ba55e555de02fac27b7c",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "So you want a simple HTTPServer?",
+        "date": "2014-04-04T00:00:00.000Z",
+        "_PARENT": "1c1f9700-2f38-51b3-95e3-b3b6547d4a1a"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/gdzl8OD.jpg, 'Python simpleHTTPServer Simples')\n\n# 5 steps to create a simple HTTP Server with python\n\n## Step 1.\n\nInstall Python 2.7 https://wiki.python.org/moin/BeginnersGuide/Download\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ python -m SimpleHTTPServer\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>python -m SimpleHTTPServer\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:8000/\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nServing HTTP on 0.0.0.0 port 8000 ...  \n127.0.0.1 - - [15/Feb/2014 14:13:45] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:38] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:39] \"GET /hello_world.gif HTTP/1.1\" 200 -\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver.md",
+      "fields": {
+        "slug": "/2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver/"
+      }
+    },
+    "6df0e87d-645b-5efa-9fa9-097740bd9624": {
+      "id": "6df0e87d-645b-5efa-9fa9-097740bd9624",
+      "children": [],
+      "parent": "3644f8a4-55a2-5531-96ba-add2ef7b0020",
+      "internal": {
+        "content": "\n![alt text ](https://i.imgur.com/zwRgfKG.jpg, \"There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke\")\n\n\n# Ternary Operators in Angular Templates\n\nTernary Operators are part of the toolset of most programming languages and are available of course in Javascript.\n\nThe syntax for a ternary operator is\n\n```\ncondition ? expr1 : expr2\n```\n\nWhere the *condition* is any statement that evaluates to true or false and expressions *expr1* and *expr2* are values of any type.\n\nIf the *condition* is true then value of *expr1* is returned otherwise the value of *expr2* is returned.\n\nSo in the following code\n\n```\nvar currentMember = {\n  name: 'Joe Bloggs',\n  isGoldMember: true\n};\nconsole.log(\"Price: \" + (currentMember.isGoldMember ? \"£5.00\" : \"£10.00\"));\n```\n\nThe output is\n\n```\nPrice: £5.00\n```\n\n\n## How to use ternary operators in angular templates\n\nThe most useful use case I have found for ternary operators is within angular directives such as ng-class and ng-style.\n\nTernary operators were added to Angular [1.1.5](https://github.com/angular/angular.js/commit/6798fec4390a72b7943a49505f8a245b6016c84b) and can be used from version 1.1.5 and up.\n\n### Using a ternary operator within ng-style\n\nIn the example we wish to apply to highlight every third item in a list.\n\nThe list to display contains the first names of users of a website.\n\nSo we will initialise our angular app in the usual way\n\n```\nvar app = angular.module('ternaryExample', []);\n```\n\nAnd the main controller contains a list of first names\n\n```\napp.controller('MainCtrl', function($scope) {\n  $scope.persons = [\n    'Allison',\n    'Arthur',\n    'Ana',\n    'Alex',\n    'Arlene',\n    'Alberto',\n    'Barry',\n    'Bertha',\n    'Bill',\n    'Bonnie',\n    'Bret',\n    'Beryl',\n    'Chantal',\n    'Cristobal',\n    'Claudette',\n    '...\n    ];\n});\n```\n\nTo simply display the user names with a greeting we use a template within our controller attached to the document body.\n\n\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons\">\n      <h4>\n      {% raw %}\n        Hello {{ person }}!\n      {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nBy adding track by $index we can use the current array index in our code.\n\n```\nperson in persons track by $index\n```\n\nSo how is this useful in a ternary operator where we want to apply a different style to every third person?\n\nWe can add one to $index, as it is a 0 based index, and then return either a green hex code value as the color if true\n\n```\n'#008141'\n```\n\nor a black hex code value if false\n\n```\n'#131313'\n```\n\nbased on a ternary expression that utilizes a modulus operator to evaluate if the current $index mod 3 returns 0 and is indeed a 'third' element in the array. \n\n```\n<h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n```\n\nLike so\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons track by $index\">\n      <h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n        {% raw %}\n        Hello {{ person }}!\n        {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nA working demo of our example can be found on [codepen](http://codepen.io/NicholasMurray/pen/MajgQZ).\n\n\n### Credits\n\nThe ternary joke used in the meme I found [here](https://www.allegro.cc/forums/thread/611052/2)",
+        "type": "MarkdownRemark",
+        "contentDigest": "42b6ba2f7726c8b5282bfac0f538d0b2",
+        "owner": "gatsby-transformer-remark",
+        "fieldOwners": {
+          "slug": "default-site-plugin"
+        }
+      },
+      "frontmatter": {
+        "title": "Ternary Operators in Angular Templates",
+        "date": "2015-05-22T00:00:00.000Z",
+        "_PARENT": "3644f8a4-55a2-5531-96ba-add2ef7b0020"
+      },
+      "excerpt": "",
+      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/zwRgfKG.jpg, \"There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke\")\n\n\n# Ternary Operators in Angular Templates\n\nTernary Operators are part of the toolset of most programming languages and are available of course in Javascript.\n\nThe syntax for a ternary operator is\n\n```\ncondition ? expr1 : expr2\n```\n\nWhere the *condition* is any statement that evaluates to true or false and expressions *expr1* and *expr2* are values of any type.\n\nIf the *condition* is true then value of *expr1* is returned otherwise the value of *expr2* is returned.\n\nSo in the following code\n\n```\nvar currentMember = {\n  name: 'Joe Bloggs',\n  isGoldMember: true\n};\nconsole.log(\"Price: \" + (currentMember.isGoldMember ? \"£5.00\" : \"£10.00\"));\n```\n\nThe output is\n\n```\nPrice: £5.00\n```\n\n\n## How to use ternary operators in angular templates\n\nThe most useful use case I have found for ternary operators is within angular directives such as ng-class and ng-style.\n\nTernary operators were added to Angular [1.1.5](https://github.com/angular/angular.js/commit/6798fec4390a72b7943a49505f8a245b6016c84b) and can be used from version 1.1.5 and up.\n\n### Using a ternary operator within ng-style\n\nIn the example we wish to apply to highlight every third item in a list.\n\nThe list to display contains the first names of users of a website.\n\nSo we will initialise our angular app in the usual way\n\n```\nvar app = angular.module('ternaryExample', []);\n```\n\nAnd the main controller contains a list of first names\n\n```\napp.controller('MainCtrl', function($scope) {\n  $scope.persons = [\n    'Allison',\n    'Arthur',\n    'Ana',\n    'Alex',\n    'Arlene',\n    'Alberto',\n    'Barry',\n    'Bertha',\n    'Bill',\n    'Bonnie',\n    'Bret',\n    'Beryl',\n    'Chantal',\n    'Cristobal',\n    'Claudette',\n    '...\n    ];\n});\n```\n\nTo simply display the user names with a greeting we use a template within our controller attached to the document body.\n\n\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons\">\n      <h4>\n      {% raw %}\n        Hello {{ person }}!\n      {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nBy adding track by $index we can use the current array index in our code.\n\n```\nperson in persons track by $index\n```\n\nSo how is this useful in a ternary operator where we want to apply a different style to every third person?\n\nWe can add one to $index, as it is a 0 based index, and then return either a green hex code value as the color if true\n\n```\n'#008141'\n```\n\nor a black hex code value if false\n\n```\n'#131313'\n```\n\nbased on a ternary expression that utilizes a modulus operator to evaluate if the current $index mod 3 returns 0 and is indeed a 'third' element in the array. \n\n```\n<h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n```\n\nLike so\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons track by $index\">\n      <h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n        {% raw %}\n        Hello {{ person }}!\n        {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nA working demo of our example can be found on [codepen](http://codepen.io/NicholasMurray/pen/MajgQZ).\n\n\n### Credits\n\nThe ternary joke used in the meme I found [here](https://www.allegro.cc/forums/thread/611052/2)",
+      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-9-22-ternary-operators-in-angular-templates/2015-9-22-ternary-operators-in-angular-templates.md",
+      "fields": {
+        "slug": "/2015-9-22-ternary-operators-in-angular-templates/2015-9-22-ternary-operators-in-angular-templates/"
       }
     },
     "SitePage /2017-3-18-react-random-squares-avatar/2017-3-18-react-random-squares-avatar/": {
@@ -6204,44 +6379,6 @@
         "owner": "internal-data-bridge"
       }
     },
-    "SitePage /2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/": {
-      "jsonName": "2015-5-4-so-you-want-a-simple-node-http-server-2015-5-4-so-you-want-a-simple-node-http-server-a1d",
-      "internalComponentName": "Component201554SoYouWantASimpleNodeHttpServer201554SoYouWantASimpleNodeHttpServer",
-      "path": "/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/",
-      "component": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/templates/blog-post.js",
-      "componentChunkName": "component---src-templates-blog-post-js",
-      "context": {
-        "slug": "/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/",
-        "previous": {
-          "fields": {
-            "slug": "/2015-12-2-git-add/2015-12-2-git-add/"
-          },
-          "frontmatter": {
-            "title": "What exactly does git add -A do?"
-          }
-        },
-        "next": {
-          "fields": {
-            "slug": "/2016-01-6-creating-an-angularjs-pulse-directive/2016-01-6-creating-an-angularjs-pulse-directive/"
-          },
-          "frontmatter": {
-            "title": "Creating an AngularJS pulse directive"
-          }
-        }
-      },
-      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
-      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
-      "componentPath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/templates/blog-post.js",
-      "id": "SitePage /2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/",
-      "parent": "SOURCE",
-      "children": [],
-      "internal": {
-        "type": "SitePage",
-        "contentDigest": "6c2d4db544d44519f50725030ba3c18b",
-        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
-        "owner": "internal-data-bridge"
-      }
-    },
     "SitePage /2016-01-16-self-executing-anonymous-function-in-angularjs/2016-01-16-self-executing-anonymous-function-in-angularjs/": {
       "jsonName": "2016-01-16-self-executing-anonymous-function-in-angularjs-2016-01-16-self-executing-anonymous-function-in-angularjs-a9e",
       "internalComponentName": "Component20160116SelfExecutingAnonymousFunctionInAngularjs20160116SelfExecutingAnonymousFunctionInAngularjs",
@@ -6314,6 +6451,44 @@
       "internal": {
         "type": "SitePage",
         "contentDigest": "094cc4273f53e1a7147cc9b296cec2ec",
+        "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+        "owner": "internal-data-bridge"
+      }
+    },
+    "SitePage /2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/": {
+      "jsonName": "2015-5-4-so-you-want-a-simple-node-http-server-2015-5-4-so-you-want-a-simple-node-http-server-a1d",
+      "internalComponentName": "Component201554SoYouWantASimpleNodeHttpServer201554SoYouWantASimpleNodeHttpServer",
+      "path": "/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/",
+      "component": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/templates/blog-post.js",
+      "componentChunkName": "component---src-templates-blog-post-js",
+      "context": {
+        "slug": "/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/",
+        "previous": {
+          "fields": {
+            "slug": "/2015-12-2-git-add/2015-12-2-git-add/"
+          },
+          "frontmatter": {
+            "title": "What exactly does git add -A do?"
+          }
+        },
+        "next": {
+          "fields": {
+            "slug": "/2016-01-6-creating-an-angularjs-pulse-directive/2016-01-6-creating-an-angularjs-pulse-directive/"
+          },
+          "frontmatter": {
+            "title": "Creating an AngularJS pulse directive"
+          }
+        }
+      },
+      "pluginCreator___NODE": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "pluginCreatorId": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
+      "componentPath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/src/templates/blog-post.js",
+      "id": "SitePage /2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/",
+      "parent": "SOURCE",
+      "children": [],
+      "internal": {
+        "type": "SitePage",
+        "contentDigest": "6c2d4db544d44519f50725030ba3c18b",
         "description": "7374ebf2-d961-52ee-92a2-c25e7cb387a9",
         "owner": "internal-data-bridge"
       }
@@ -7132,181 +7307,6 @@
         "description": "f795702c-a3b8-5a88-88ee-5d06019d44fa",
         "owner": "internal-data-bridge"
       }
-    },
-    "33e3d4eb-f3bb-519f-a1fe-8d4c9453ebe3": {
-      "id": "33e3d4eb-f3bb-519f-a1fe-8d4c9453ebe3",
-      "children": [],
-      "parent": "a390fc6e-ae40-5b0b-9b09-6d1b52ecf05c",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/BIvWLez.png, \"My Top 10 Podcasts for Coders\")\n\n\nHere are my top 10 podcasts for coding\n\n1. [Techzing](http://techzinglive.com/) Jason and Justin present a podcast that has the right mix of coding, tech stories and the projects that they are currently working on. They also sometimes have interviews episodes and on their 100 show they interviewed Jason Calacanis.\n\n2. [Dev Hell](http://devhell.info/) Presented by Chris Hartjes and Ed Finkler this podcast has a php slant which is saved by Chris getting on his unit testing hobby horse. Ed's native advertisements for the sponsors are both simultaneously hilarious and cringeworthy.\n\n3. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) A weekly talk show taking a pragmatic look at the art and business of Software Development and related technologies.\n\n4. [Adventures in Angular](http://devchat.tv/adventures-in-angular/) Adventures in Angular</a> A weekly show dedicated to the AngularJS framework.\n\n5. [Javascript Jabber](http://devchat.tv/js-jabber/) A weekly podcast about JavaScript, including Node.js, Front-End Technologies, Careers, Teams and more.\n\n6. [.Net Rocks](http://dotnetrocks.com/) Carl Franklin's and Richard Campbell's internet audio talk show for .Net Developers that's not just .Net Related.\t\n\n7. [HanselMinutes](http://hanselminutes.com/) Scott Hanselman provides 30 mins of fresh air for developers by interviewing the tech community about tech.\n\n8. [This Developers Life](http://thisdeveloperslife.com/) This Developers Life</a> Created in the style of This American Life, Rob Conery and Scott Hanselman get deep about developers and their lives.\n\n9. [Lately in Javascript](http://www.jsclasses.org/blog/category/podcast/) Lately in Javascript</a> Manuel Lemos and Arturs Sosins discuss the latest in javascript related developments.\n\n\n10. [Yet Another Podcast](http://jesseliberty.com/podcast/) Yet Another Podcast</a> Jessie Liberty's easy going interview style makes the podcast easy to listen to but informative.\n",
-        "type": "MarkdownRemark",
-        "contentDigest": "738d302a3f40b6da7e0be315bd51890f",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "My Top Ten Coding Podcasts",
-        "date": "2015-07-03T00:00:00.000Z",
-        "_PARENT": "a390fc6e-ae40-5b0b-9b09-6d1b52ecf05c"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/BIvWLez.png, \"My Top 10 Podcasts for Coders\")\n\n\nHere are my top 10 podcasts for coding\n\n1. [Techzing](http://techzinglive.com/) Jason and Justin present a podcast that has the right mix of coding, tech stories and the projects that they are currently working on. They also sometimes have interviews episodes and on their 100 show they interviewed Jason Calacanis.\n\n2. [Dev Hell](http://devhell.info/) Presented by Chris Hartjes and Ed Finkler this podcast has a php slant which is saved by Chris getting on his unit testing hobby horse. Ed's native advertisements for the sponsors are both simultaneously hilarious and cringeworthy.\n\n3. [Coder Radio](http://www.jupiterbroadcasting.com/show/coderradio/) A weekly talk show taking a pragmatic look at the art and business of Software Development and related technologies.\n\n4. [Adventures in Angular](http://devchat.tv/adventures-in-angular/) Adventures in Angular</a> A weekly show dedicated to the AngularJS framework.\n\n5. [Javascript Jabber](http://devchat.tv/js-jabber/) A weekly podcast about JavaScript, including Node.js, Front-End Technologies, Careers, Teams and more.\n\n6. [.Net Rocks](http://dotnetrocks.com/) Carl Franklin's and Richard Campbell's internet audio talk show for .Net Developers that's not just .Net Related.\t\n\n7. [HanselMinutes](http://hanselminutes.com/) Scott Hanselman provides 30 mins of fresh air for developers by interviewing the tech community about tech.\n\n8. [This Developers Life](http://thisdeveloperslife.com/) This Developers Life</a> Created in the style of This American Life, Rob Conery and Scott Hanselman get deep about developers and their lives.\n\n9. [Lately in Javascript](http://www.jsclasses.org/blog/category/podcast/) Lately in Javascript</a> Manuel Lemos and Arturs Sosins discuss the latest in javascript related developments.\n\n\n10. [Yet Another Podcast](http://jesseliberty.com/podcast/) Yet Another Podcast</a> Jessie Liberty's easy going interview style makes the podcast easy to listen to but informative.\n",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-7-3-my-top-ten-coding-podcasts/2015-7-3-my-top-ten-coding-podcasts.md",
-      "fields": {
-        "slug": "/2015-7-3-my-top-ten-coding-podcasts/2015-7-3-my-top-ten-coding-podcasts/"
-      }
-    },
-    "50b779f3-9727-572c-ad45-794b56460173": {
-      "id": "50b779f3-9727-572c-ad45-794b56460173",
-      "children": [],
-      "parent": "1ef95bf8-2e55-50ca-8ad1-fdf3d3cec3e3",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/DAqGSop.jpg, \"Shuffle a Javascript Array\")\n\n\n## Sorting\n\nWhen you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand.\n\nIf you call sort on a simple array of strings or numbers it will sort them alphabetically or numerically. Also, if you pass in an optional anonymous function parameter you can custom sort the array as long as your function returns a negative, zero or positive value.\n\n```\nvar colours = ['Red', 'Yellow', 'Blue'];\ncolours.sort();\n// results\n// [\"Blue\", \"Red\", \"Yellow\"]\n\nvar frequencyArray = [{ n: 3, name: 'Brown' }, { n: 2, name: 'Blue' }, { n: 4, name: 'Red'  }];\nfrequencyArray.sort(function(a,b) { return a.n - b.n; });\n\n// results\n// [{ n: 2, name: 'Blue' }, { n: 3, name: 'Brown' }, { n: 4, name: 'Red'  }];\n```\n\n\n\n## Random Sorting\n\nA simple way of randomly sorting a simple array of numbers is\n\n```\nvar numbers = [12,4,16,3];\nnumbers.sort(function() {\n  return .5 - Math.random();\n});\n// results from sorting 5 times\n//[3, 16, 4, 12]\n//[16, 4, 3, 12]\n//[16, 12, 4, 3]\n//[16, 12, 3, 4]\n//[3, 12, 16, 4]\n```\n\nbut this is the least efficient and <a href=\"http://jsfiddle.net/rcmp0aLL/\" target=\"_blank\">biased</a> way of sorting randomly as it has a strong bias toward keeping each element in its initial starting position in addition to the edges of the array having slightly more bias than the middle.\n\n## Random Shuffling An Array the Fisher-Yates (aka Knuth) Way\n\nOriginally designed by Fisher and Yates as pencil and paper method using a table of random numbers for randomness and then popularized by Donald E. Knuth in The Art of Computer Programming (<a href=\"https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle\" target=\"_blank\">source</a>). This shuffling algorithm provides with a more efficient and more random result set.\n\n```\nfunction shuffle(array) {\n  var currentIndex = array.length, temporaryValue, randomIndex ;\n\n  // While there remain elements to shuffle...\n  while (0 !== currentIndex) {\n\n    // Pick a remaining element...\n    randomIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex -= 1;\n\n    // And swap it with the current element.\n    temporaryValue = array[currentIndex];\n    array[currentIndex] = array[randomIndex];\n    array[randomIndex] = temporaryValue;\n  }\n\n  return array;\n}\n\nvar arr = [2, 11, 37, 42];\nshuffle(arr);\n// results\n// [42, 2, 37, 11]\n```",
-        "type": "MarkdownRemark",
-        "contentDigest": "fb22f80e9f84c83ebf1a068a4ce3e565",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "Shuffle a Javascript Array",
-        "date": "2015-07-13T00:00:00.000Z",
-        "_PARENT": "1ef95bf8-2e55-50ca-8ad1-fdf3d3cec3e3"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/DAqGSop.jpg, \"Shuffle a Javascript Array\")\n\n\n## Sorting\n\nWhen you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand.\n\nIf you call sort on a simple array of strings or numbers it will sort them alphabetically or numerically. Also, if you pass in an optional anonymous function parameter you can custom sort the array as long as your function returns a negative, zero or positive value.\n\n```\nvar colours = ['Red', 'Yellow', 'Blue'];\ncolours.sort();\n// results\n// [\"Blue\", \"Red\", \"Yellow\"]\n\nvar frequencyArray = [{ n: 3, name: 'Brown' }, { n: 2, name: 'Blue' }, { n: 4, name: 'Red'  }];\nfrequencyArray.sort(function(a,b) { return a.n - b.n; });\n\n// results\n// [{ n: 2, name: 'Blue' }, { n: 3, name: 'Brown' }, { n: 4, name: 'Red'  }];\n```\n\n\n\n## Random Sorting\n\nA simple way of randomly sorting a simple array of numbers is\n\n```\nvar numbers = [12,4,16,3];\nnumbers.sort(function() {\n  return .5 - Math.random();\n});\n// results from sorting 5 times\n//[3, 16, 4, 12]\n//[16, 4, 3, 12]\n//[16, 12, 4, 3]\n//[16, 12, 3, 4]\n//[3, 12, 16, 4]\n```\n\nbut this is the least efficient and <a href=\"http://jsfiddle.net/rcmp0aLL/\" target=\"_blank\">biased</a> way of sorting randomly as it has a strong bias toward keeping each element in its initial starting position in addition to the edges of the array having slightly more bias than the middle.\n\n## Random Shuffling An Array the Fisher-Yates (aka Knuth) Way\n\nOriginally designed by Fisher and Yates as pencil and paper method using a table of random numbers for randomness and then popularized by Donald E. Knuth in The Art of Computer Programming (<a href=\"https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle\" target=\"_blank\">source</a>). This shuffling algorithm provides with a more efficient and more random result set.\n\n```\nfunction shuffle(array) {\n  var currentIndex = array.length, temporaryValue, randomIndex ;\n\n  // While there remain elements to shuffle...\n  while (0 !== currentIndex) {\n\n    // Pick a remaining element...\n    randomIndex = Math.floor(Math.random() * currentIndex);\n    currentIndex -= 1;\n\n    // And swap it with the current element.\n    temporaryValue = array[currentIndex];\n    array[currentIndex] = array[randomIndex];\n    array[randomIndex] = temporaryValue;\n  }\n\n  return array;\n}\n\nvar arr = [2, 11, 37, 42];\nshuffle(arr);\n// results\n// [42, 2, 37, 11]\n```",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-7-13-shuffling-a-javascript-array/2015-7-13-shuffling-a-javascript-array.md",
-      "fields": {
-        "slug": "/2015-7-13-shuffling-a-javascript-array/2015-7-13-shuffling-a-javascript-array/"
-      }
-    },
-    "dc83c82d-04da-58bd-80ed-584c75f2e619": {
-      "id": "dc83c82d-04da-58bd-80ed-584c75f2e619",
-      "children": [],
-      "parent": "ffc10a40-885b-5a83-ac74-769c6039eaa7",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/rtSu3eu.jpg, \"PHP Server Simples\")\n\n# 5 steps to create a simple PHP Server\n\n## Step 1.\n\nInstall PHP 5 http://php.net/manual/en/install.php\n\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ sudo php -S 127.0.0.1:80 -t .\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>php -S 127.0.0.1:80 -t .\n\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:80\n\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nPHP 5.5.14 Development Server started at Mon Mar  2 08:33:26 2015   \nListening on http://127.0.0.1:80   \nDocument root is /../../../test   \nPress Ctrl-C to quit.   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51466 [200]: /     \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51467 [200]: /lib/jasmine-1.3.1/jasmine.css   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51468 [404]: /js/libs/require-2.1.5.min.js \n\n\n## Step 5. \n\nThere is no step 5. Simples!\n",
-        "type": "MarkdownRemark",
-        "contentDigest": "0fc729590386000a90d2b9f150b21eca",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "So you want a simple PHP Server?",
-        "date": "2015-03-02T00:00:00.000Z",
-        "_PARENT": "ffc10a40-885b-5a83-ac74-769c6039eaa7"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/rtSu3eu.jpg, \"PHP Server Simples\")\n\n# 5 steps to create a simple PHP Server\n\n## Step 1.\n\nInstall PHP 5 http://php.net/manual/en/install.php\n\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ sudo php -S 127.0.0.1:80 -t .\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>php -S 127.0.0.1:80 -t .\n\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:80\n\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nPHP 5.5.14 Development Server started at Mon Mar  2 08:33:26 2015   \nListening on http://127.0.0.1:80   \nDocument root is /../../../test   \nPress Ctrl-C to quit.   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51466 [200]: /     \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51467 [200]: /lib/jasmine-1.3.1/jasmine.css   \n[Mon Mar  2 08:33:40 2015] 127.0.0.1:51468 [404]: /js/libs/require-2.1.5.min.js \n\n\n## Step 5. \n\nThere is no step 5. Simples!\n",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-3-2-so-you-want-a-simple-php-server/2015-3-2-so-you-want-a-simple-php-server.md",
-      "fields": {
-        "slug": "/2015-3-2-so-you-want-a-simple-php-server/2015-3-2-so-you-want-a-simple-php-server/"
-      }
-    },
-    "0d617aa5-4a55-5fff-9318-70a3c718c3d9": {
-      "id": "0d617aa5-4a55-5fff-9318-70a3c718c3d9",
-      "children": [],
-      "parent": "737c9853-6239-58a6-9e89-16f59d252225",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/NmVNJdW.jpg, \"Now test your CSS classess\")\n\n\n# If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.\n\njasmine-jquery provides two extensions for the [Jasmine](http://jasmine.github.io/) JavaScript Testing Framework:\n\n- a set of custom matchers for jQuery framework\n- an API for handling HTML, CSS, and JSON fixtures in your specs\n\nUsing the loadStyleFixtures or setStyleFixtures global shortcuts we can add the css we want to test either from a relative url\n\n```\n  loadStyleFixtures('css/stylesheet.css');\n```\n\nor append the classes directly to the document head\n\n```\n  setStyleFixtures('.btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }');\n```\n\nThen load the fixtures using the loadFixtures or setFixtures global shortcuts either from a relative url\n\n```\n  loadFixtures('templates/success.html');\n```\n\nor append the fixture directly to the document body\n\n```\n  fixture = setFixtures('<button type=\"button\" class=\"btn btn-success\">Success</button>');\n```\n\nThen use the custom matchers to retrieve the element you would like to test against\n\n```\n  var successButton = fixture.find('.btn-success');\n```\n\nand then test against your expectation\n\n```\n  expect(successButton.css('color')).toEqual('rgb(255, 255, 255)');\n```\n\nYou can see the test below working in this  [jsfiddle](https://jsfiddle.net/Nicholas_Murray/2488cm7k/)\n\n<script src=\"https://gist.github.com/NicholasMurray/ca68a50a7c6a3954d74a.js\"></script>\n\nwith all tests passing\n\n<iframe width=\"320\" height=\"240\" style=\"width: 100%; height: 240px;\" src=\"https://jsfiddle.net/Nicholas_Murray/2488cm7k/embedded/result/\"></iframe>\n",
-        "type": "MarkdownRemark",
-        "contentDigest": "469020e44b1ba633d9beff130695fe1a",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "Testing CSS classes with Jasmine-JQuery",
-        "date": "2015-04-03T00:00:00.000Z",
-        "_PARENT": "737c9853-6239-58a6-9e89-16f59d252225"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/NmVNJdW.jpg, \"Now test your CSS classess\")\n\n\n# If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.\n\njasmine-jquery provides two extensions for the [Jasmine](http://jasmine.github.io/) JavaScript Testing Framework:\n\n- a set of custom matchers for jQuery framework\n- an API for handling HTML, CSS, and JSON fixtures in your specs\n\nUsing the loadStyleFixtures or setStyleFixtures global shortcuts we can add the css we want to test either from a relative url\n\n```\n  loadStyleFixtures('css/stylesheet.css');\n```\n\nor append the classes directly to the document head\n\n```\n  setStyleFixtures('.btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }');\n```\n\nThen load the fixtures using the loadFixtures or setFixtures global shortcuts either from a relative url\n\n```\n  loadFixtures('templates/success.html');\n```\n\nor append the fixture directly to the document body\n\n```\n  fixture = setFixtures('<button type=\"button\" class=\"btn btn-success\">Success</button>');\n```\n\nThen use the custom matchers to retrieve the element you would like to test against\n\n```\n  var successButton = fixture.find('.btn-success');\n```\n\nand then test against your expectation\n\n```\n  expect(successButton.css('color')).toEqual('rgb(255, 255, 255)');\n```\n\nYou can see the test below working in this  [jsfiddle](https://jsfiddle.net/Nicholas_Murray/2488cm7k/)\n\n<script src=\"https://gist.github.com/NicholasMurray/ca68a50a7c6a3954d74a.js\"></script>\n\nwith all tests passing\n\n<iframe width=\"320\" height=\"240\" style=\"width: 100%; height: 240px;\" src=\"https://jsfiddle.net/Nicholas_Murray/2488cm7k/embedded/result/\"></iframe>\n",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-4-22-jasmine-jquery-testing-css/2015-4-22-jasmine-jquery-testing-css.md",
-      "fields": {
-        "slug": "/2015-4-22-jasmine-jquery-testing-css/2015-4-22-jasmine-jquery-testing-css/"
-      }
-    },
-    "7a1ab2e9-b483-564d-87ca-212b8f390895": {
-      "id": "7a1ab2e9-b483-564d-87ca-212b8f390895",
-      "children": [],
-      "parent": "eeb97cd3-7636-5e8d-b30e-4cd04200d212",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/hquoVFO.jpg, \"Node HTTP-Server Simples\")\n\n# 5 steps to create a simple Node HTTP Server\n\n## Step 1.\n\nOpen a terminal and install NPM if you don't have it yet\n\n```\ncurl https://npmjs.org/install.sh | sh\n```\n\n\n## Step 2.\n\nInstall the Node HTTP Server\n\n```\nnpm install http-server -g\n```\n\n\n## Step 3.\n\nRun the Node HTTP Server\n\n```\nhttp-server\n```\n\n\n## Step 4.\n\nCreate a new index.html page in your current directory then visit http://127.0.0.1:8080\n\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
-        "type": "MarkdownRemark",
-        "contentDigest": "c970f96d5465e2993302e98d1976e75e",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "So you want a simple Node HTTP Server?",
-        "date": "2016-01-06T00:00:00.000Z",
-        "_PARENT": "eeb97cd3-7636-5e8d-b30e-4cd04200d212"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/hquoVFO.jpg, \"Node HTTP-Server Simples\")\n\n# 5 steps to create a simple Node HTTP Server\n\n## Step 1.\n\nOpen a terminal and install NPM if you don't have it yet\n\n```\ncurl https://npmjs.org/install.sh | sh\n```\n\n\n## Step 2.\n\nInstall the Node HTTP Server\n\n```\nnpm install http-server -g\n```\n\n\n## Step 3.\n\nRun the Node HTTP Server\n\n```\nhttp-server\n```\n\n\n## Step 4.\n\nCreate a new index.html page in your current directory then visit http://127.0.0.1:8080\n\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server.md",
-      "fields": {
-        "slug": "/2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/"
-      }
-    },
-    "c56b307a-db98-58fe-83d2-2c4e93f69fea": {
-      "id": "c56b307a-db98-58fe-83d2-2c4e93f69fea",
-      "children": [],
-      "parent": "1c1f9700-2f38-51b3-95e3-b3b6547d4a1a",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/gdzl8OD.jpg, 'Python simpleHTTPServer Simples')\n\n# 5 steps to create a simple HTTP Server with python\n\n## Step 1.\n\nInstall Python 2.7 https://wiki.python.org/moin/BeginnersGuide/Download\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ python -m SimpleHTTPServer\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>python -m SimpleHTTPServer\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:8000/\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nServing HTTP on 0.0.0.0 port 8000 ...  \n127.0.0.1 - - [15/Feb/2014 14:13:45] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:38] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:39] \"GET /hello_world.gif HTTP/1.1\" 200 -\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
-        "type": "MarkdownRemark",
-        "contentDigest": "351788e6ce41ba55e555de02fac27b7c",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "So you want a simple HTTPServer?",
-        "date": "2014-04-04T00:00:00.000Z",
-        "_PARENT": "1c1f9700-2f38-51b3-95e3-b3b6547d4a1a"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/gdzl8OD.jpg, 'Python simpleHTTPServer Simples')\n\n# 5 steps to create a simple HTTP Server with python\n\n## Step 1.\n\nInstall Python 2.7 https://wiki.python.org/moin/BeginnersGuide/Download\n\n## Step 2.\n\nOn a mac Open up a terminal and type:\n\n$ cd Documents/somedir\n$ python -m SimpleHTTPServer\n\nOn windows Open up the console and type:\n\nc:\\Users\\CurrentFolder>cd \\Users\\somedir\nc:\\Users\\CurrentFolder>python -m SimpleHTTPServer\n\n## Step 3.\n\nCreate a new index.html page in somedir then visit http://127.0.0.1:8000/\n\n## Step 4.\n\nView the http requests in your terminal/console\n\nServing HTTP on 0.0.0.0 port 8000 ...  \n127.0.0.1 - - [15/Feb/2014 14:13:45] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:38] \"GET / HTTP/1.1\" 200 -  \n127.0.0.1 - - [15/Feb/2014 14:18:39] \"GET /hello_world.gif HTTP/1.1\" 200 -\n\n## Step 5.\n\nThere is no step 5. Simples!\n",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver.md",
-      "fields": {
-        "slug": "/2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver/"
-      }
-    },
-    "6df0e87d-645b-5efa-9fa9-097740bd9624": {
-      "id": "6df0e87d-645b-5efa-9fa9-097740bd9624",
-      "children": [],
-      "parent": "3644f8a4-55a2-5531-96ba-add2ef7b0020",
-      "internal": {
-        "content": "\n![alt text ](https://i.imgur.com/zwRgfKG.jpg, \"There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke\")\n\n\n# Ternary Operators in Angular Templates\n\nTernary Operators are part of the toolset of most programming languages and are available of course in Javascript.\n\nThe syntax for a ternary operator is\n\n```\ncondition ? expr1 : expr2\n```\n\nWhere the *condition* is any statement that evaluates to true or false and expressions *expr1* and *expr2* are values of any type.\n\nIf the *condition* is true then value of *expr1* is returned otherwise the value of *expr2* is returned.\n\nSo in the following code\n\n```\nvar currentMember = {\n  name: 'Joe Bloggs',\n  isGoldMember: true\n};\nconsole.log(\"Price: \" + (currentMember.isGoldMember ? \"£5.00\" : \"£10.00\"));\n```\n\nThe output is\n\n```\nPrice: £5.00\n```\n\n\n## How to use ternary operators in angular templates\n\nThe most useful use case I have found for ternary operators is within angular directives such as ng-class and ng-style.\n\nTernary operators were added to Angular [1.1.5](https://github.com/angular/angular.js/commit/6798fec4390a72b7943a49505f8a245b6016c84b) and can be used from version 1.1.5 and up.\n\n### Using a ternary operator within ng-style\n\nIn the example we wish to apply to highlight every third item in a list.\n\nThe list to display contains the first names of users of a website.\n\nSo we will initialise our angular app in the usual way\n\n```\nvar app = angular.module('ternaryExample', []);\n```\n\nAnd the main controller contains a list of first names\n\n```\napp.controller('MainCtrl', function($scope) {\n  $scope.persons = [\n    'Allison',\n    'Arthur',\n    'Ana',\n    'Alex',\n    'Arlene',\n    'Alberto',\n    'Barry',\n    'Bertha',\n    'Bill',\n    'Bonnie',\n    'Bret',\n    'Beryl',\n    'Chantal',\n    'Cristobal',\n    'Claudette',\n    '...\n    ];\n});\n```\n\nTo simply display the user names with a greeting we use a template within our controller attached to the document body.\n\n\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons\">\n      <h4>\n      {% raw %}\n        Hello {{ person }}!\n      {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nBy adding track by $index we can use the current array index in our code.\n\n```\nperson in persons track by $index\n```\n\nSo how is this useful in a ternary operator where we want to apply a different style to every third person?\n\nWe can add one to $index, as it is a 0 based index, and then return either a green hex code value as the color if true\n\n```\n'#008141'\n```\n\nor a black hex code value if false\n\n```\n'#131313'\n```\n\nbased on a ternary expression that utilizes a modulus operator to evaluate if the current $index mod 3 returns 0 and is indeed a 'third' element in the array. \n\n```\n<h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n```\n\nLike so\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons track by $index\">\n      <h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n        {% raw %}\n        Hello {{ person }}!\n        {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nA working demo of our example can be found on [codepen](http://codepen.io/NicholasMurray/pen/MajgQZ).\n\n\n### Credits\n\nThe ternary joke used in the meme I found [here](https://www.allegro.cc/forums/thread/611052/2)",
-        "type": "MarkdownRemark",
-        "contentDigest": "42b6ba2f7726c8b5282bfac0f538d0b2",
-        "owner": "gatsby-transformer-remark",
-        "fieldOwners": {
-          "slug": "default-site-plugin"
-        }
-      },
-      "frontmatter": {
-        "title": "Ternary Operators in Angular Templates",
-        "date": "2015-05-22T00:00:00.000Z",
-        "_PARENT": "3644f8a4-55a2-5531-96ba-add2ef7b0020"
-      },
-      "excerpt": "",
-      "rawMarkdownBody": "\n![alt text ](https://i.imgur.com/zwRgfKG.jpg, \"There are 10 types of people in this world: those who understand ternary, those who don't, and those who thought this was a binary joke\")\n\n\n# Ternary Operators in Angular Templates\n\nTernary Operators are part of the toolset of most programming languages and are available of course in Javascript.\n\nThe syntax for a ternary operator is\n\n```\ncondition ? expr1 : expr2\n```\n\nWhere the *condition* is any statement that evaluates to true or false and expressions *expr1* and *expr2* are values of any type.\n\nIf the *condition* is true then value of *expr1* is returned otherwise the value of *expr2* is returned.\n\nSo in the following code\n\n```\nvar currentMember = {\n  name: 'Joe Bloggs',\n  isGoldMember: true\n};\nconsole.log(\"Price: \" + (currentMember.isGoldMember ? \"£5.00\" : \"£10.00\"));\n```\n\nThe output is\n\n```\nPrice: £5.00\n```\n\n\n## How to use ternary operators in angular templates\n\nThe most useful use case I have found for ternary operators is within angular directives such as ng-class and ng-style.\n\nTernary operators were added to Angular [1.1.5](https://github.com/angular/angular.js/commit/6798fec4390a72b7943a49505f8a245b6016c84b) and can be used from version 1.1.5 and up.\n\n### Using a ternary operator within ng-style\n\nIn the example we wish to apply to highlight every third item in a list.\n\nThe list to display contains the first names of users of a website.\n\nSo we will initialise our angular app in the usual way\n\n```\nvar app = angular.module('ternaryExample', []);\n```\n\nAnd the main controller contains a list of first names\n\n```\napp.controller('MainCtrl', function($scope) {\n  $scope.persons = [\n    'Allison',\n    'Arthur',\n    'Ana',\n    'Alex',\n    'Arlene',\n    'Alberto',\n    'Barry',\n    'Bertha',\n    'Bill',\n    'Bonnie',\n    'Bret',\n    'Beryl',\n    'Chantal',\n    'Cristobal',\n    'Claudette',\n    '...\n    ];\n});\n```\n\nTo simply display the user names with a greeting we use a template within our controller attached to the document body.\n\n\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons\">\n      <h4>\n      {% raw %}\n        Hello {{ person }}!\n      {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nBy adding track by $index we can use the current array index in our code.\n\n```\nperson in persons track by $index\n```\n\nSo how is this useful in a ternary operator where we want to apply a different style to every third person?\n\nWe can add one to $index, as it is a 0 based index, and then return either a green hex code value as the color if true\n\n```\n'#008141'\n```\n\nor a black hex code value if false\n\n```\n'#131313'\n```\n\nbased on a ternary expression that utilizes a modulus operator to evaluate if the current $index mod 3 returns 0 and is indeed a 'third' element in the array. \n\n```\n<h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n```\n\nLike so\n\n```\n <body ng-controller=\"MainCtrl\">\n    <div ng-repeat=\"person in persons track by $index\">\n      <h4 ng-style=\"{color : ($index + 1) % 3 == 0 ? '#008141' : '#131313'}\">\n        {% raw %}\n        Hello {{ person }}!\n        {% endraw %}\n      </h4>\n    </div>\n  </body>\n```\n\n\nA working demo of our example can be found on [codepen](http://codepen.io/NicholasMurray/pen/MajgQZ).\n\n\n### Credits\n\nThe ternary joke used in the meme I found [here](https://www.allegro.cc/forums/thread/611052/2)",
-      "fileAbsolutePath": "/Users/nicholasmurray/Documents/blog/nicholasmurray.github.io/content/blog/2015-9-22-ternary-operators-in-angular-templates/2015-9-22-ternary-operators-in-angular-templates.md",
-      "fields": {
-        "slug": "/2015-9-22-ternary-operators-in-angular-templates/2015-9-22-ternary-operators-in-angular-templates/"
-      }
     }
   },
   "status": {
@@ -7347,8 +7347,8 @@
         "/2015-2-7-psst-wanna-monkey-patch/2015-2-7-psst-wanna-monkey-patch/",
         "/2014-4-4-unit-testing-arrays-with-qunit/2014-4-4-unit-testing-arrays-with-qunit/",
         "/2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver/",
-        "sq--src-components-bio-js",
-        "sq--src-components-seo-js"
+        "sq--src-components-seo-js",
+        "sq--src-components-bio-js"
       ],
       "f178728c-fedc-54ca-baa3-3bbfb4b2f910": [
         "sq--src-components-bio-js"
@@ -7477,7 +7477,7 @@
     "2015-4-3-collabocats-2015-4-3-collabocats-9c7": "931/path---2015-4-3-collabocats-2015-4-3-collabocats-9-c-7-38a-7A7GGqu70hqcWIcYOmKAbOqYo",
     "2015-4-22-jasmine-jquery-testing-css-2015-4-22-jasmine-jquery-testing-css-17f": "26/path---2015-4-22-jasmine-jquery-testing-css-2015-4-22-jasmine-jquery-testing-css-17-f-628-n6tqf6pQCRSglr9ERPUR0KkADY",
     "2015-3-31-angularjs-bind-2015-3-31-angularjs-bind-d70": "55/path---2015-3-31-angularjs-bind-2015-3-31-angularjs-bind-d-70-e0b-6zEILeLfgdGjqr0uoiRQx7fmFio",
-    "2015-5-4-so-you-want-a-simple-node-http-server-2015-5-4-so-you-want-a-simple-node-http-server-a1d": "764/path---2015-5-4-so-you-want-a-simple-node-http-server-2015-5-4-so-you-want-a-simple-node-http-server-a-1-d-9c3-seDyhREA3UoeofBTNDeZIGOZj50",
+    "2015-5-4-so-you-want-a-simple-node-http-server-2015-5-4-so-you-want-a-simple-node-http-server-a1d": "308/path---2015-5-4-so-you-want-a-simple-node-http-server-2015-5-4-so-you-want-a-simple-node-http-server-a-1-d-9c3-yaNm1xxHF5pFi5wtXMAGX3qQE3M",
     "2015-5-12-angularjs-service-v-factory-2015-5-12-angularjs-service-v-factory-946": "288/path---2015-5-12-angularjs-service-v-factory-2015-5-12-angularjs-service-v-factory-946-7dd-bRBhH4glMpq2DlxF933Py5VNzA",
     "2015-7-3-my-top-ten-coding-podcasts-2015-7-3-my-top-ten-coding-podcasts-d54": "794/path---2015-7-3-my-top-ten-coding-podcasts-2015-7-3-my-top-ten-coding-podcasts-d-54-57f-rl7sk4EETIV1BftoYVRAb6r1vAc",
     "2015-7-13-shuffling-a-javascript-array-2015-7-13-shuffling-a-javascript-array-a05": "185/path---2015-7-13-shuffling-a-javascript-array-2015-7-13-shuffling-a-javascript-array-a-05-0cc-kv4aFrRuHW9L2WfXtvV0yScpQ",
@@ -7486,11 +7486,11 @@
     "2015-10-2-debugging-angularjs-scope-in-a-browser-console-2015-10-2-debugging-angularjs-scope-in-a-browser-console-771": "949/path---2015-10-2-debugging-angularjs-scope-in-a-browser-console-2015-10-2-debugging-angularjs-scope-in-a-browser-console-771-347-LEaxr2maFrZLHTpFnQW4KAL5Q",
     "2015-11-4-angularjs-empty-scope-object-check-2015-11-4-angularjs-empty-scope-object-check-ac7": "965/path---2015-11-4-angularjs-empty-scope-object-check-2015-11-4-angularjs-empty-scope-object-check-ac-7-77c-gnk7ENnxMANdSjUQxhAvUpUBQGs",
     "2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ng-bind-or-interpolation-2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ng-bind-or-interpolation-b06": "870/path---2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ng-bind-or-interpolation-2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ng-bind-or-interpolation-b-06-51e-mzCoBeiHQUvM5LUXxdU2YQ1uUQ",
-    "2015-12-2-git-add-2015-12-2-git-add-d82": "670/path---2015-12-2-git-add-2015-12-2-git-add-d-82-299-WfB2a0xWQwJIQkYR1pEq0VDDjHg",
-    "2016-01-6-creating-an-angularjs-pulse-directive-2016-01-6-creating-an-angularjs-pulse-directive-270": "768/path---2016-01-6-creating-an-angularjs-pulse-directive-2016-01-6-creating-an-angularjs-pulse-directive-270-fe6-G8ybP1WPBeKxg1aAZ87Hc2dqE",
-    "2016-01-16-self-executing-anonymous-function-in-angularjs-2016-01-16-self-executing-anonymous-function-in-angularjs-a9e": "424/path---2016-01-16-self-executing-anonymous-function-in-angularjs-2016-01-16-self-executing-anonymous-function-in-angularjs-a-9-e-d81-wn7Oy8rnIanRp1A5C5jOyIehBmc",
+    "2015-12-2-git-add-2015-12-2-git-add-d82": "607/path---2015-12-2-git-add-2015-12-2-git-add-d-82-299-tjR3Cju63jgyyuSev7Mhzz2xY",
+    "2016-01-6-creating-an-angularjs-pulse-directive-2016-01-6-creating-an-angularjs-pulse-directive-270": "398/path---2016-01-6-creating-an-angularjs-pulse-directive-2016-01-6-creating-an-angularjs-pulse-directive-270-fe6-xNUeNQNrBd5HmE03kyNvEWujo",
+    "2016-01-16-self-executing-anonymous-function-in-angularjs-2016-01-16-self-executing-anonymous-function-in-angularjs-a9e": "848/path---2016-01-16-self-executing-anonymous-function-in-angularjs-2016-01-16-self-executing-anonymous-function-in-angularjs-a-9-e-d81-vWETuWqX7F1KdyhPNrlVtG8vjwY",
     "2016-3-10-typescript-spread-operator-2016-3-10-typescript-spread-operator-87f": "84/path---2016-3-10-typescript-spread-operator-2016-3-10-typescript-spread-operator-87-f-8ff-NjNaSrrsOdO1jpHnzYONik9GBs",
-    "2016-2-15-theres-an-app-for-that-kadence-2016-2-15-theres-an-app-for-that-kadence-312": "572/path---2016-2-15-theres-an-app-for-that-kadence-2016-2-15-theres-an-app-for-that-kadence-312-014-G0eAUZTKMy2TQaNZnBl70l6EHY",
+    "2016-2-15-theres-an-app-for-that-kadence-2016-2-15-theres-an-app-for-that-kadence-312": "714/path---2016-2-15-theres-an-app-for-that-kadence-2016-2-15-theres-an-app-for-that-kadence-312-014-FFB9hpj8uhJE6rJRXc7ofAr4E0",
     "2016-4-14-angular-2-unit-testing-a-component-2016-4-14-angular-2-unit-testing-a-component-485": "403/path---2016-4-14-angular-2-unit-testing-a-component-2016-4-14-angular-2-unit-testing-a-component-485-844-Pu4CjTaPDj2AOL69dUsZ13Wb4",
     "2016-5-9-windows-deleting-node-modules-2016-5-9-windows-deleting-node-modules-415": "92/path---2016-5-9-windows-deleting-node-modules-2016-5-9-windows-deleting-node-modules-415-3ec-HvTXC8TXQtMqeMP5xmuxY0mrpCw",
     "2016-5-29-the-apple-watch-at-a-glance-2016-5-29-the-apple-watch-at-a-glance-f86": "198/path---2016-5-29-the-apple-watch-at-a-glance-2016-5-29-the-apple-watch-at-a-glance-f-86-33f-5MXWpPkuvC2eZMBYrgNauf2dUAU",

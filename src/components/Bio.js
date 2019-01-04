@@ -23,7 +23,7 @@ function Bio() {
                 </div>
                 <div className={styles.siteInfo}>
                   <h1 className={styles.siteName}>
-                    <a href="/">It's My Code Blog</a>
+                    <a className={styles.siteNameLink} href="/">It's My Code Blog</a>
                   </h1>
                   <p className={styles.siteDescription}>Stuff I've learnt and stuff I like</p>
                 </div>
