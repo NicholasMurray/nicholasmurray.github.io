@@ -61,8 +61,8 @@ As shown in the chart below the amount of time it takes to execute the algorithm
       <!-- axis -->
       <path d="M50 50 L 50 550 L 551 550" fill="transparent" stroke="#5c5c5b" stroke-width="2"></path>
       <!-- labels -->
-      <text x="0" y="0" transform="translate(20 340) rotate(-90)" style="font-size:20px; color: #5c5c5b; font-style: italic;">Time ---></text>
-      <text x="0" y="0" transform="translate(250 595)" style="font-size:20px; color: #5c5c5b; font-style: italic;">Input Size ---></text>
+      <text x="0" y="0" transform="translate(16 400) rotate(-90)" style="font-size:16px; color: #5c5c5b; font-style: italic;">Time ---> (no. of operations)</text>
+      <text x="0" y="0" transform="translate(188 595)" style="font-size:16px; color: #5c5c5b; font-style: italic;">Input Size ---> (no. of elements)</text>
       <!-- values x axis -->
       <text x="48" y="570" style="font-size:12px; color: #5c5c5b;">0</text>
       <line x1="100" y1="550" x2="100" y2="560" style="stroke:#5c5c5b;stroke-width:2" />
@@ -88,25 +88,25 @@ As shown in the chart below the amount of time it takes to execute the algorithm
       <!-- values y axis -->
       <text x="30" y="554" style="font-size:12px; color: #5c5c5b;">0</text>
       <line x1="40" y1="500" x2="50" y2="500" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="504" style="font-size:12px; color: #5c5c5b;">10</text>
+      <text x="19" y="504" style="font-size:12px; color: #5c5c5b;">100</text>
       <line x1="40" y1="450" x2="50" y2="450" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="454" style="font-size:12px; color: #5c5c5b;">20</text>
+      <text x="19" y="454" style="font-size:12px; color: #5c5c5b;">200</text>
       <line x1="40" y1="400" x2="50" y2="400" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="404" style="font-size:12px; color: #5c5c5b;">30</text>
+      <text x="19" y="404" style="font-size:12px; color: #5c5c5b;">300</text>
       <line x1="40" y1="350" x2="50" y2="350" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="354" style="font-size:12px; color: #5c5c5b;">40</text>
-      <line x1="40" y1="300" x2="50" y2="300" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="304" style="font-size:12px; color: #5c5c5b;">50</text>
+      <text x="19" y="354" style="font-size:12px; color: #5c5c5b;">400</text>
+      <line x1="40" y1="300" x2="50" y2="300" style="stroke:#5c5c5b;st roke-width:2" />
+      <text x="19" y="304" style="font-size:12px; color: #5c5c5b;">500</text>
       <line x1="40" y1="250" x2="50" y2="250" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="254" style="font-size:12px; color: #5c5c5b;">60</text>
+      <text x="19" y="254" style="font-size:12px; color: #5c5c5b;">600</text>
       <line x1="40" y1="200" x2="50" y2="200" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="204" style="font-size:12px; color: #5c5c5b;">70</text>
+      <text x="19" y="204" style="font-size:12px; color: #5c5c5b;">700</text>
       <line x1="40" y1="150" x2="50" y2="150" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="154" style="font-size:12px; color: #5c5c5b;">80</text>
+      <text x="19" y="154" style="font-size:12px; color: #5c5c5b;">800</text>
       <line x1="40" y1="100" x2="50" y2="100" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="24" y="104" style="font-size:12px; color: #5c5c5b;">90</text>
+      <text x="19" y="104" style="font-size:12px; color: #5c5c5b;">900</text>
       <line x1="40" y1="50" x2="50" y2="50" style="stroke:#5c5c5b;stroke-width:2" />
-      <text x="18" y="54" style="font-size:12px; color: #5c5c5b;">100</text>
+      <text x="12" y="54" style="font-size:12px; color: #5c5c5b;">1000</text>
       <!-- O (1) path -->
       <path d="M51 548 L 550 548" fill="transparent" stroke="#f05a1f" stroke-width="2"></path>
       <!-- O (1) path label -->
