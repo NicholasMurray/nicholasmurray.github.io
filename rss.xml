@@ -1,0 +1,1961 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[It's My Code Blog]]></title><description><![CDATA[Stuff I've learnt and stuff I like]]></description><link>http://www.itsmycodeblog.com/</link><generator>RSS for Node</generator><lastBuildDate>Sun, 03 Feb 2019 22:36:56 GMT</lastBuildDate><item><title><![CDATA[Big-O notation with Javascript]]></title><description><![CDATA[
+Photo by Jeff Fielitz on Unsplash Big-O notation with Javascript Big-O notation What is Big-O notation? Big-O notation is a special…]]></description><link>http://www.itsmycodeblog.com//2019-1-13-big-o-notation-with-javascript/2019-1-13-big-o-notation-with-javascript/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2019-1-13-big-o-notation-with-javascript/2019-1-13-big-o-notation-with-javascript/</guid><pubDate>Sun, 13 Jan 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/jeff-fielitz-120506-unsplash.jpg&quot; alt=&quot;alt text &quot; title=&quot;Big O notation with Javascript&quot;&gt;
+Photo by Jeff Fielitz on Unsplash&lt;/p&gt;
+&lt;h1&gt;Big-O notation with Javascript&lt;/h1&gt;
+&lt;h2&gt;Big-O notation&lt;/h2&gt;
+&lt;h3&gt;What is Big-O notation?&lt;/h3&gt;
+&lt;p&gt;Big-O notation is a special notation that is used to tell you how fast an algorithm runs. In that, it is not a measure of
+how fast in seconds it runs, but rather it tells you how fast it will grow in time to run. It tells is how the runtime of
+an algorithm will increase as the size of its input (n) increases. As the input can vary it will give the maximum runtime
+possible as we cannot be sure in advance the possible outcomes of running an algorithm.&lt;/p&gt;
+&lt;h3&gt;What is an algorithm?&lt;/h3&gt;
+&lt;p&gt;Algorithms are methods (aka functions) that receive data as input, perform task against the data and return a result
+when the tasks are processed. Examples could be: pick winnning lottery numbers, find a user that is a admin or calculating
+the time required to cook a receipe.&lt;/p&gt;
+&lt;h2&gt;O(1) - Constant time&lt;/h2&gt;
+&lt;p&gt;O(1) is an algorithm that has a constant run time regardless of the supplied dataset (n).  &lt;/p&gt;
+&lt;p&gt;So for example, an algorithm that takes the same amount of time to complete no matter what the
+input supplied would be, finding an array item by its index.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Big-O O(1) - Constant Time
+function findByIndex(arr, index) {
+  return arr[index];
+}
+
+var food = [&amp;#39;🍿&amp;#39;, &amp;#39;🍔&amp;#39;, &amp;#39;🍩&amp;#39;, &amp;#39;🍗&amp;#39;];
+var drinks = [&amp;#39;☕️&amp;#39;, &amp;#39;🍺&amp;#39;, &amp;#39;🍹&amp;#39;, &amp;#39;🍷&amp;#39;, &amp;#39;🍸&amp;#39;, &amp;#39;🍵&amp;#39;, &amp;#39;🍶&amp;#39;];
+
+console.log(findByIndex(food, 2));   🍩
+console.log(findByIndex(drinks, 5));   🍵&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Chart - O(1) - Constant time&lt;/h3&gt;
+&lt;p&gt;As shown in the chart below the amount of time it takes to execute the algorithm does &lt;em&gt;not&lt;/em&gt; increase with input size.&lt;/p&gt;
+&lt;svg width=&quot;600&quot; height=&quot;600&quot;&gt;
+    &lt;g&gt;
+      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;600&quot; fill=&quot;#a3cfd1&quot;&gt;&lt;/rect&gt;
+      &lt;!-- axis --&gt;
+      &lt;path d=&quot;M50 50 L 50 550 L 551 550&quot; fill=&quot;transparent&quot; stroke=&quot;#5c5c5b&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- labels --&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(16 400) rotate(-90)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Time ---&gt; (no. of operations)&lt;/text&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(188 595)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Input Size ---&gt; (no. of elements)&lt;/text&gt;
+      &lt;!-- values x axis --&gt;
+      &lt;text x=&quot;48&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;100&quot; y1=&quot;550&quot; x2=&quot;100&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;92&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;10&lt;/text&gt;
+      &lt;line x1=&quot;150&quot; y1=&quot;550&quot; x2=&quot;150&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;144&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;20&lt;/text&gt;
+      &lt;line x1=&quot;200&quot; y1=&quot;550&quot; x2=&quot;200&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;194&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;30&lt;/text&gt;
+      &lt;line x1=&quot;250&quot; y1=&quot;550&quot; x2=&quot;250&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;244&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;40&lt;/text&gt;
+      &lt;line x1=&quot;300&quot; y1=&quot;550&quot; x2=&quot;300&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;294&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;50&lt;/text&gt;
+      &lt;line x1=&quot;350&quot; y1=&quot;550&quot; x2=&quot;350&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;352&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;60&lt;/text&gt;
+      &lt;line x1=&quot;400&quot; y1=&quot;550&quot; x2=&quot;400&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;394&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;70&lt;/text&gt;
+      &lt;line x1=&quot;450&quot; y1=&quot;550&quot; x2=&quot;450&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;444&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;80&lt;/text&gt;
+      &lt;line x1=&quot;500&quot; y1=&quot;550&quot; x2=&quot;500&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;494&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;90&lt;/text&gt;
+      &lt;line x1=&quot;550&quot; y1=&quot;550&quot; x2=&quot;550&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;540&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;!-- values y axis --&gt;
+      &lt;text x=&quot;30&quot; y=&quot;554&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;500&quot; x2=&quot;50&quot; y2=&quot;500&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;504&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;450&quot; x2=&quot;50&quot; y2=&quot;450&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;454&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;200&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;400&quot; x2=&quot;50&quot; y2=&quot;400&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;404&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;300&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;350&quot; x2=&quot;50&quot; y2=&quot;350&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;354&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;400&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;300&quot; x2=&quot;50&quot; y2=&quot;300&quot; style=&quot;stroke:#5c5c5b;st roke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;304&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;500&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;250&quot; x2=&quot;50&quot; y2=&quot;250&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;254&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;600&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;200&quot; x2=&quot;50&quot; y2=&quot;200&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;204&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;700&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;150&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;154&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;800&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;50&quot; y2=&quot;100&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;104&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;900&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;50&quot; x2=&quot;50&quot; y2=&quot;50&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;12&quot; y=&quot;54&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;1000&lt;/text&gt;
+      &lt;!-- O(1) path --&gt;
+      &lt;path d=&quot;M51 548 L 550 548&quot; fill=&quot;transparent&quot; stroke=&quot;#f05a1f&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- O(1) path label --&gt;
+      &lt;text x=&quot;500&quot; y=&quot;540&quot; fill=&quot;#5c5c5b&quot;&gt;O(1)&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;h2&gt;0(n) - Linear Time&lt;/h2&gt;
+&lt;p&gt;O(n) is an algorithm that has a linear run time correlating to the size of the supplied dataset (n).  &lt;/p&gt;
+&lt;p&gt;So for example, an algorithm that has input of 10 items and each item runs 10 times, if it has an input of 1000 items it
+runs 1000 times.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;// Big-O O(n) -  Linear Time
+function bogoff(arr) {
+  arr.forEach(a =&amp;gt; 
+       console.log(a,a)
+  );
+}
+
+var food = [&amp;#39;🍿&amp;#39;, &amp;#39;🍔&amp;#39;, &amp;#39;🍩&amp;#39;, &amp;#39;🍗&amp;#39;];
+var drinks = [&amp;#39;☕️&amp;#39;, &amp;#39;🍺&amp;#39;, &amp;#39;🍹&amp;#39;, &amp;#39;🍷&amp;#39;, &amp;#39;🍸&amp;#39;, &amp;#39;🍵&amp;#39;, &amp;#39;🍶&amp;#39;];
+
+bogoff(food); // 🍿🍿​​​​​ 🍔🍔​​​​​ ​​​​🍩🍩​​​​​ ​​​​​🍗🍗​​​​​
+bogoff(drinks); // ☕️☕️​​​​​ ​​​​​🍺🍺​​​​​ ​​​​​🍹🍹​​​​​ ​​​​​🍷🍷​​​​​ ​​​​​🍸🍸​​​​​ ​​​​​🍵🍵​​​​​ ​​​​​🍶🍶​​​​​&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Chart - O(n) - Linear Time&lt;/h3&gt;
+&lt;p&gt;As shown in the chart below the amount of time it takes to execute the algorithm increases in direct &lt;em&gt;correlation&lt;/em&gt; to input size.&lt;/p&gt;
+&lt;svg width=&quot;600&quot; height=&quot;600&quot;&gt;
+    &lt;g&gt;
+      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;600&quot; fill=&quot;#a3cfd1&quot;&gt;&lt;/rect&gt;
+      &lt;!-- axis --&gt;
+      &lt;path d=&quot;M50 50 L 50 550 L 551 550&quot; fill=&quot;transparent&quot; stroke=&quot;#5c5c5b&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- labels --&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(16 400) rotate(-90)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Time ---&gt; (no. of operations)&lt;/text&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(188 595)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Input Size ---&gt; (no. of elements)&lt;/text&gt;
+      &lt;!-- values x axis --&gt;
+      &lt;text x=&quot;48&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;100&quot; y1=&quot;550&quot; x2=&quot;100&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;92&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;10&lt;/text&gt;
+      &lt;line x1=&quot;150&quot; y1=&quot;550&quot; x2=&quot;150&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;144&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;20&lt;/text&gt;
+      &lt;line x1=&quot;200&quot; y1=&quot;550&quot; x2=&quot;200&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;194&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;30&lt;/text&gt;
+      &lt;line x1=&quot;250&quot; y1=&quot;550&quot; x2=&quot;250&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;244&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;40&lt;/text&gt;
+      &lt;line x1=&quot;300&quot; y1=&quot;550&quot; x2=&quot;300&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;294&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;50&lt;/text&gt;
+      &lt;line x1=&quot;350&quot; y1=&quot;550&quot; x2=&quot;350&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;352&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;60&lt;/text&gt;
+      &lt;line x1=&quot;400&quot; y1=&quot;550&quot; x2=&quot;400&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;394&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;70&lt;/text&gt;
+      &lt;line x1=&quot;450&quot; y1=&quot;550&quot; x2=&quot;450&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;444&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;80&lt;/text&gt;
+      &lt;line x1=&quot;500&quot; y1=&quot;550&quot; x2=&quot;500&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;494&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;90&lt;/text&gt;
+      &lt;line x1=&quot;550&quot; y1=&quot;550&quot; x2=&quot;550&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;540&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;!-- values y axis --&gt;
+      &lt;text x=&quot;30&quot; y=&quot;554&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;500&quot; x2=&quot;50&quot; y2=&quot;500&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;504&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;450&quot; x2=&quot;50&quot; y2=&quot;450&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;454&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;200&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;400&quot; x2=&quot;50&quot; y2=&quot;400&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;404&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;300&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;350&quot; x2=&quot;50&quot; y2=&quot;350&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;354&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;400&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;300&quot; x2=&quot;50&quot; y2=&quot;300&quot; style=&quot;stroke:#5c5c5b;st roke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;304&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;500&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;250&quot; x2=&quot;50&quot; y2=&quot;250&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;254&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;600&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;200&quot; x2=&quot;50&quot; y2=&quot;200&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;204&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;700&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;150&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;154&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;800&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;50&quot; y2=&quot;100&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;104&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;900&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;50&quot; x2=&quot;50&quot; y2=&quot;50&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;12&quot; y=&quot;54&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;1000&lt;/text&gt;
+      &lt;!-- O(n) path --&gt;
+      &lt;path d=&quot;M50 550 L 550 500&quot; fill=&quot;transparent&quot; stroke=&quot;#f05a1f&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- O(n) path label --&gt;
+      &lt;text x=&quot;500&quot; y=&quot;490&quot; fill=&quot;#5c5c5b&quot;&gt;O(n)&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;h2&gt;O(log n) Logarithmic Time&lt;/h2&gt;
+&lt;p&gt;O(log n) is an algorithm is the most efficient when the supplied dataset (n) is large. So for example with a dataset of one
+million we could find a specified element in 20 iterations and for one billion we could find it in 30 iterations.&lt;/p&gt;
+&lt;p&gt;An example of an O(log n) algorithm would be a binary search algorithm.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function binarySearch(array, element, start = 0, end = (array.length - 1)) {
+  if (end &amp;lt; start) return -1;
+  var middle = Math.floor((start + end) / 2);
+  return element === array[middle]
+    ? middle
+    : element &amp;lt; array[middle]
+      ? binarySearch(array, element, start, middle - 1)
+      : binarySearch(array, element, middle + 1, end);
+}
+
+var unsortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+console.log(&amp;quot;Index of 2: &amp;quot;, binarySearch(unsortedArray, 2));    // Index of 2: 1
+console.log(&amp;quot;22 not found: &amp;quot;, binarySearch(unsortedArray, 22)); // 22 not found: -1&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Chart - O(log n) - Logarithmic Time&lt;/h3&gt;
+&lt;p&gt;As shown in the chart below the amount of time it takes to execute the algorithm increases slightly with input size.&lt;/p&gt;
+&lt;svg width=&quot;600&quot; height=&quot;600&quot;&gt;
+    &lt;g&gt;
+      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;600&quot; fill=&quot;#a3cfd1&quot;&gt;&lt;/rect&gt;
+      &lt;!-- axis --&gt;
+      &lt;path d=&quot;M50 50 L 50 550 L 551 550&quot; fill=&quot;transparent&quot; stroke=&quot;#5c5c5b&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- labels --&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(16 400) rotate(-90)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Time ---&gt; (no. of operations)&lt;/text&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(188 595)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Input Size ---&gt; (no. of elements)&lt;/text&gt;
+      &lt;!-- values x axis --&gt;
+      &lt;text x=&quot;48&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;100&quot; y1=&quot;550&quot; x2=&quot;100&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;92&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;10&lt;/text&gt;
+      &lt;line x1=&quot;150&quot; y1=&quot;550&quot; x2=&quot;150&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;144&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;20&lt;/text&gt;
+      &lt;line x1=&quot;200&quot; y1=&quot;550&quot; x2=&quot;200&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;194&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;30&lt;/text&gt;
+      &lt;line x1=&quot;250&quot; y1=&quot;550&quot; x2=&quot;250&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;244&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;40&lt;/text&gt;
+      &lt;line x1=&quot;300&quot; y1=&quot;550&quot; x2=&quot;300&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;294&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;50&lt;/text&gt;
+      &lt;line x1=&quot;350&quot; y1=&quot;550&quot; x2=&quot;350&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;352&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;60&lt;/text&gt;
+      &lt;line x1=&quot;400&quot; y1=&quot;550&quot; x2=&quot;400&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;394&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;70&lt;/text&gt;
+      &lt;line x1=&quot;450&quot; y1=&quot;550&quot; x2=&quot;450&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;444&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;80&lt;/text&gt;
+      &lt;line x1=&quot;500&quot; y1=&quot;550&quot; x2=&quot;500&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;494&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;90&lt;/text&gt;
+      &lt;line x1=&quot;550&quot; y1=&quot;550&quot; x2=&quot;550&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;540&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;!-- values y axis --&gt;
+      &lt;text x=&quot;30&quot; y=&quot;554&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;500&quot; x2=&quot;50&quot; y2=&quot;500&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;504&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;450&quot; x2=&quot;50&quot; y2=&quot;450&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;454&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;200&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;400&quot; x2=&quot;50&quot; y2=&quot;400&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;404&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;300&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;350&quot; x2=&quot;50&quot; y2=&quot;350&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;354&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;400&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;300&quot; x2=&quot;50&quot; y2=&quot;300&quot; style=&quot;stroke:#5c5c5b;st roke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;304&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;500&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;250&quot; x2=&quot;50&quot; y2=&quot;250&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;254&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;600&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;200&quot; x2=&quot;50&quot; y2=&quot;200&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;204&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;700&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;150&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;154&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;800&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;50&quot; y2=&quot;100&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;104&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;900&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;50&quot; x2=&quot;50&quot; y2=&quot;50&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;12&quot; y=&quot;54&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;1000&lt;/text&gt;
+      &lt;!-- O(1) path --&gt;
+      &lt;path d=&quot;M51 548 L 550 546&quot; fill=&quot;transparent&quot; stroke=&quot;#f05a1f&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- O(1) path label --&gt;
+      &lt;text x=&quot;500&quot; y=&quot;540&quot; fill=&quot;#5c5c5b&quot;&gt;O(log n)&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;h2&gt;O(n log n)&lt;/h2&gt;
+&lt;p&gt;An example of an O(n log n) algorithm would be a quicksort algorithm&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function quicksort(arr) {
+  if (arr.length &amp;lt; 2) return arr;
+  var pivotIndex = Math.floor(arr.length / 2);
+  var pivot = arr[pivotIndex];
+  var less = [];
+  var greater = [];
+  arr.forEach((element, i) =&amp;gt; {
+    if (i != pivotIndex) {
+      element &amp;gt; pivot ? greater.push(element) : less.push(element);
+    }
+  });
+  return [
+    ...quicksort(less),
+    pivot,
+    ...quicksort(greater)
+  ];
+}
+
+console.log(quicksort([5, 7, 3, 8, 9]));  // [ 3, 5, 7, 8, 9]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Chart - O(n log n)&lt;/h3&gt;
+&lt;p&gt;As shown in the chart below the amount of time it takes to execute the algorithm increases somewhat with input size.&lt;/p&gt;
+&lt;svg width=&quot;600&quot; height=&quot;600&quot;&gt;
+    &lt;g&gt;
+      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;600&quot; fill=&quot;#a3cfd1&quot;&gt;&lt;/rect&gt;
+      &lt;!-- axis --&gt;
+      &lt;path d=&quot;M50 50 L 50 550 L 551 550&quot; fill=&quot;transparent&quot; stroke=&quot;#5c5c5b&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- labels --&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(16 400) rotate(-90)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Time ---&gt; (no. of operations)&lt;/text&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(188 595)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Input Size ---&gt; (no. of elements)&lt;/text&gt;
+      &lt;!-- values x axis --&gt;
+      &lt;text x=&quot;48&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;100&quot; y1=&quot;550&quot; x2=&quot;100&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;92&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;10&lt;/text&gt;
+      &lt;line x1=&quot;150&quot; y1=&quot;550&quot; x2=&quot;150&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;144&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;20&lt;/text&gt;
+      &lt;line x1=&quot;200&quot; y1=&quot;550&quot; x2=&quot;200&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;194&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;30&lt;/text&gt;
+      &lt;line x1=&quot;250&quot; y1=&quot;550&quot; x2=&quot;250&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;244&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;40&lt;/text&gt;
+      &lt;line x1=&quot;300&quot; y1=&quot;550&quot; x2=&quot;300&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;294&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;50&lt;/text&gt;
+      &lt;line x1=&quot;350&quot; y1=&quot;550&quot; x2=&quot;350&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;352&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;60&lt;/text&gt;
+      &lt;line x1=&quot;400&quot; y1=&quot;550&quot; x2=&quot;400&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;394&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;70&lt;/text&gt;
+      &lt;line x1=&quot;450&quot; y1=&quot;550&quot; x2=&quot;450&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;444&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;80&lt;/text&gt;
+      &lt;line x1=&quot;500&quot; y1=&quot;550&quot; x2=&quot;500&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;494&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;90&lt;/text&gt;
+      &lt;line x1=&quot;550&quot; y1=&quot;550&quot; x2=&quot;550&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;540&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;!-- values y axis --&gt;
+      &lt;text x=&quot;30&quot; y=&quot;554&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;500&quot; x2=&quot;50&quot; y2=&quot;500&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;504&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;450&quot; x2=&quot;50&quot; y2=&quot;450&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;454&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;200&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;400&quot; x2=&quot;50&quot; y2=&quot;400&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;404&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;300&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;350&quot; x2=&quot;50&quot; y2=&quot;350&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;354&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;400&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;300&quot; x2=&quot;50&quot; y2=&quot;300&quot; style=&quot;stroke:#5c5c5b;st roke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;304&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;500&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;250&quot; x2=&quot;50&quot; y2=&quot;250&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;254&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;600&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;200&quot; x2=&quot;50&quot; y2=&quot;200&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;204&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;700&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;150&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;154&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;800&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;50&quot; y2=&quot;100&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;104&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;900&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;50&quot; x2=&quot;50&quot; y2=&quot;50&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;12&quot; y=&quot;54&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;1000&lt;/text&gt;
+      &lt;!-- O(1) path --&gt;
+      &lt;path d=&quot;M51 550 L 550 350&quot; fill=&quot;transparent&quot; stroke=&quot;#f05a1f&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- O(1) path label --&gt;
+      &lt;text x=&quot;460&quot; y=&quot;410&quot; fill=&quot;#5c5c5b&quot;&gt;O(n log n)&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;h2&gt;0(n2) - Quadratic Time&lt;/h2&gt;
+&lt;p&gt;0(n2) is an algorithm that has a quadratic run time where execution is proportional to the square of the input size (n).&lt;/p&gt;
+&lt;p&gt;For example, a bubble sort algorithm that has an input of 4 items runs 4 times on the outer loop
+and the inner loop runs 4 times for run of the outer loop, or n * n.&lt;/p&gt;
+&lt;p&gt;The inner loop does O(n) work on each iteration, and the outer loop runs for O(n) iterations, so the total work is O(n2). When n = 10 it is 10 * 10 = 100 steps, by adding one additional item (11 * 11 = 121 steps) you are adding 121 additional steps.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function bubbleSort(array){
+  array = array.slice();
+  for (let i = 0; i &amp;lt; array.length; i++) {
+    for (let j = 0; j &amp;lt; array.length - 1; j++) {
+      if (array[j] &amp;gt; array[j + 1]) {
+        [array[j], array[j + 1]] = [array[j + 1], array[j]];
+      }
+    }
+  }
+  return array;
+}
+
+var array = [ 4, 3, 2, 1];
+
+console.log(bubbleSort(array)); // [ 1, 2, 3, 4]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Chart - O(n2) - Quadratic Time&lt;/h3&gt;
+&lt;p&gt;As shown in the chart below the amount of time it takes to execute the algorithm increases in direct &lt;em&gt;correlation&lt;/em&gt; to the
+square of the input size.&lt;/p&gt;
+&lt;svg width=&quot;600&quot; height=&quot;600&quot;&gt;
+    &lt;g&gt;
+      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;600&quot; fill=&quot;#a3cfd1&quot;&gt;&lt;/rect&gt;
+      &lt;!-- axis --&gt;
+      &lt;path d=&quot;M50 50 L 50 550 L 551 550&quot; fill=&quot;transparent&quot; stroke=&quot;#5c5c5b&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- labels --&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(16 400) rotate(-90)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Time ---&gt; (no. of operations)&lt;/text&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(188 595)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Input Size ---&gt; (no. of elements)&lt;/text&gt;
+      &lt;!-- values x axis --&gt;
+      &lt;text x=&quot;48&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;100&quot; y1=&quot;550&quot; x2=&quot;100&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;92&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;10&lt;/text&gt;
+      &lt;line x1=&quot;150&quot; y1=&quot;550&quot; x2=&quot;150&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;144&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;20&lt;/text&gt;
+      &lt;line x1=&quot;200&quot; y1=&quot;550&quot; x2=&quot;200&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;194&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;30&lt;/text&gt;
+      &lt;line x1=&quot;250&quot; y1=&quot;550&quot; x2=&quot;250&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;244&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;40&lt;/text&gt;
+      &lt;line x1=&quot;300&quot; y1=&quot;550&quot; x2=&quot;300&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;294&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;50&lt;/text&gt;
+      &lt;line x1=&quot;350&quot; y1=&quot;550&quot; x2=&quot;350&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;352&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;60&lt;/text&gt;
+      &lt;line x1=&quot;400&quot; y1=&quot;550&quot; x2=&quot;400&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;394&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;70&lt;/text&gt;
+      &lt;line x1=&quot;450&quot; y1=&quot;550&quot; x2=&quot;450&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;444&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;80&lt;/text&gt;
+      &lt;line x1=&quot;500&quot; y1=&quot;550&quot; x2=&quot;500&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;494&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;90&lt;/text&gt;
+      &lt;line x1=&quot;550&quot; y1=&quot;550&quot; x2=&quot;550&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;540&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;!-- values y axis --&gt;
+      &lt;text x=&quot;30&quot; y=&quot;554&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;500&quot; x2=&quot;50&quot; y2=&quot;500&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;504&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;450&quot; x2=&quot;50&quot; y2=&quot;450&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;454&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;200&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;400&quot; x2=&quot;50&quot; y2=&quot;400&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;404&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;300&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;350&quot; x2=&quot;50&quot; y2=&quot;350&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;354&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;400&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;300&quot; x2=&quot;50&quot; y2=&quot;300&quot; style=&quot;stroke:#5c5c5b;st roke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;304&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;500&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;250&quot; x2=&quot;50&quot; y2=&quot;250&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;254&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;600&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;200&quot; x2=&quot;50&quot; y2=&quot;200&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;204&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;700&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;150&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;154&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;800&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;50&quot; y2=&quot;100&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;104&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;900&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;50&quot; x2=&quot;50&quot; y2=&quot;50&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;12&quot; y=&quot;54&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;1000&lt;/text&gt;
+      &lt;!-- O(n) path --&gt;
+      &lt;path d=&quot;M50 550 Q 140 500, 200 50&quot; fill=&quot;transparent&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- O(n) path label --&gt;
+      &lt;text x=&quot;200&quot; y=&quot;100&quot; fill=&quot;#5c5c5b&quot;&gt;O(n2)&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;
+&lt;h2&gt;0(2n) - Exponential&lt;/h2&gt;
+&lt;p&gt;O(n2) is an algorithm that has a run time that doubles for every element in the supplied dataset (n).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function fibonacci(n){
+  if(n &amp;lt;= 2)
+     return [0, 1].slice(0, n);
+  var res = fibonacci(n - 1);
+  res.push(res[res.length - 1] + res[res.length - 2])
+  return res;
+}
+
+
+console.log(fibonacci(8)); // [ 0, 1, 1, 2, 3, 5, 8]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Chart - O(2n) - Exponential&lt;/h3&gt;
+&lt;p&gt;As shown in the chart below the amount of time it takes to execute the algorithm starts off shallow and then rises meteorically.&lt;/p&gt;
+&lt;svg width=&quot;600&quot; height=&quot;600&quot;&gt;
+    &lt;g&gt;
+      &lt;rect x=&quot;0&quot; y=&quot;0&quot; width=&quot;600&quot; height=&quot;600&quot; fill=&quot;#a3cfd1&quot;&gt;&lt;/rect&gt;
+      &lt;!-- axis --&gt;
+      &lt;path d=&quot;M50 50 L 50 550 L 551 550&quot; fill=&quot;transparent&quot; stroke=&quot;#5c5c5b&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- labels --&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(16 400) rotate(-90)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Time ---&gt; (no. of operations)&lt;/text&gt;
+      &lt;text x=&quot;0&quot; y=&quot;0&quot; transform=&quot;translate(188 595)&quot; style=&quot;font-size:16px; color: #5c5c5b; font-style: italic;&quot;&gt;Input Size ---&gt; (no. of elements)&lt;/text&gt;
+      &lt;!-- values x axis --&gt;
+      &lt;text x=&quot;48&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;100&quot; y1=&quot;550&quot; x2=&quot;100&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;92&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;10&lt;/text&gt;
+      &lt;line x1=&quot;150&quot; y1=&quot;550&quot; x2=&quot;150&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;144&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;20&lt;/text&gt;
+      &lt;line x1=&quot;200&quot; y1=&quot;550&quot; x2=&quot;200&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;194&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;30&lt;/text&gt;
+      &lt;line x1=&quot;250&quot; y1=&quot;550&quot; x2=&quot;250&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;244&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;40&lt;/text&gt;
+      &lt;line x1=&quot;300&quot; y1=&quot;550&quot; x2=&quot;300&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;294&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;50&lt;/text&gt;
+      &lt;line x1=&quot;350&quot; y1=&quot;550&quot; x2=&quot;350&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;352&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;60&lt;/text&gt;
+      &lt;line x1=&quot;400&quot; y1=&quot;550&quot; x2=&quot;400&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;394&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;70&lt;/text&gt;
+      &lt;line x1=&quot;450&quot; y1=&quot;550&quot; x2=&quot;450&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;444&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;80&lt;/text&gt;
+      &lt;line x1=&quot;500&quot; y1=&quot;550&quot; x2=&quot;500&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;494&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;90&lt;/text&gt;
+      &lt;line x1=&quot;550&quot; y1=&quot;550&quot; x2=&quot;550&quot; y2=&quot;560&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;540&quot; y=&quot;570&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;!-- values y axis --&gt;
+      &lt;text x=&quot;30&quot; y=&quot;554&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;0&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;500&quot; x2=&quot;50&quot; y2=&quot;500&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;504&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;100&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;450&quot; x2=&quot;50&quot; y2=&quot;450&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;454&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;200&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;400&quot; x2=&quot;50&quot; y2=&quot;400&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;404&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;300&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;350&quot; x2=&quot;50&quot; y2=&quot;350&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;354&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;400&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;300&quot; x2=&quot;50&quot; y2=&quot;300&quot; style=&quot;stroke:#5c5c5b;st roke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;304&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;500&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;250&quot; x2=&quot;50&quot; y2=&quot;250&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;254&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;600&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;200&quot; x2=&quot;50&quot; y2=&quot;200&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;204&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;700&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;150&quot; x2=&quot;50&quot; y2=&quot;150&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;154&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;800&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;100&quot; x2=&quot;50&quot; y2=&quot;100&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;19&quot; y=&quot;104&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;900&lt;/text&gt;
+      &lt;line x1=&quot;40&quot; y1=&quot;50&quot; x2=&quot;50&quot; y2=&quot;50&quot; style=&quot;stroke:#5c5c5b;stroke-width:2&quot; /&gt;
+      &lt;text x=&quot;12&quot; y=&quot;54&quot; style=&quot;font-size:12px; color: #5c5c5b;&quot;&gt;1000&lt;/text&gt;
+      &lt;!-- O(n) path --&gt;
+      &lt;path d=&quot;M50 550 Q 140 550, 140 50&quot; fill=&quot;transparent&quot; stroke=&quot;black&quot; stroke-width=&quot;2&quot;&gt;&lt;/path&gt;
+      &lt;!-- O(n) path label --&gt;
+      &lt;text x=&quot;200&quot; y=&quot;100&quot; fill=&quot;#5c5c5b&quot;&gt;O(n2)&lt;/text&gt;
+    &lt;/g&gt;
+&lt;/svg&gt;</content:encoded></item><item><title><![CDATA[React Random Squares Avatar]]></title><description><![CDATA[react-random-squares-avatar A simple react component that creates a Slack like avatar. Demo & Examples Live demo:  reactrandomsquaresavatar…]]></description><link>http://www.itsmycodeblog.com//2017-3-18-react-random-squares-avatar/2017-3-18-react-random-squares-avatar/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2017-3-18-react-random-squares-avatar/2017-3-18-react-random-squares-avatar/</guid><pubDate>Sat, 18 Mar 2017 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/react-random-squares-avatar.png&quot; alt=&quot;alt text &quot; title=&quot;React Random Squares Avatar&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;react-random-squares-avatar&lt;/h1&gt;
+&lt;p&gt;A simple react component that creates a Slack like avatar.&lt;/p&gt;
+&lt;h2&gt;Demo &amp;#x26; Examples&lt;/h2&gt;
+&lt;p&gt;Live demo: &lt;a href=&quot;https://reactrandomsquaresavatar-demo.firebaseapp.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;reactrandomsquaresavatar-demo.firebaseapp.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Github&lt;/h2&gt;
+&lt;p&gt;Github repo:
+&lt;a href=&quot;https://github.com/NicholasMurray/react-random-squares-avatar&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;https://github.com/NicholasMurray/react-random-squares-avatar&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;NPM&lt;/h2&gt;
+&lt;p&gt;NPM Package:
+&lt;a href=&quot;https://www.npmjs.com/package/react-random-squares-avatar/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;https://www.npmjs.com/package/react-random-squares-avatar/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;To build and test locally, run:&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install
+npm test
+npm run testonly
+npm run lint
+npm run prepublish&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Installation&lt;/h2&gt;
+&lt;p&gt;The easiest way to use react-random-squares-avatar is to install it from NPM and include it in your own React build process (using &lt;a href=&quot;http://browserify.org&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Browserify&lt;/a&gt;, &lt;a href=&quot;http://webpack.github.io/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Webpack&lt;/a&gt;, &lt;a href=&quot;http://brunch.io/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Brunch&lt;/a&gt;, etc).&lt;/p&gt;
+&lt;p&gt;You can also use the standalone build by including &lt;code class=&quot;language-text&quot;&gt;dist/index.js&lt;/code&gt; in your page. If you use this, make sure you have already included React, and it is available as a global variable.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install react-random-squares-avatar --save&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Usage&lt;/h2&gt;
+&lt;p&gt;If no props are supplied then the default height and width are 100px and the rotation will be a random 10 digit number in the range of 10 degrees to 80 degrees inclusive.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt; ReactRandomSquaresAvatar /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The props height and width set the avatars dimensions and the rotate value can be either 0, or a 10 digit number in the range of 10 degrees to 80 degrees inclusive.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;ReactRandomSquaresAvatar height=&amp;quot;200&amp;quot; width=&amp;quot;200&amp;quot; rotate=&amp;quot;0&amp;quot; /&amp;gt;
+&amp;lt;ReactRandomSquaresAvatar height=&amp;quot;200&amp;quot; width=&amp;quot;200&amp;quot; rotate=&amp;quot;80&amp;quot; /&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Credits&lt;/h2&gt;
+&lt;p&gt;Inspired by this codepen&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://codepen.io/richardj/pen/oxvrwr&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://codepen.io/richardj/pen/oxvrwr&lt;/a&gt; by @richardj&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ES6 Let there be let]]></title><description><![CDATA[In the beginning there was var And  var  was a little bit tricky to understand. So, along came es6 with the new 
+shiny  let . Block level…]]></description><link>http://www.itsmycodeblog.com//2016-8-04-es6-let-there-be-let/2016-8-04-es6-let-there-be-let/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-8-04-es6-let-there-be-let/2016-8-04-es6-let-there-be-let/</guid><pubDate>Thu, 04 Aug 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/let-there-be-light.jpg&quot; alt=&quot;alt text &quot; title=&quot;ES6 Let there be let&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;In the beginning there was var&lt;/h1&gt;
+&lt;p&gt;And &lt;strong&gt;&lt;em&gt;var&lt;/em&gt;&lt;/strong&gt; was a little bit tricky to understand. So, along came es6 with the new
+shiny &lt;strong&gt;&lt;em&gt;let&lt;/em&gt;&lt;/strong&gt;.&lt;/p&gt;
+&lt;h2&gt;Block level scoping&lt;/h2&gt;
+&lt;p&gt;In javascript the setting of a variable can be the cause of bugs due to way javascript allows
+the assigning of values. For example, in the code below you would think that declaring and
+assigning a value to a variable inside a block of code would isolate it from the rest of the
+code. But javascript does not have block level scoping. So, in the code below the variable
+&lt;strong&gt;&lt;em&gt;messageInBottle&lt;/em&gt;&lt;/strong&gt; takes its value from the second assignment and not the first.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var messageInBottle = &amp;#39;Help me!&amp;#39;;
+{
+  var messageInBottle = &amp;#39;Would you like a pen pal?&amp;#39;; 
+}
+console.log(messageInBottle);
+
+// output: Would you like a pen pal?&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Javascript has function level scoping which encapsulates &lt;strong&gt;&lt;em&gt;var&lt;/em&gt;&lt;/strong&gt; declarations and assignments
+and therefore in the code below the first assignment of &lt;strong&gt;&lt;em&gt;messageInBottle&lt;/em&gt;&lt;/strong&gt; is unaffected by the
+second assignment.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var messageInBottle = &amp;#39;Help me!&amp;#39;;
+
+function bottle() {
+  var messageInBottle = &amp;#39;Would you like a pen pal?&amp;#39;; 
+}
+
+console.log(messageInBottle);
+
+// output: Help me!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;With es6 the introduction of the &lt;strong&gt;&lt;em&gt;let&lt;/em&gt;&lt;/strong&gt; keyword introduces block level variable scoping. This
+allows the declaration and assignment of variables that have block level scope. Now we can
+see that the first &lt;strong&gt;&lt;em&gt;messageInBottle&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;let&lt;/em&gt;&lt;/strong&gt; variable retains its value as the second
+&lt;strong&gt;&lt;em&gt;messageInBottle&lt;/em&gt;&lt;/strong&gt; &lt;strong&gt;&lt;em&gt;let&lt;/em&gt;&lt;/strong&gt; variable is restricted to the scope of its code block. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;let messageInBottle = &amp;#39;Help me!&amp;#39;;
+{
+  let messageInBottle = &amp;#39;Would you like a pen pal?&amp;#39;; 
+}
+console.log(messageInBottle);
+
+// output: Help me!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Hoisted by your own petard&lt;/h2&gt;
+&lt;p&gt;In the code below we would expect the output to be the range of numbers 0-9 squared but
+the output is in fact the number 10 repeated 10 times. This occurs due to the reference
+of &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; pointing to the value of n in the loop which has exited when it incremented to
+the number 10. This variable hoisting moves the declaration of the variable &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; out
+of the loop and instead to the top of the function scope.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var squares = [];
+
+for (var n = 0; n &amp;lt; 10; n ++) {
+   squares.push(function() {
+     console.log(n * n);
+   });
+}
+
+squares.forEach(function(s) { 
+  s();
+});
+
+// output:
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10
+// 10&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This can be solved by using a closure which are nested functions that retain a reference to
+the enviroment in which they were created. The closure retains the value of n that it was
+passed during its creation. We now see the expected output of the range 0-9 squared.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var squares = [];
+
+for (var n = 0; n &amp;lt; 10; n ++) {
+   squares.push(function(i) {
+     console.log(i * i);
+   }(n));
+}
+
+squares.forEach(function(s) {
+});
+
+// output:
+// 0
+// 1
+// 4
+// 9
+// 16
+// 25
+// 36
+// 49
+// 64
+// 81&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The newly introduced &lt;strong&gt;&lt;em&gt;let&lt;/em&gt;&lt;/strong&gt; keyword can help us gain the expected output by its ability
+to create a new instance of &lt;strong&gt;&lt;em&gt;n&lt;/em&gt;&lt;/strong&gt; each time the code goes through the for loop.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var squares = [];
+
+for (let n = 0; n &amp;lt; 10; n ++) {
+   squares.push(function() {
+     console.log(n * n);
+   });
+}
+
+squares.forEach(function(s) {
+  s();
+});
+
+// output:
+// 0
+// 1
+// 4
+// 9
+// 16
+// 25
+// 36
+// 49
+// 64
+// 81&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Photo Credit: &lt;a href=&quot;https://unsplash.com/@celestekorol&quot;&gt;Celeste Korol&lt;/a&gt; via &lt;a href=&quot;https://unsplash.com/&quot;&gt;Unsplash&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[ES6 String Template Literals]]></title><description><![CDATA[Template Literals ES6 has introduced Template Literals as a new way of working with strings and string 
+templates. Template Literals have…]]></description><link>http://www.itsmycodeblog.com//2016-7-14-es6-string-template-literals/2016-7-14-es6-string-template-literals/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-7-14-es6-string-template-literals/2016-7-14-es6-string-template-literals/</guid><pubDate>Thu, 14 Jul 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/stringballs.jpg&quot; alt=&quot;alt text &quot; title=&quot;es6 String Template Literals&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Template Literals&lt;/h1&gt;
+&lt;p&gt;ES6 has introduced Template Literals as a new way of working with strings and string
+templates. Template Literals have ensured that working with strings will no longer be
+as painful as it once was.&lt;/p&gt;
+&lt;p&gt;The main benefits are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Back ticks - no more escaping&lt;/li&gt;
+&lt;li&gt;Multi-line - now less characters &lt;/li&gt;
+&lt;li&gt;Interpolation - not only variables but any expressions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2&gt;No more escaping&lt;/h2&gt;
+&lt;p&gt;The clever use of the ` back tick character to enclose text means that the common problem
+of escaping your double quotes or single quotes is not longer an issue.&lt;/p&gt;
+&lt;p&gt;Before whether you used single or double quotes to wrap text you eventually end up
+escaping quotes within the text.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var lyric = &amp;#39;I\&amp;#39;m a lumberjack and I\&amp;#39;m ok&amp;#39;;
+
+var button = &amp;quot;&amp;lt;button class=\&amp;quot;btn btn-primary\&amp;quot;&amp;gt;Save&amp;lt;/button&amp;gt;&amp;quot;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Now the back ticks negate the escaping problem.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var Q = `&amp;#39;Have you any idea&amp;#39;, he said, &amp;#39;what &amp;quot;dillygrout&amp;quot; is?&amp;#39;`;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Multi-line formating&lt;/h2&gt;
+&lt;p&gt;There are traditionally two ways to format strings over multiple lines, without using a
+function, which involved either string concatenation or the lesser known method of adding
+a backslash to the end of a line.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var exampleHTML = &amp;quot;&amp;lt;body&amp;gt;\n&amp;quot; +
+&amp;quot;  &amp;lt;h1&amp;gt;Header Text&amp;lt;/h1&amp;gt;\n&amp;quot; +
+&amp;quot;  &amp;lt;p&amp;gt;Paragraph Text&amp;lt;/p&amp;gt;\n&amp;quot; +
+&amp;quot;&amp;lt;/body&amp;gt;&amp;quot;;
+
+var exampleHTML2 = &amp;quot;&amp;lt;body&amp;gt;\n\
+  &amp;lt;h1&amp;gt;Header Text&amp;lt;/h1&amp;gt;\n\
+  &amp;lt;p&amp;gt;Paragraph Text&amp;lt;/p&amp;gt;\n\
+&amp;lt;/body&amp;gt;&amp;quot;;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which can be now resolved by the neater wrapping text with back ticks.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var exampleHTML3 = `&amp;lt;body&amp;gt;
+  &amp;lt;h1&amp;gt;Header Text&amp;lt;/h1&amp;gt;
+  &amp;lt;p&amp;gt;Paragraph Text&amp;lt;/p&amp;gt;
+&amp;lt;/body&amp;gt;`;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Interpolation&lt;/h2&gt;
+&lt;p&gt;ES6 facilitates interpolation by using the ${expession} notation to replace the syntax of
+a variable preceded and/or succeeded by a plus sign.&lt;/p&gt;
+&lt;p&gt;Plus syntax.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var a = 4;
+alert(a + &amp;#39; cubed is &amp;#39; + (a * a * a));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The more readable new ${expession} syntax.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var a = 4;
+alert(`${a} cubed is ${a * a * a}`);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[The Apple Watch at a Glance]]></title><description><![CDATA[Apple Watch Glances As an avid listener of podcasts one of my biggest bugbears is the steps that I have to go 
+through in order to skip a…]]></description><link>http://www.itsmycodeblog.com//2016-5-29-the-apple-watch-at-a-glance/2016-5-29-the-apple-watch-at-a-glance/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-5-29-the-apple-watch-at-a-glance/2016-5-29-the-apple-watch-at-a-glance/</guid><pubDate>Sun, 29 May 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/now-playing-apple-podcast-app.png&quot; alt=&quot;alt text &quot; title=&quot;Apple Watch at a Glance&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Apple Watch Glances&lt;/h1&gt;
+&lt;p&gt;As an avid listener of podcasts one of my biggest bugbears is the steps that I have to go
+through in order to skip a podcast backwards to listen again to a segment that I missed, or
+to skip past some intro music / advert that I have heard for the nth time.&lt;/p&gt;
+&lt;p&gt;It normally goes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Interuption / what was that just said?&lt;/li&gt;
+&lt;li&gt;Take phone out of pocket / pick up phone&lt;/li&gt;
+&lt;li&gt;Wake up phone&lt;/li&gt;
+&lt;li&gt;Skip forward or backward on lock screen&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Not very many steps you may think, but fetching the phone out of my pocket when mowing the
+lawn or walking the dog gets irritating especially when you have to stop to fish it out. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pebble.jpg&quot; alt=&quot;alt text &quot; title=&quot;Pebble Watch&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Pebble Watch&lt;/h2&gt;
+&lt;p&gt;I have owned a smart watch in the form of a Pebble Watch from the first iteration that I
+backed on kickstarter. An it has served me well for nearly three years. The notification
+display coupled with the ability to accept or cancel an incoming phone call on the watch
+came to be features that I have rely on.&lt;/p&gt;
+&lt;p&gt;The feature that proved to be the most useful was the ability to control music and podcast
+playback on the watch. Pebble watches provided an interface to control volume, pause and
+play, fast forward/rewind to the next song or podcast. This was achieved via the three
+buttons on the right where you could alternate the functionality of the top and bottom
+buttons by pressing the middle button to toggle between volume and fast forward/rewind modes.&lt;/p&gt;
+&lt;p&gt;After a while it became apparent that there
+was a UX design flaw in the toggle functionality as there was no audible cue to which mode
+you were in and this lead to frustratingly fast forwarding to the end of the current podcast
+rather than adjusting volume.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/pebble-screen-tearing.jpg&quot; alt=&quot;alt text &quot; title=&quot;Pebble Watch Screen Tearing&quot;&gt;&lt;/p&gt;
+&lt;p&gt;The bad UX I could live with, but when the Pebble started screen tearing I began to
+entertain the possiblity of purchasing an Apple watch.&lt;/p&gt;
+&lt;h2&gt;Apple Watch no official podcast app&lt;/h2&gt;
+&lt;p&gt;When I started considering an Apple watch to replace my Pebble watch I searched for reviews of
+Apple’s podcast watch app and found out there was not an official app available. The good
+news was that other podcast app players such as Overcast did provide companion watch apps
+that allowed skipping. &lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/overcast-apple-watch-app.png&quot; alt=&quot;alt text &quot; title=&quot;Overcast Apple Watch App&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Although due to the amount of time I had spent curating the content of Apple’s podcast player and
+general inertia I was not keen on switching, but if that was the only way to gain the skip
+functionality I would if needed.  &lt;/p&gt;
+&lt;h2&gt;Swipe up to glance at now playing&lt;/h2&gt;
+&lt;p&gt;The Apple watch allows companion apps to implement a glance interface on the watch which is
+accessed by swiping up on the watch face screen. Glances are quick summaries of
+information provided by the apps that you select to appear in the glances menu.&lt;/p&gt;
+&lt;p&gt;While exploring the glances functionality of the Apple watch I came across the now playing
+glance that gave a hint that it could control podcast playback without the need for a
+dedicated watch app.&lt;/p&gt;
+&lt;h3&gt;Now playing glance&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/now-playing-not-playing.png&quot; alt=&quot;alt text &quot; title=&quot;Apple Watch now playing glance&quot;&gt;&lt;/p&gt;
+&lt;p&gt;I started a podcast to investigate would the now playing glance expose the skip functionality?,
+to my delight it did. Also it allowed the adjusting of volume through the on screen
+touch enabled plus and minus buttons as well as via the digital crown.&lt;/p&gt;
+&lt;h3&gt;Apple Podcast now playing glance&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/images/now-playing-apple-podcast-app.png&quot; alt=&quot;alt text &quot; title=&quot;Apple Watch now playing a podcast now playing glance&quot;&gt;&lt;/p&gt;
+&lt;h3&gt;Overcast Podcast now playing glance&lt;/h3&gt;
+&lt;p&gt;The same now playing information summary is also available for the Overcast App, which puts it
+on an even footing with the other official and third party music and podcast players.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/now-playing-overcast-app.png&quot; alt=&quot;alt text &quot; title=&quot;Apple Watch now playing an Overcast podcast now playing glance&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Apple watch podcast now playing glance pros and cons&lt;/h2&gt;
+&lt;h3&gt;Podcast glance pros&lt;/h3&gt;
+&lt;p&gt;Skip forward and back functionality. &lt;/p&gt;
+&lt;p&gt;Easily accessed thorough the swipe up gesture. &lt;/p&gt;
+&lt;p&gt;Changing of volume through on screen touch enabled plus and minus buttons. &lt;/p&gt;
+&lt;p&gt;Ability to change volume via the digital crown. &lt;/p&gt;
+&lt;h3&gt;Podcast glance drawbacks&lt;/h3&gt;
+&lt;p&gt;No indication of how long is left of the podcast.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Deleting a node_modules folder on windows without downloading anything]]></title><description><![CDATA[Windows and node_modules folders When trying to delete a node _ modules folder within windows explorer you will be presented with a windows…]]></description><link>http://www.itsmycodeblog.com//2016-5-9-windows-deleting-node-modules/2016-5-9-windows-deleting-node-modules/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-5-9-windows-deleting-node-modules/2016-5-9-windows-deleting-node-modules/</guid><pubDate>Mon, 09 May 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/delete-node-modules.png&quot; alt=&quot;alt text &quot; title=&quot;Deleting a  
+node_modules folder on windows&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Windows and node_modules folders&lt;/h1&gt;
+&lt;p&gt;When trying to delete a node_modules folder within windows explorer you&lt;br&gt;
+will be presented with a windows dialog saying the ‘The folder contains items&lt;br&gt;
+whose names are too long for the Recycle Bin.’ This is due to a restriction&lt;br&gt;
+of the NTFS file system where the MAX_PATH of a complete directory file&lt;br&gt;
+path cannot be more than 260 characters in length.&lt;/p&gt;
+&lt;p&gt;As a consequence, when windows tries to move the node_modules folder into&lt;br&gt;
+the Recycle Bin, the tendency of node dependencies to create multiple&lt;br&gt;
+nested folders and therefore file path names exceeding 260 characters,&lt;br&gt;
+prevents the files from being moved to the recycle bin.&lt;/p&gt;
+&lt;p&gt;&lt;img src=&quot;/images/long-file-names-node-modules.png&quot; alt=&quot;alt text &quot; title=&quot;Long file names dialog 
+when deleting a node_modules folder on windows&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Deleting node_modules folders on windows&lt;/h2&gt;
+&lt;p&gt;When searching online for solutions for deleting a node_modules on windows you can find
+recommendations to install the excellent &lt;a href=&quot;https://github.com/isaacs/rimraf&quot;&gt;RimRaf&lt;/a&gt;
+util via npm but you can remove the folders without downloading any utils.&lt;/p&gt;
+&lt;h2&gt;Deleting node_modules folders on windows without downloading anything&lt;/h2&gt;
+&lt;h3&gt;Steps to follow&lt;/h3&gt;
+&lt;h4&gt;Open the windows command prompt&lt;/h4&gt;
+&lt;p&gt;Windows start button / type command prompt&lt;/p&gt;
+&lt;h4&gt;Change directory to your c drive root&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;cd c:\&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Create a temp folder&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;mkdir temp&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h4&gt;Use the built in robocopy to remove the node_modules folder that you wish to delete.&lt;/h4&gt;
+&lt;p&gt;Tip: you only need to type up to the first three letters of a directory name (depending on
+similar directory names) and then you can press tab to autocomplete the name.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;robocopy /MIR c:\temp c:\inetpub\wwwroot\sample_app\node_modules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;robocopy is short for “Robust File Copy” which on from windows vista onwards had replaced
+xcopy.&lt;/em&gt; &lt;/p&gt;
+&lt;p&gt;&lt;em&gt;/MIR is short for Mirror meaning copy (mirror) files from the first folder&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This command will have the effect of destroying any files in the second folder that are
+not present in the first folder.&lt;/p&gt;
+&lt;p&gt;So, as you created an empty folder &lt;em&gt;c:\temp&lt;/em&gt; all files within &lt;em&gt;c:\inetpub\wwwroot\sample&lt;em&gt;app&lt;br&gt;
+node\&lt;/em&gt;modules&lt;/em&gt; are not present in &lt;em&gt;c:\temp&lt;/em&gt; and so all files will be deleted (destroyed).&lt;/p&gt;
+&lt;h4&gt;Then to delete the empty node_modules folder type&lt;/h4&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;RD c:\inetpub\wwwroot\sample_app\node_modules&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where RD stands for Remove Directory.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Angular2 - Unit Testing a component]]></title><description><![CDATA[Angular2  - Components In Angular2 Components are the way we add behaviour to new DOM elements that we add to an application whereas…]]></description><link>http://www.itsmycodeblog.com//2016-4-14-angular2-unit-testing-a-component/2016-4-14-angular2-unit-testing-a-component/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-4-14-angular2-unit-testing-a-component/2016-4-14-angular2-unit-testing-a-component/</guid><pubDate>Thu, 14 Apr 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/High_voltage_test_set.jpg&quot; alt=&quot;alt text &quot; title=&quot;Angular2 - unit Testing a component&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Angular2  - Components&lt;/h1&gt;
+&lt;p&gt;In Angular2 Components are the way we add behaviour to new DOM elements that we add to an application whereas
+Directives add behaviour to existing elements. Components allow us to break down an application into smaller
+pieces of code that can encapsulate behaviour and functionality. This allows us to test the component
+separately from the rest of the application. The component that we will unit test renders a supplied club
+members fullname in a span tag.&lt;/p&gt;
+&lt;h2&gt;Club Member Model&lt;/h2&gt;
+&lt;p&gt;The club member component requires a club member to be supplied, so we will create a club member model
+that we can use to pass a club member as input to the component. The club member model needs two properties -
+a firstname and a surname - and we will also need to return function to return a fullname.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;export class ClubMemberModel {
+
+    constructor(
+        public firstname: string = &amp;#39;&amp;#39;,
+        public surname: string = &amp;#39;&amp;#39;
+    ) {};
+
+    fullname() {
+        return (this.firstname + &amp;#39; &amp;#39; + this.surname);
+    }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Club Member Model Unit Test&lt;/h2&gt;
+&lt;p&gt;The club member renderer component is going to have an Input property that is in the form of a club member
+model. So as the club member renderer component relies on the club member model we should unit test our
+club member model first to ensure that it works as expected. &lt;/p&gt;
+&lt;p&gt;Firstly we need to import &lt;em&gt;describe&lt;/em&gt;, &lt;em&gt;it&lt;/em&gt; and &lt;em&gt;expect&lt;/em&gt; from &lt;em&gt;angular2/testing&lt;/em&gt; and
+&lt;em&gt;ClubMemberModel&lt;/em&gt; from &lt;em&gt;club-member-model.ts&lt;/em&gt;. Then we can test that the club member model returns firstname,
+surname and fullname in line with our expectations.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import {
+  describe, 
+  it, 
+  expect
+} from &amp;#39;angular2/testing&amp;#39;;
+
+import {ClubMemberModel} from &amp;#39;./club-member-model&amp;#39;;
+
+describe(&amp;#39;ClubMemberModel&amp;#39;, () =&amp;gt; {
+
+  it(&amp;#39;should return the correct properties&amp;#39;, () =&amp;gt; {
+
+      var newClubMember = new ClubMemberModel();
+      newClubMember.firstname = &amp;#39;John&amp;#39;;
+      newClubMember.surname = &amp;#39;Velo&amp;#39;;
+
+      expect(newClubMember.firstname).toBe(&amp;#39;John&amp;#39;);
+      expect(newClubMember.surname).toBe(&amp;#39;Velo&amp;#39;);
+      expect(newClubMember.fullname()).toBe(&amp;#39;John Velo&amp;#39;);
+  });
+
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Club Member Renderer&lt;/h2&gt;
+&lt;p&gt;The club member renderer component comprises of a &lt;em&gt;selector&lt;/em&gt;, a &lt;em&gt;template&lt;/em&gt; and has a databound &lt;em&gt;Input&lt;/em&gt; property
+of clubmember. The selector parameter is the replacement for the naming conventions that were previously
+in directives and works in the same fashion as a querySelector that searches for an element called
+club-member-renderer upon which it will instatiate itself. The template parameter is an inline template
+that contains span tags that wrap an angular expression which evaluates clubmember.fullname(). Finally
+there is a a data bound input property of clubmember which will be passed to template for evaluation.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import {Component, Input} from &amp;#39;angular2/core&amp;#39;;
+
+@Component({
+    selector: &amp;#39;club-member-renderer&amp;#39;,
+    template:   `&amp;lt;span&amp;gt;{{ clubmember.fullname() }}&amp;lt;/span&amp;gt;`
+})
+export class ClubMemberRenderer {
+    @Input() clubmember;
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Club Member Renderer Unit Test&lt;/h2&gt;
+&lt;p&gt;A component requires more setup than our previous model test. Intially we will have to import &lt;em&gt;describe&lt;/em&gt;,
+&lt;em&gt;it&lt;/em&gt;, &lt;em&gt;expect&lt;/em&gt;, &lt;em&gt;inject&lt;/em&gt;, &lt;em&gt;beforeEach&lt;/em&gt;, &lt;em&gt;beforeEachProviders&lt;/em&gt; and &lt;em&gt;TestComponentBuilder&lt;/em&gt; from
+&lt;em&gt;angular2/testing&lt;/em&gt;. Then next import &lt;em&gt;ClubMemberRenderer&lt;/em&gt; from &lt;em&gt;club-member-renderer.ts&lt;/em&gt; and
+&lt;em&gt;ClubMemberModel&lt;/em&gt; from &lt;em&gt;club-member-model&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Succeeding the imports is some setup for the test using the &lt;em&gt;beforeEachProviders&lt;/em&gt;  and &lt;em&gt;inject&lt;/em&gt; functions
+to bootstrap the test, instantiating the component under test. Then in the test we can create asynchronously
+the ClubMemberRenderer component verifying that the span element it creates, will render the fullname of a
+club member, if passed an instance of a ClubMemberModel containing a firstname and surname.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import {
+    describe, 
+    it, 
+    expect, 
+    inject,
+    beforeEach, 
+    beforeEachProviders, 
+    TestComponentBuilder
+} from &amp;#39;angular2/testing&amp;#39;;
+
+import {ClubMemberRenderer} from &amp;quot;./club-member-renderer&amp;quot;;
+import {ClubMemberModel} from &amp;quot;./club-member-model&amp;quot;;
+    
+describe(&amp;#39;ClubMemberRenderer: component&amp;#39;, () =&amp;gt; {
+  let tcb;
+  
+  //setup
+  beforeEachProviders(() =&amp;gt; [
+      TestComponentBuilder,
+      ClubMemberRenderer
+  ]);
+  
+  beforeEach(inject([TestComponentBuilder], _tcb =&amp;gt; { 
+      tcb = _tcb
+  }));
+  
+  //specs
+  it(&amp;#39;should render club member name&amp;#39;, done =&amp;gt; {
+      tcb.createAsync(ClubMemberRenderer).then(fixture =&amp;gt; {
+          let clubMemberFixture = fixture.componentInstance, 
+          element = fixture.nativeElement;
+          
+          var newClubMember = new ClubMemberModel();
+          newClubMember.firstname = &amp;#39;John&amp;#39;;
+          newClubMember.surname = &amp;#39;Velo&amp;#39;;
+              
+          clubMemberFixture.clubmember = newClubMember;
+          
+          fixture.detectChanges(); //trigger change detection
+          expect(element.querySelector(&amp;#39;span&amp;#39;).innerText).toBe(&amp;#39;John Velo&amp;#39;);
+          done();
+      })
+      .catch(e =&amp;gt; done.fail(e));
+  });
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Club Member Renderer in action&lt;/h2&gt;
+&lt;p&gt;So how is the club member renderer used in the context of an Angular2 app? First we create an app component
+that imports &lt;em&gt;Component&lt;/em&gt; and &lt;em&gt;Input&lt;/em&gt; from &lt;em&gt;angular2/core&lt;/em&gt;, &lt;em&gt;ClubMemberModel&lt;/em&gt; from &lt;em&gt;club-member-model&lt;/em&gt; and
+then &lt;em&gt;ClubMemberRenderer&lt;/em&gt; from &lt;em&gt;club-member-renderer&lt;/em&gt;. Next we declare the selector parameter of &lt;em&gt;app&lt;/em&gt;,
+a template parameter which contains a &lt;em&gt;&lt;club-member-renderer&gt;&lt;/em&gt; element and then a directive reference to
+the &lt;em&gt;ClubMemberRenderer&lt;/em&gt; component. The App class contains a variable &lt;em&gt;clubMember&lt;/em&gt; declared as type
+&lt;em&gt;ClubMemberModel&lt;/em&gt; then in the constructor &lt;em&gt;clubMember&lt;/em&gt; is set to a new instance of &lt;em&gt;ClubMemberModel&lt;/em&gt;
+comprising of a firstname and surname.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import {Component, Input} from &amp;#39;angular2/core&amp;#39;;
+import {ClubMemberModel} from &amp;#39;./club-member-model&amp;#39;;
+import {ClubMemberRenderer} from &amp;#39;./club-member-renderer&amp;#39;;
+
+@Component({
+	selector: &amp;#39;app&amp;#39;,
+	template: `&amp;lt;div&amp;gt;
+	            &amp;lt;club-member-renderer [clubmember]=&amp;quot;clubMember&amp;quot;&amp;gt;&amp;lt;/club-member-renderer&amp;gt;
+	           &amp;lt;/div&amp;gt;`,
+	directives: [ClubMemberRenderer]
+})
+export class App {
+  clubMember: ClubMemberModel;
+  
+  constructor() {
+    
+    this.clubMember = new ClubMemberModel(&amp;quot;John&amp;quot;, &amp;quot;Velo&amp;quot;);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Plunker Links&lt;/h2&gt;
+&lt;p&gt;The code for the &lt;em&gt;ClubMemberRenderer&lt;/em&gt; unit tests are available in this &lt;a href=&quot;https://plnkr.co/XcBugFIxCpS7ARyEHBXK&quot; target=&quot;_blank&quot;&gt;plnkr&lt;/a&gt;
+and the &lt;em&gt;ClubMemberRenderer&lt;/em&gt; in action code is available in this &lt;a href=&quot;https://plnkr.co/QYMkClDh6t7nYPfbcaZO&quot; target=&quot;_blank&quot;&gt;plnkr&lt;/a&gt;. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Typescript Spread Operator]]></title><description><![CDATA[Spread Operator Angular2 is now in beta and the Angular Team have built it upon Typescript. Typescript is a
+typed superset of Javascript…]]></description><link>http://www.itsmycodeblog.com//2016-3-10-typescript-spread-operator/2016-3-10-typescript-spread-operator/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-3-10-typescript-spread-operator/2016-3-10-typescript-spread-operator/</guid><pubDate>Thu, 10 Mar 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/spread-operator.jpg&quot; alt=&quot;alt text &quot; title=&quot;Typescript Spread Operator&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Spread Operator&lt;/h1&gt;
+&lt;p&gt;Angular2 is now in beta and the Angular Team have built it upon Typescript. Typescript is a
+typed superset of Javascript created and maintained by Microsoft. The usage of types allows the
+code written in Typescript to have the advantage of compile time checking, code completion and ES6 compatibility.&lt;/p&gt;
+&lt;p&gt;While working through some introductory tutorials on Angular2 and Typescript a new operator
+came to my attention which takes the form of an ellipsis and is called the Spread Operator.&lt;/p&gt;
+&lt;h2&gt;ES6&lt;/h2&gt;
+&lt;p&gt;ECMAScript 6 was finalized in June 2015 and it introduced the spread operator as a better version of the the existing apply method.&lt;/p&gt;
+&lt;p&gt;Using the existing Function.prototype.apply you pass two arguments, a this parameter and a single array which is converted into a list of arguments to the function which apply is called on.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var argsArray = [&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;];
+
+console.log.apply(console, argsArray);
+
+// Which outputs the same as
+console.log(&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;In ES6 using the spread operator you can instead prefix the arguments with &lt;em&gt;…&lt;/em&gt;&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var argsArray = [&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;];
+
+console.log(...argsArray);
+
+// Which outputs the same as
+console.log(&amp;quot;A&amp;quot;, &amp;quot;B&amp;quot;, &amp;quot;C&amp;quot;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Angular2 and Typescript&lt;/h2&gt;
+&lt;p&gt;When creating an Angular2 application using Typescript the spread operator becomes very useful. When updating an object in for example a todo list array it is recommended to replace the  array rather than to update it so any pipes that filter the array contents are informed that the contents have changed. In the toggle function below we can use splice combined with the spread operator to neatly update a todo object within our array of todo objects.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;import {Injectable} from &amp;quot;angular2/core&amp;quot;;
+import {TodoModel} from &amp;quot;./todo-model&amp;quot;;
+
+@Injectable()   
+export class TodoService{
+    todos = [
+        new TodoModel(&amp;quot;eat&amp;quot;),
+        new TodoModel(&amp;quot;sleep&amp;quot;),
+        new TodoModel(&amp;quot;dance&amp;quot;, &amp;quot;completed&amp;quot;),
+        new TodoModel(&amp;quot;party&amp;quot;),
+        new TodoModel(&amp;quot;work&amp;quot;),
+        new TodoModel(&amp;quot;play&amp;quot;),
+        new TodoModel(&amp;quot;record&amp;quot;, &amp;quot;completed&amp;quot;),
+        new TodoModel(&amp;quot;earn&amp;quot;),
+        new TodoModel(&amp;quot;charm&amp;quot;, &amp;quot;completed&amp;quot;),
+        new TodoModel(&amp;quot;exercise&amp;quot;),
+        new TodoModel(&amp;quot;swim&amp;quot;, &amp;quot;completed&amp;quot;),
+        new TodoModel(&amp;quot;code&amp;quot;)
+    ];
+
+    addTodo(todo: TodoModel) {
+        this.todos = [...this.todos, todo];
+    }
+
+    toggleTodo(todo: TodoModel) {
+        todo.toggle();
+
+        const i = this.todos.indexOf(todo);
+
+        this.todos = [
+            ...this.todos.slice(0, i),
+            todo,
+            ...this.todos.slice(i + 1)
+        ]
+
+    }
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Photo Credit: &lt;a href=&quot;https://www.flickr.com/photos/71256895@N00/5491842479/&quot;&gt;tomylees&lt;/a&gt; via &lt;a href=&quot;http://compfight.com&quot;&gt;Compfight&lt;/a&gt; &lt;a href=&quot;https://creativecommons.org/licenses/by-nc-sa/2.0/&quot;&gt;cc&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[There's an app for that - Kadence]]></title><description><![CDATA[Kadence - My first app in the Apple iOS App Store First the idea I have found the best way to have an idea for a first app is fulfill a gap…]]></description><link>http://www.itsmycodeblog.com//2016-2-15-theres-an-app-for-that-kadence/2016-2-15-theres-an-app-for-that-kadence/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-2-15-theres-an-app-for-that-kadence/2016-2-15-theres-an-app-for-that-kadence/</guid><pubDate>Mon, 15 Feb 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/kadence.png&quot; alt=&quot;alt text &quot; title=&quot;There&amp;#x27;s an app for that - Kadence&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Kadence - My first app in the Apple iOS App Store&lt;/h1&gt;
+&lt;h2&gt;First the idea&lt;/h2&gt;
+&lt;p&gt;I have found the best way to have an idea for a first app is fulfill a gap
+in the market for app that you have discovered because you &lt;strong&gt;&lt;em&gt;need&lt;/em&gt;&lt;/strong&gt; that app.&lt;/p&gt;
+&lt;p&gt;This will allow you design the app with the user in mind because user number one
+will be &lt;strong&gt;&lt;em&gt;you&lt;/em&gt;&lt;/strong&gt; so unless you are a special unique flower other users may find it useful also.&lt;/p&gt;
+&lt;p&gt;In my case I required an app that would allow help me decide to choose a new bike based on
+chainset and cassette combinations. I wanted to find a bike that had a range somewhere
+between a compact road bike and mountain bike - an all-rounder that would allow me to climb
+steep climbs but still not spin-out when going down hills.&lt;/p&gt;
+&lt;p&gt;My requirements were:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Ease of adding bikes&lt;/li&gt;
+&lt;li&gt;Ease of navigation between bikes&lt;/li&gt;
+&lt;li&gt;Mobility&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;And that’s why &lt;a href=&quot;https://itunes.apple.com/us/app/kadence/id1081127512?mt=8&quot; target=&quot;_blank&quot;&gt;Kadence&lt;/a&gt; was created.&lt;/p&gt;
+&lt;h2&gt;How it was built&lt;/h2&gt;
+&lt;h3&gt;Ionic&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;http://ionicframework.com/&quot; target=&quot;_blank&quot;&gt;ionic&lt;/a&gt; framework “is a powerful HTML5 SDK that helps you build native-feeling mobile apps using web technologies like HTML, CSS, and Javascript.” I have found that it allowed me to create my hybrid HTML5 app using a familiar tool set.&lt;/p&gt;
+&lt;h3&gt;AngularJS&lt;/h3&gt;
+&lt;p&gt;The &lt;a href=&quot;https://angularjs.org/&quot; target=&quot;_blank&quot;&gt;AngularJS&lt;/a&gt; is a Javascript framework that is 100% client-side and compatible with both desktop and mobile browsers. Ionic is built upon Angular directives and components and also uses the Angular UI router for single page apps. Being familiar with AngularJS gave me an easier on-boarding for the ionic framework.&lt;/p&gt;
+&lt;h3&gt;PouchDB&lt;/h3&gt;
+&lt;p&gt;&lt;a href=&quot;http://pouchdb.com/&quot; target=&quot;_blank&quot;&gt;PouchDB&lt;/a&gt; “is an open-source JavaScript database inspired by Apache CouchDB that is designed to run well within the browser”. Although it enables applications to store data locally and then synchronize with CouchDB and when the application is back online I only needed the offline capability for my app.&lt;/p&gt;
+&lt;h2&gt;Lessons Learned&lt;/h2&gt;
+&lt;h3&gt;Refactoring&lt;/h3&gt;
+&lt;p&gt;Although you can fall into the refactoring &amp;#x3C;a href=”&lt;a href=&quot;http://tumblr.jeremyjohnstone.com/post/74379505516/the-code-refactoring-trap&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://tumblr.jeremyjohnstone.com/post/74379505516/the-code-refactoring-trap&lt;/a&gt; target=“_blank”&gt;trap&lt;/a&gt; when creating your first app I think it’s acceptable if this is your first app and your first effort will be more a prototype rather than the finished article. The more familiar you get with Ionic the easier it will be to envisage and plan how to build your app correctly from the start.&lt;/p&gt;
+&lt;h3&gt;Perseverance&lt;/h3&gt;
+&lt;p&gt;If like me you are building an app in your spare time you will need a substantial amount of perseverance to see it through. But it will be worth it when you see your app live in the &lt;a href=&quot;https://itunes.apple.com/gb/app/kadence/id1081127512?mt=8&quot; target=&quot;_blank&quot;&gt;app store&lt;/a&gt;.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Self Executing Anonymous Functions in AngularJS]]></title><description><![CDATA[A common pattern you will see in AngularJS is angular code being wrapped in a Self Executing Anonymous Function (SEAF) such as a directive…]]></description><link>http://www.itsmycodeblog.com//2016-01-16-self-executing-anonymous-function-in-angularjs/2016-01-16-self-executing-anonymous-function-in-angularjs/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-01-16-self-executing-anonymous-function-in-angularjs/2016-01-16-self-executing-anonymous-function-in-angularjs/</guid><pubDate>Wed, 06 Jan 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/seaf.jpg&quot; alt=&quot;alt text &quot; title=&quot;Self Executing Anonymous Function&quot;&gt;&lt;/p&gt;
+&lt;p&gt;A common pattern you will see in AngularJS is angular code being wrapped in a Self Executing Anonymous Function (SEAF) such as a directive  being attached to an angular module. A SEAF is also known as an IIFE which is short for Immediately-Invoked Function Expression.&lt;/p&gt;
+&lt;h2&gt;What is a Self Executing Anonymous Function (SEAF)?&lt;/h2&gt;
+&lt;p&gt;In order to create modular code in javascript one technique is to wrap your code in a SEAF.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function(){
+
+    var greetingPartOne = &amp;quot;Hello&amp;quot;;
+    var greetingPartTwo = &amp;quot;World!&amp;quot;;
+    
+    function salutation() {
+        alert(greetingPartOne + &amp;quot; &amp;quot; + greetingPartTwo);
+    }
+    
+    salutation();
+   
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The SEAF consists of the anonymous function&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function(){
+})&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and the two brackets at the end that immediately executes the code contained in the preceeding parentheses.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Although the SEAF describes the anonymous function as being &lt;em&gt;executed&lt;/em&gt; the IIFE description of &lt;em&gt;invoked&lt;/em&gt; is more accurate.&lt;/p&gt;
+&lt;h2&gt;Anonymous Function&lt;/h2&gt;
+&lt;p&gt;The use of the anonymous function creates a closure which prevents access to the variables and functions that it contains.&lt;/p&gt;
+&lt;p&gt;So in the example below the alerting of the variables and the call to the salutation function from outside the SEAF will not work as they are not available to code external to the anonymous function.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function(){
+
+    var greetingPartOne = &amp;quot;Hello&amp;quot;;
+    var greetingPartTwo = &amp;quot;World!&amp;quot;;
+    
+    function salutation() {
+        alert(greetingPartOne + &amp;quot; &amp;quot; + greetingPartTwo);
+    }
+    
+    salutation();
+   
+})();
+
+alert(greetingPartOne);
+alert(greetingPartTwo);
+salutation();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The usage of the variables and function outside the SEAF will result in Reference Errors being thrown by the javascript compiler.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Exception: ReferenceError: greetingPartOne is not defined
+
+Exception: ReferenceError: greetingPartTwo is not defined
+
+Exception: ReferenceError: salutation is not defineded&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;The SEAF pattern in jQuery&lt;/h2&gt;
+&lt;p&gt;This SEAF pattern is used extensively by jQuery developers when wishing to pass the jQuery object into an anonymous function to create and attach objects as properties or methods that can be accessed without exposing the objects publicly. It also prevents any variable naming collisions by keeping the variables private and internal to the anonymous function.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function($){
+
+    //jQuery is available here as $
+    
+    var arr = []; //this is private
+    
+    $.addItem = function(item) {
+      arr.push(item);
+    }
+
+})(jQuery);
+
+// arr can&amp;#39;t be accessed here
+// jQuery.addItem can be accessed here.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;The SEAF pattern in AngularJS&lt;/h2&gt;
+&lt;p&gt;The typical example would be a controller being added to an angular module being wrapped in a self executing anonymous function. In the example below the wrapping SEAF is not being utalised as the code block is being wrapped in an anonymous function which is encapsulating
+the code within its local function scope. &lt;/p&gt;
+&lt;p&gt;But it is good practice to include it within your javascript code and many developers code editors are set up to include a SEAF code snippet in a new javascript file. Coupled with the &lt;em&gt;‘use strict’&lt;/em&gt; directive which enables strict mode that will throw errors if it encounters, for example, undeclared variables.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function(){
+
+ &amp;quot;use strict&amp;quot;;
+
+    angular.module(&amp;#39;appMod&amp;#39;)
+    .controller(&amp;#39;appCtrl&amp;#39;, [&amp;#39;dep1&amp;#39;, function(dep1){
+      //..
+      // Code block here
+      //..
+    }])
+   
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The code seen below separates the controllers anonymous function out into a named function keeping the angular related code more
+cleaner and makes use of the SEAF to locally scope the MainCtrl function. This makes the code more modular keeping our functions and variables local while still being able to connect our controller to the angular.module(‘app’).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function () {
+
+    &amp;#39;use strict&amp;#39;;
+    
+    function MainCtrl ($scope) {
+        $scope.initalised = true;
+    }
+    
+    angular.module(&amp;#39;app&amp;#39;).controller(&amp;#39;MainCtrl&amp;#39;, [&amp;#39;$scope&amp;#39;, MainCtrl);
+    
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So whether you call it a SEAF or an IIFE it is good practice to encapsulate your code in an anonymous function that can self invoke. &lt;/p&gt;</content:encoded></item><item><title><![CDATA[Creating an AngularJS pulse directive]]></title><description><![CDATA[Using animations to alert the user to value changes When highlighting to the user a change of a value on a page with a noisy layout you are…]]></description><link>http://www.itsmycodeblog.com//2016-01-6-creating-an-angularjs-pulse-directive/2016-01-6-creating-an-angularjs-pulse-directive/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2016-01-6-creating-an-angularjs-pulse-directive/2016-01-6-creating-an-angularjs-pulse-directive/</guid><pubDate>Wed, 06 Jan 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/pulse.jpg&quot; alt=&quot;alt text &quot; title=&quot;Creating an AngularJS pulse directive&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Using animations to alert the user to value changes&lt;/h2&gt;
+&lt;p&gt;When highlighting to the user a change of a value on a page with a noisy layout you are faced with two possibilities,
+either use a colour to highlight the change or add an animation to emphasize the transition
+between the initial value and the new value.&lt;/p&gt;
+&lt;p&gt;Using a colour can add to visual noise on page if the change in value is not crucial to the overall user experience, you may
+course want a value highlighted in red if a limit has been reached. If you want draw attention value changing but not the
+significance of the value then an animation can be effective.&lt;/p&gt;
+&lt;p&gt;One of the animations types we will explore is a CSS pulse animation.&lt;/p&gt;
+&lt;h2&gt;Pulse CSS with keyframes&lt;/h2&gt;
+&lt;p&gt;The pulse animation will take the form of 3d scaling up the chosen element by 25% at the halfway point in the animation and
+then gradually transforming the element back to its initial state at the end of the animation. CSS3 us allows to use keyframes
+to specify the points in time at which we wish our effects to have taken place&lt;/p&gt;
+&lt;p&gt;Keyframes are steps in your animation that allow you define the stages of the transformation being specified,
+creating a smoother animation.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;.pulse {
+  animation: pulse 1s infinite;
+  animation-duration: 1s;
+  animation-play-state: running;
+  animation-iteration-count: 1;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale3d(1, 1, 1);
+  }
+  50% {
+    transform: scale3d(1.25, 1.25, 1.25);
+  }
+  100% {
+    transform: scale3d(1, 1, 1);
+  }
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;ngAnimate&lt;/h2&gt;
+&lt;p&gt;In this AngularJS app we will have a dependency on &lt;a href=&quot;https://docs.angularjs.org/api/ngAnimate&quot; target=&quot;_blank&quot;&gt;ngAnimate&lt;/a&gt;
+so lets inject it into our app via dependency injection.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var app = angular.module(&amp;quot;app&amp;quot;, [&amp;quot;ngAnimate&amp;quot;]);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Control the value in the controller&lt;/h2&gt;
+&lt;p&gt;As usual in an AngularJS app the value that we will be manipulating should have any operations located in the controller. So the
+currentVote variable will be initialised, incremented and decremented from our controller. &lt;/p&gt;
+&lt;p&gt;In this implementation we will be using the ‘controller as’ syntax to identify methods with the controller scope indicated
+with the vm (view model).&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;).controller(&amp;quot;AppCtrl&amp;quot;, function() {
+      var vm = this;
+
+      vm.currentVote = 0;
+
+      vm.plusOne = function() {
+        vm.currentVote = vm.currentVote + 1;
+      }
+
+      vm.minusOne = function() {
+        vm.currentVote = vm.currentVote - 1;
+      } 
+      
+      return vm;
+  });
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;To use a directive or not use a directive&lt;/h2&gt;
+&lt;p&gt;We could also invoke the animation from our &lt;em&gt;controller&lt;/em&gt;, first by injecting $animation into the anonymous function and then
+by adding code to the plusOne and minusOne functions like below.&lt;/p&gt;
+&lt;h4&gt;Code Smell&lt;/h4&gt;
+&lt;p&gt;In AngularJS this would give our code a ‘code smell’ as searching for elements by id or class is an anti-pattern as
+directives have been supplied to deal with this scenario. The &lt;em&gt;controller&lt;/em&gt; should be controlling the value and the &lt;em&gt;directive&lt;/em&gt;
+controlling the element to animate.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;).controller(&amp;quot;AppCtrl&amp;quot;, function($animate) {
+      var vm = this;
+    
+      var elementToPulse = angular.element(document.getElementById(&amp;#39;badge&amp;#39;));
+
+      vm.currentVote = 0;
+
+      vm.plusOne = function() {
+        vm.currentVote = vm.currentVote + 1;
+        $animate.addClass(elementToPulse, &amp;quot;pulse&amp;quot;);
+      }
+
+      vm.minusOne = function() {
+        vm.currentVote = vm.currentVote - 1;
+        $animate.addClass(elementToPulse, &amp;quot;pulse&amp;quot;);
+      } 
+      
+      return vm;
+  });
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Watch the variable from our directive&lt;/h2&gt;
+&lt;p&gt;We will create a directive called pulseOnChange that will watch for value changes in an element. Injecting $animate and
+$timeout provide the functionality to add the pulse class to the element on change and then to remove the pulse class after
+1 second in this case as we have specified our animation to last 1 second.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;).directive(&amp;quot;pulseOnChange&amp;quot;, function($animate, $timeout) {
+    return function(scope, element, attrs) {
+          scope.$watch(attrs.pulseOnChange, function() {
+                  $animate.addClass(element, &amp;quot;pulse&amp;quot;);
+                  $timeout(function() {
+                    $animate.removeClass(element, &amp;quot;pulse&amp;quot;);
+                  }, 1000);
+          });
+      };
+  });
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Lets create the HTML&lt;/h2&gt;
+&lt;p&gt;There are fours part to our HTML&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;declare our app and controller on the body and use the controller as snytax&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a button to control the increment&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a directive applied to the element containing the value&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;a button to decrement the value&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We will use &lt;a href=&quot;http://getbootstrap.com/&quot; target=&quot;_blank&quot;&gt;bootstrap 3&lt;/a&gt; to layout our page, add
+styles and icons to our app.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;body ng-app=&amp;quot;app&amp;quot; ng-controller=&amp;quot;AppCtrl as vm&amp;quot;&amp;gt;
+  
+  &amp;lt;div class=&amp;quot;jumbotron vertical-center&amp;quot;&amp;gt;
+    &amp;lt;div class=&amp;quot;container text-center&amp;quot;&amp;gt;
+      &amp;lt;button class=&amp;quot;btn btn-success glyphicon glyphicon-thumbs-up&amp;quot; ng-click=&amp;quot;vm.plusOne()&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+      &amp;lt;div class=&amp;quot;badge-container vertical-center&amp;quot;&amp;gt;
+        &amp;lt;span class=&amp;quot;badge&amp;quot; pulse-on-change=&amp;quot;vm.currentVote&amp;quot;&amp;gt;{{ vm.currentVote}}&amp;lt;/span&amp;gt;
+      &amp;lt;/div&amp;gt;
+      &amp;lt;button class=&amp;quot;btn btn-success glyphicon glyphicon-thumbs-down&amp;quot; ng-click=&amp;quot;vm.minusOne()&amp;quot;&amp;gt;&amp;lt;/button&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/div&amp;gt;
+  
+&amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Lets view the end product&lt;/h2&gt;
+&lt;p&gt;As we can see all the moving parts come together to highlight the change in value to the user without adding any additional
+visual noise to the page.&lt;/p&gt;
+&lt;p data-height=&quot;268&quot; data-theme-id=&quot;0&quot; data-slug-hash=&quot;OMWBWj&quot; data-default-tab=&quot;result&quot; data-user=&quot;NicholasMurray&quot; class=&apos;codepen&apos;&gt;See the Pen &lt;a href=&apos;http://codepen.io/NicholasMurray/pen/OMWBWj/&apos;&gt;AngularJS Pulse on change Directive&lt;/a&gt; by Nicholas Murray (&lt;a href=&apos;http://codepen.io/NicholasMurray&apos;&gt;@NicholasMurray&lt;/a&gt;) on &lt;a href=&apos;http://codepen.io&apos;&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async src=&quot;//assets.codepen.io/assets/embed/ei.js&quot;&gt;&lt;/script&gt;</content:encoded></item><item><title><![CDATA[So you want a simple Node HTTP Server?]]></title><description><![CDATA[5 steps to create a simple Node HTTP Server Step 1. Open a terminal and install NPM if you don’t have it yet Step 2. Install the Node HTTP…]]></description><link>http://www.itsmycodeblog.com//2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-5-4-so-you-want-a-simple-node-http-server/2015-5-4-so-you-want-a-simple-node-http-server/</guid><pubDate>Wed, 06 Jan 2016 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/hquoVFO.jpg,&quot; alt=&quot;alt text &quot; title=&quot;Node HTTP-Server Simples&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;5 steps to create a simple Node HTTP Server&lt;/h1&gt;
+&lt;h2&gt;Step 1.&lt;/h2&gt;
+&lt;p&gt;Open a terminal and install NPM if you don’t have it yet&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;curl https://npmjs.org/install.sh | sh&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Step 2.&lt;/h2&gt;
+&lt;p&gt;Install the Node HTTP Server&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;npm install http-server -g&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Step 3.&lt;/h2&gt;
+&lt;p&gt;Run the Node HTTP Server&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http-server&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Step 4.&lt;/h2&gt;
+&lt;p&gt;Create a new index.html page in your current directory then visit &lt;a href=&quot;http://127.0.0.1:8080&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://127.0.0.1:8080&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Step 5.&lt;/h2&gt;
+&lt;p&gt;There is no step 5. Simples!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[What exactly does git add -A do?]]></title><description><![CDATA[Simple git workflow When working on my personal projects I have always followed a simple git workflow that involves nothing more…]]></description><link>http://www.itsmycodeblog.com//2015-12-2-git-add/2015-12-2-git-add/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-12-2-git-add/2015-12-2-git-add/</guid><pubDate>Wed, 02 Dec 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/git.png&quot; alt=&quot;alt text &quot; title=&quot;Git&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Simple git workflow&lt;/h2&gt;
+&lt;p&gt;When working on my personal projects I have always followed a simple git workflow that involves nothing more
+complicated than creating a new branch adding and comitting my changes into the new branch, then merging the
+new branch into master and pushing it to &lt;a href=&quot;https://bitbucket.org/&quot; target=&quot;_blank&quot;&gt;bitbucket&lt;/a&gt; or
+&lt;a href=&quot;https://github.com/&quot; target=&quot;_blank&quot;&gt;github&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git branch &amp;quot;NewBranch&amp;quot;
+...make changes....
+git add -A
+git commit -m &amp;quot;Added changes&amp;quot;
+git checkout master
+git merge NewBranch
+git push&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;What does git add -A actually do?&lt;/h2&gt;
+&lt;h3&gt;Git Version 1.x&lt;/h3&gt;
+&lt;p&gt;In git version &lt;strong&gt;1.x&lt;/strong&gt; &lt;code class=&quot;language-text&quot;&gt;git add -A&lt;/code&gt; is a shorthand way of typing the &lt;code class=&quot;language-text&quot;&gt;git add --all&lt;/code&gt; command that stages (adds) all new, modified and deleted files.
+This is in itself a shorthand way of typing the commands&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;git add .
+git add -u&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;where &lt;code class=&quot;language-text&quot;&gt;git add .&lt;/code&gt; stages new and modified files only  and &lt;code class=&quot;language-text&quot;&gt;git add -u&lt;/code&gt; stages modified and deleted files only.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# For the next commit
+$ git add .   # stage only files new or modified files 
+$ git add -u  # stage only files modified or deleted files 
+$ git add -A  # stage files new, modified or deleted files &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;Git Version 2.x&lt;/h3&gt;
+&lt;p&gt;In git version &lt;strong&gt;2.x&lt;/strong&gt; the &lt;code class=&quot;language-text&quot;&gt;git add&lt;/code&gt; commands have changed so that &lt;code class=&quot;language-text&quot;&gt;git add .&lt;/code&gt; is now equivalent to &lt;code class=&quot;language-text&quot;&gt;git add -A&lt;/code&gt; &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;# For the next commit
+$ git add .   # stage files new, modified or deleted files 
+$ git add -u  # stage only files modified or deleted  files 
+$ git add --ignore removal  # stage only new or modified files 
+$ git add -A  # stage files new, modified or deleted&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So, when I upgrade from git &lt;strong&gt;1.x&lt;/strong&gt; to &lt;strong&gt;2.x&lt;/strong&gt; I will be able to save typing one character by using &lt;code class=&quot;language-text&quot;&gt;git add .&lt;/code&gt; instead.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AngularJS how to execute a custom directive link or compile function after ngBind or interpolation]]></title><description><![CDATA[When creating your own custom angularjs directives you may wish to append a value to a variable that is being evaluated within the 
+element…]]></description><link>http://www.itsmycodeblog.com//2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ngBind-or-interpolation/2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ngBind-or-interpolation/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ngBind-or-interpolation/2015-11-11-angularjs-execute-a-custom-directive-link-function-after-ngBind-or-interpolation/</guid><pubDate>Wed, 11 Nov 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/tworonnies.jpg&quot; alt=&quot;alt text &quot; title=&quot;AngularJS how to execute a custom directive link or compile function after ngBind or interpolation&quot;&gt;&lt;/p&gt;
+&lt;p&gt;When creating your own custom angularjs directives you may wish to append a value to a variable that is being evaluated within the
+element that you are attaching your directive to. &lt;/p&gt;
+&lt;p&gt;If you are using a &lt;a href=&quot;https://docs.angularjs.org/guide/directive&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;link&lt;/a&gt; function to manipulate a vm variable&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;, []); 
+})();
+
+(function() {
+  angular.module(&amp;quot;app&amp;quot;).controller(&amp;quot;AppCtrl&amp;quot;, [AppCtrl]);
+    function AppCtrl() {  
+      var vm = this; 
+      vm.farewell = &amp;quot;And it&amp;#39;s Goodnight &amp;quot;;
+      return vm;
+    }; 
+})();
+
+(function() {
+  angular.module(&amp;quot;app&amp;quot;).directive(&amp;quot;regularFarewellDirective&amp;quot;, function() {
+    return {
+      link: function(scope,element,attrs) {
+          var currentValue = element.text();
+          element.text(currentValue + &amp;quot; and goodbye!&amp;quot;);
+      }
+     };  
+  });
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;body ng-app=&amp;quot;app&amp;quot;&amp;gt;
+  &amp;lt;div ng-controller=&amp;quot;AppCtrl as vm&amp;quot;&amp;gt;
+    &amp;lt;span regular-farewell-directive&amp;gt;{{vm.farewell}}&amp;lt;/span&amp;gt;
+  &amp;lt;/div&amp;gt;
+&amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The output would look like this as the value has not yet been evaluated.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;{{vm.farewell}} and goodbye! &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;If you used a &lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$compile&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;compile&lt;/a&gt; function instead&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;).directive(&amp;quot;regularFarewellDirective&amp;quot;, function() {
+    return {
+      compile: function(scope,element,attrs) {
+          var currentValue = element.text();
+          element.text(currentValue + &amp;quot; and goodbye!&amp;quot;);
+      }
+     };  
+  });
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The output would be different containing just the evaluated variable value.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;And it&amp;#39;s Goodnight &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Executing a custom directive link function where there is a value to be evaluated in ngBind&lt;/h2&gt;
+&lt;p&gt;One way around this issue would be to move the variable to the built in &lt;a href=&quot;https://docs.angularjs.org/api/ng/directive/ngBind&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;ngBind&lt;/a&gt; directive and then watch for the value
+to be evaluated and then executing our code.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;).directive(&amp;quot;corbettFarewellDirective&amp;quot;, function() {
+    return {
+      link: function(scope,element,attrs) {
+        scope.$watch(attrs.ngBind, function(newvalue) {
+          element.text(newvalue + &amp;quot; from me!&amp;quot;);
+        });           
+      }
+     };  
+  });
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;body ng-app=&amp;quot;app&amp;quot;&amp;gt; 
+  &amp;lt;div ng-controller=&amp;quot;AppCtrl as vm&amp;quot;&amp;gt;
+    &amp;lt;span corbett-farewell-directive ng-bind=&amp;quot;vm.farewell&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;
+  &amp;lt;/div&amp;gt;  
+&amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;This would result in the desired outcome.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;And it&amp;#39;s Goodnight from me! &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Executing a custom directive link function where there is a value to be evaluated in ngBind&lt;/h2&gt;
+&lt;p&gt;If we are not able to or, do not wish to, move the variable to an ngBind element attribute we can still watch the
+variable being evaluated using a combination of a compile function and the &lt;a href=&quot;https://docs.angularjs.org/api/ng/service/$interpolate&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;$interpolate&lt;/a&gt; service.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;(function() {
+  angular.module(&amp;quot;app&amp;quot;).directive(&amp;quot;barkerFarewellDirective&amp;quot;,   function($interpolate) {
+      return {
+        compile: function (tElem, tAttrs) {
+          var interpolateFn = $interpolate(tElem.html(), true);
+          tElem.empty();
+          return function(scope, elem, attrs){
+            scope.$watch(interpolateFn, function (value) {
+              var currentText = value;
+              elem.text(currentText + &amp;quot; from him!&amp;quot;);
+            });
+          }
+        }
+      };
+   }) 
+})();&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;body ng-app=&amp;quot;app&amp;quot;&amp;gt; 
+  &amp;lt;div ng-controller=&amp;quot;AppCtrl as vm&amp;quot;&amp;gt;
+    &amp;lt;span barker-farewell-directive&amp;gt;{{vm.farewell}}&amp;lt;/span&amp;gt;
+  &amp;lt;/div&amp;gt;  
+&amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Gaining the ouput that we require.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;And it&amp;#39;s Goodnight from him!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How to check for an empty AngularJS $scope object]]></title><description><![CDATA[Creating an empty $scope object In AngularJS there are many cases where you will create a $scope object and initialise it as an empty object…]]></description><link>http://www.itsmycodeblog.com//2015-11-4-angularjs-empty-$scope-object-check/2015-11-4-angularjs-empty-$scope-object-check/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-11-4-angularjs-empty-$scope-object-check/2015-11-4-angularjs-empty-$scope-object-check/</guid><pubDate>Wed, 04 Nov 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/empty-property.jpg&quot; alt=&quot;alt text &quot; title=&quot;How to check for an empty AngularJS $scope object&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Creating an empty $scope object&lt;/h1&gt;
+&lt;p&gt;In AngularJS there are many cases where you will create a $scope object and initialise it as an empty object.&lt;/p&gt;
+&lt;p&gt;A typical case would be when you are going to open a form modal to allow the addition of a new person.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;vm.showAddPersonModal = function() {                   	
+  $scope.person = {};
+  $scope.action = &amp;#39;Add&amp;#39;;
+  $scope.isAdd = true;
+  $scope.modal.show();	
+};&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Checking if object is still empty&lt;/h1&gt;
+&lt;p&gt;One of the ways in which a modal can be dismissed is by clicking outside the modal area and that can leave us with an empty object
+if no data has been entered and saved.&lt;/p&gt;
+&lt;p&gt;So, if we are listening to the modal being hidden and we wish to take some action if the object is empty,
+how can we verify this?&lt;/p&gt;
+&lt;p&gt;We can check if the object is empty by looping over the properties explicitly&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function isEmpty(obj) {
+    for(var prop in obj) {
+        if(obj.hasOwnProperty(prop))
+            return false;
+    }
+    return true;
+}	&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or by, my preferred method, counting the object keys length &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var obj = {};
+return Object.keys(obj).length; //returns 0 if empty or an integer &amp;gt; 0 if non-empty&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So let’s see this in action&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$scope.$on(&amp;#39;modal.hidden&amp;#39;, function() {
+  if (Object.keys($scope.person).length == 0) {
+    // object empty
+    // logic
+  }
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How to debug AngularJS $scope in a browser console]]></title><description><![CDATA[Inspect an element All of the major browsers including, Chrome, Internet Explorer, Firefox, Safari and Opera include in their development…]]></description><link>http://www.itsmycodeblog.com//2015-10-2-debugging-angularjs-$scope-in-a-browser-console/2015-10-2-debugging-angularjs-$scope-in-a-browser-console/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-10-2-debugging-angularjs-$scope-in-a-browser-console/2015-10-2-debugging-angularjs-$scope-in-a-browser-console/</guid><pubDate>Fri, 02 Oct 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/angular-scope.png&quot; alt=&quot;alt text &quot; title=&quot;How to debug AngularJS $scope in a browser console&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Inspect an element&lt;/h1&gt;
+&lt;p&gt;All of the major browsers including, Chrome, Internet Explorer, Firefox, Safari and Opera include in their development tools the ability to
+inspect an element. This allows you to right click on a web page, select “inspect element” from the context menu which will in turn open the
+browsers development tools to allow you to view the HTML, DOM tree and CSS associated with that element.&lt;/p&gt;
+&lt;h1&gt;Referencing an element&lt;/h1&gt;
+&lt;p&gt;If you have inspected an element, the currently selected element is available via the reference &lt;strong&gt;$0&lt;/strong&gt;. The developer tools will make available via
+references the last five elements (or heap objects) selected through the properties named &lt;strong&gt;$0&lt;/strong&gt;, &lt;strong&gt;$1&lt;/strong&gt;, &lt;strong&gt;$2&lt;/strong&gt;, &lt;strong&gt;$3&lt;/strong&gt;, &lt;strong&gt;$4&lt;/strong&gt;. The most recently selected element or
+object can be referenced as &lt;strong&gt;$0&lt;/strong&gt;, the second most recent as &lt;strong&gt;$1&lt;/strong&gt; and so on.&lt;/p&gt;
+&lt;p&gt;So if you went to &lt;a href=&quot;https://www.google.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;www.google.com&lt;/a&gt; and right clicked on the search text box, inspected the element then in the
+dev tools console tab typed &lt;strong&gt;$0&lt;/strong&gt; and hit return.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;$0&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The console would return html such as below.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;input class=&amp;quot;gsfi&amp;quot; id=&amp;quot;lst-ib&amp;quot; maxlength=&amp;quot;2048&amp;quot; name=&amp;quot;q&amp;quot; autocomplete=&amp;quot;off&amp;quot; title=&amp;quot;Search&amp;quot; type=&amp;quot;text&amp;quot; value=&amp;quot;&amp;quot; aria-label=&amp;quot;Search&amp;quot; 
+aria-haspopup=&amp;quot;false&amp;quot; role=&amp;quot;combobox&amp;quot; aria-autocomplete=&amp;quot;both&amp;quot; dir=&amp;quot;ltr&amp;quot; spellcheck=&amp;quot;false&amp;quot; 
+style=&amp;quot;border: none; padding: 0px; margin: 0px; height: auto; width: 100%; position: absolute; z-index: 6; 
+left: 0px; outline: none; background: url(data:image/gif;base64,R0lGODlhAQABAID/AMDAwAAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw%3D%3D) 
+transparent;&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;Angular.element&lt;/h1&gt;
+&lt;p&gt;When needing to find the scope of an element on a page when developing or debugging an angular application there are tools available
+such as &lt;a href=&quot;https://github.com/angular/batarang&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Batarang&lt;/a&gt; which allow you to visually click through a hierarchy of scopes. Although this is
+useful, I find that inspecting an element, then wrapping the reference in &lt;a href=&quot;https://docs.angularjs.org/api/ng/function/angular.element&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;angular.element&lt;/a&gt;
+and utalizing the scope method to display the associated scope is an easier path to retrieving the required object.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var e = angular.element($0);
+var s = e.scope();
+s&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h1&gt;allrecipes.com&lt;/h1&gt;
+&lt;p&gt;For instance, if we went to &lt;a href=&quot;http://allrecipes.com&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;allrecipes.com&lt;/a&gt;, inspected a recipe on the home page to find out if we were
+a registered as user in the current scope, we could type the following in the console.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var e = angular.element($0);
+var s = e.scope();
+s.visitorIsRegistered&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Which returns the boolean value.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;false&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[How to debug phantomjs tests in another browser]]></title><description><![CDATA[What can you do if your karma unit tests are failing or throwing an error? Coding unit tests creates a similar set of problems as…]]></description><link>http://www.itsmycodeblog.com//2015-8-4-debugging-phantomjs-tests-in-a-browser/2015-8-4-debugging-phantomjs-tests-in-a-browser/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-8-4-debugging-phantomjs-tests-in-a-browser/2015-8-4-debugging-phantomjs-tests-in-a-browser/</guid><pubDate>Tue, 04 Aug 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/phantomjs.png&quot; alt=&quot;alt text &quot; title=&quot;How to debug phantomjs tests in a browser&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;What can you do if your karma unit tests are failing or throwing an error?&lt;/h1&gt;
+&lt;p&gt;Coding unit tests creates a similar set of problems as programming the code you wish to test.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;They can throw an error&lt;/li&gt;
+&lt;li&gt;They can throw an exception&lt;/li&gt;
+&lt;li&gt;Unexpectantly failing a test&lt;/li&gt;
+&lt;li&gt;Just plain failing&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3&gt;Running karma with phantomjs&lt;/h3&gt;
+&lt;p&gt;When running your javascript unit tests having them running as fast as possible is very desirable and phantomjs, the headless webkit
+browser, allows your tests to be run at speed with the output being returned to your console.&lt;/p&gt;
+&lt;p&gt;To use phantomjs as your testing browser in karma your need to install the node package karma-phantomjs-launcher and then reference it
+in your karma config.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;    autoWatch: true,
+    browsers:  [&amp;#39;PhantomJS&amp;#39;],
+    plugins: [
+      &amp;#39;karma-phantomjs-launcher&amp;#39;,
+      &amp;#39;karma-jasmine&amp;#39;,
+      &amp;#39;karma-webpack&amp;#39;
+    ],&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;But if it is a headless browser running in a console how do debug it?&lt;/h3&gt;
+&lt;p&gt;Phantomjs is a headless browser that runs in your console which, is great when your tests are all passing.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;PhantomJS 1.9.8 (Mac OS X 0.0.0): Executed 18 of 18 SUCCESS (0.169 secs / 0.165 secs)&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;But if your output looks like below then you probably wish you could open the testing browsers Developer Tools
+and debug the test manually.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;PhantomJS 1.9.8 (Mac OS X 0.0.0): Executed 18 of 18 (1 FAILED) (0.163 secs / 0.161 secs)
+PhantomJS 1.9.8 (Mac OS X 0.0.0) dropboxController should import the file, refresh and autosave the document FAILED
+        Expected spy $emit to have been called with [ &amp;#39;autosave&amp;#39; ] but it was never called.
+        Expected spy $emit to have been called with [ &amp;#39;document.refresh&amp;#39; ] but it was never called.&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;You can with karma&lt;/h3&gt;
+&lt;p&gt;Even though, using karma as your test runner and phantomjs as the headless browser, you can still step through your
+code in another browsers Developer Tools.&lt;/p&gt;
+&lt;p&gt;In your karma config you specify the port that karma’s webserver will be listening on.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;port:      9876,&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can combine your local host address, the port number and the karma debug page in your browser of choice and then step through the code.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;http://127.0.0.1:9876/debug.html&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;img src=&quot;/images/karma-debug.png&quot; alt=&quot;alt text &quot; title=&quot;Debugging a karam test&quot;&gt;&lt;/p&gt;
+&lt;p&gt;If you want to start debugging at a particular point you can add a debugger statement to your tests to break at that line.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;debugger;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[Shuffle a Javascript Array]]></title><description><![CDATA[Sorting When you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand. If…]]></description><link>http://www.itsmycodeblog.com//2015-7-13-shuffling-a-javascript-array/2015-7-13-shuffling-a-javascript-array/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-7-13-shuffling-a-javascript-array/2015-7-13-shuffling-a-javascript-array/</guid><pubDate>Mon, 13 Jul 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/DAqGSop.jpg,&quot; alt=&quot;alt text &quot; title=&quot;Shuffle a Javascript Array&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;Sorting&lt;/h2&gt;
+&lt;p&gt;When you have a javascript array that you need to sort you can use the sort method as it is simple to read, use and understand.&lt;/p&gt;
+&lt;p&gt;If you call sort on a simple array of strings or numbers it will sort them alphabetically or numerically. Also, if you pass in an optional anonymous function parameter you can custom sort the array as long as your function returns a negative, zero or positive value.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var colours = [&amp;#39;Red&amp;#39;, &amp;#39;Yellow&amp;#39;, &amp;#39;Blue&amp;#39;];
+colours.sort();
+// results
+// [&amp;quot;Blue&amp;quot;, &amp;quot;Red&amp;quot;, &amp;quot;Yellow&amp;quot;]
+
+var frequencyArray = [{ n: 3, name: &amp;#39;Brown&amp;#39; }, { n: 2, name: &amp;#39;Blue&amp;#39; }, { n: 4, name: &amp;#39;Red&amp;#39;  }];
+frequencyArray.sort(function(a,b) { return a.n - b.n; });
+
+// results
+// [{ n: 2, name: &amp;#39;Blue&amp;#39; }, { n: 3, name: &amp;#39;Brown&amp;#39; }, { n: 4, name: &amp;#39;Red&amp;#39;  }];&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Random Sorting&lt;/h2&gt;
+&lt;p&gt;A simple way of randomly sorting a simple array of numbers is&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var numbers = [12,4,16,3];
+numbers.sort(function() {
+  return .5 - Math.random();
+});
+// results from sorting 5 times
+//[3, 16, 4, 12]
+//[16, 4, 3, 12]
+//[16, 12, 4, 3]
+//[16, 12, 3, 4]
+//[3, 12, 16, 4]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;but this is the least efficient and &lt;a href=&quot;http://jsfiddle.net/rcmp0aLL/&quot; target=&quot;_blank&quot;&gt;biased&lt;/a&gt; way of sorting randomly as it has a strong bias toward keeping each element in its initial starting position in addition to the edges of the array having slightly more bias than the middle.&lt;/p&gt;
+&lt;h2&gt;Random Shuffling An Array the Fisher-Yates (aka Knuth) Way&lt;/h2&gt;
+&lt;p&gt;Originally designed by Fisher and Yates as pencil and paper method using a table of random numbers for randomness and then popularized by Donald E. Knuth in The Art of Computer Programming (&lt;a href=&quot;https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle&quot; target=&quot;_blank&quot;&gt;source&lt;/a&gt;). This shuffling algorithm provides with a more efficient and more random result set.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex ;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var arr = [2, 11, 37, 42];
+shuffle(arr);
+// results
+// [42, 2, 37, 11]&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</content:encoded></item><item><title><![CDATA[AngularJS - ngBind - Now you see it - now you don't...]]></title><description><![CDATA[Prevent AngularJS displaying curly braces when your page is loading The problem When your AngularJS website is loading if you are using…]]></description><link>http://www.itsmycodeblog.com//2015-3-31-angularjs-bind/2015-3-31-angularjs-bind/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-3-31-angularjs-bind/2015-3-31-angularjs-bind/</guid><pubDate>Fri, 03 Jul 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://images-na.ssl-images-amazon.com/images/I/51TOm9SmokL._SX391_BO1,204,203,200_.jpg&quot; alt=&quot;alt text &quot; title=&quot;Now you see it, now you don&amp;#x27;t&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Prevent AngularJS displaying curly braces when your page is loading&lt;/h1&gt;
+&lt;h2&gt;The problem&lt;/h2&gt;
+&lt;p&gt;When your AngularJS website is loading if you are using double curly braces within a element to bind to a variable.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	&amp;lt;span&amp;gt;Hello {{ name }}!&amp;lt;/span&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;your user may for a split second (or longer) be presented with&lt;/p&gt;
+&lt;p&gt;{% raw %}
+Hello {{}}!
+{% endraw %}&lt;/p&gt;
+&lt;p&gt;until the compilation occurs&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	Hello Nicholas!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;ngBind - solution 1&lt;/h2&gt;
+&lt;p&gt;ngBind does not show the curly braces before compilation as it is attribute based&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	Hello &amp;lt;span ng-bind=&amp;quot;name&amp;quot;&amp;gt;&amp;lt;/span&amp;gt;!&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and so it tells Angular to replace the text within the HTML element when the value changes.Therefore if a template is momentarily displayed by the browser in its raw state before Angular compiles it, since ngBind is an element attribute, it makes the bindings invisible to the user while the page is loading.&lt;/p&gt;
+&lt;p&gt;uncompiled&lt;/p&gt;
+&lt;p&gt;{% raw %}
+Hello !
+{% endraw %}&lt;/p&gt;
+&lt;p&gt;compiled&lt;/p&gt;
+&lt;p&gt;{% raw %}
+Hello Nicholas!
+{% endraw %}&lt;/p&gt;
+&lt;h2&gt;ngBindTemplate - solution 2&lt;/h2&gt;
+&lt;p&gt;Unlike ngBind, the ngBindTemplate can contain multiple {{ }} expressions.&lt;/p&gt;
+&lt;p&gt;{% raw %}
+&lt;pre ng-bind-template=&quot;{{salutation}} {{name}}!&quot;&gt;&lt;/pre&gt; !
+{% endraw %}&lt;/p&gt;
+&lt;p&gt;And also, importantly, this directive is needed since some HTML elements (such as TITLE and OPTION) cannot contain SPAN elements.&lt;/p&gt;
+&lt;p&gt;{% raw %}
+&lt;title ng:bind-template=&quot;Hello: {{name}}&quot;&gt;&lt;/title&gt;
+{% endraw %}&lt;/p&gt;</content:encoded></item><item><title><![CDATA[My Top Ten Coding Podcasts]]></title><description><![CDATA[Here are my top 10 podcasts for coding Techzing  Jason and Justin present a podcast that has the right mix of coding, tech stories and the…]]></description><link>http://www.itsmycodeblog.com//2015-7-3-my-top-ten-coding-podcasts/2015-7-3-my-top-ten-coding-podcasts/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-7-3-my-top-ten-coding-podcasts/2015-7-3-my-top-ten-coding-podcasts/</guid><pubDate>Fri, 03 Jul 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/BIvWLez.png,&quot; alt=&quot;alt text &quot; title=&quot;My Top 10 Podcasts for Coders&quot;&gt;&lt;/p&gt;
+&lt;p&gt;Here are my top 10 podcasts for coding&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://techzinglive.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Techzing&lt;/a&gt; Jason and Justin present a podcast that has the right mix of coding, tech stories and the projects that they are currently working on. They also sometimes have interviews episodes and on their 100 show they interviewed Jason Calacanis.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://devhell.info/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Dev Hell&lt;/a&gt; Presented by Chris Hartjes and Ed Finkler this podcast has a php slant which is saved by Chris getting on his unit testing hobby horse. Ed’s native advertisements for the sponsors are both simultaneously hilarious and cringeworthy.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.jupiterbroadcasting.com/show/coderradio/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Coder Radio&lt;/a&gt; A weekly talk show taking a pragmatic look at the art and business of Software Development and related technologies.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://devchat.tv/adventures-in-angular/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Adventures in Angular&lt;/a&gt; Adventures in Angular&lt;/a&gt; A weekly show dedicated to the AngularJS framework.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://devchat.tv/js-jabber/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Javascript Jabber&lt;/a&gt; A weekly podcast about JavaScript, including Node.js, Front-End Technologies, Careers, Teams and more.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://dotnetrocks.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;.Net Rocks&lt;/a&gt; Carl Franklin’s and Richard Campbell’s internet audio talk show for .Net Developers that’s not just .Net Related.	&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://hanselminutes.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;HanselMinutes&lt;/a&gt; Scott Hanselman provides 30 mins of fresh air for developers by interviewing the tech community about tech.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://thisdeveloperslife.com/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;This Developers Life&lt;/a&gt; This Developers Life&lt;/a&gt; Created in the style of This American Life, Rob Conery and Scott Hanselman get deep about developers and their lives.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.jsclasses.org/blog/category/podcast/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Lately in Javascript&lt;/a&gt; Lately in Javascript&lt;/a&gt; Manuel Lemos and Arturs Sosins discuss the latest in javascript related developments.&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;ol start=&quot;10&quot;&gt;
+&lt;li&gt;&lt;a href=&quot;http://jesseliberty.com/podcast/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Yet Another Podcast&lt;/a&gt; Yet Another Podcast&lt;/a&gt; Jessie Liberty’s easy going interview style makes the podcast easy to listen to but informative.&lt;/li&gt;
+&lt;/ol&gt;</content:encoded></item><item><title><![CDATA[Ternary Operators in Angular Templates]]></title><description><![CDATA[Ternary Operators in Angular Templates Ternary Operators are part of the toolset of most programming languages and are available of course…]]></description><link>http://www.itsmycodeblog.com//2015-9-22-ternary-operators-in-angular-templates/2015-9-22-ternary-operators-in-angular-templates/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-9-22-ternary-operators-in-angular-templates/2015-9-22-ternary-operators-in-angular-templates/</guid><pubDate>Fri, 22 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/zwRgfKG.jpg,&quot; alt=&quot;alt text &quot; title=&quot;There are 10 types of people in this world: those who understand ternary, those who don&amp;#x27;t, and those who thought this was a binary joke&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Ternary Operators in Angular Templates&lt;/h1&gt;
+&lt;p&gt;Ternary Operators are part of the toolset of most programming languages and are available of course in Javascript.&lt;/p&gt;
+&lt;p&gt;The syntax for a ternary operator is&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;condition ? expr1 : expr2&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Where the &lt;em&gt;condition&lt;/em&gt; is any statement that evaluates to true or false and expressions &lt;em&gt;expr1&lt;/em&gt; and &lt;em&gt;expr2&lt;/em&gt; are values of any type.&lt;/p&gt;
+&lt;p&gt;If the &lt;em&gt;condition&lt;/em&gt; is true then value of &lt;em&gt;expr1&lt;/em&gt; is returned otherwise the value of &lt;em&gt;expr2&lt;/em&gt; is returned.&lt;/p&gt;
+&lt;p&gt;So in the following code&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var currentMember = {
+  name: &amp;#39;Joe Bloggs&amp;#39;,
+  isGoldMember: true
+};
+console.log(&amp;quot;Price: &amp;quot; + (currentMember.isGoldMember ? &amp;quot;£5.00&amp;quot; : &amp;quot;£10.00&amp;quot;));&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The output is&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;Price: £5.00&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;How to use ternary operators in angular templates&lt;/h2&gt;
+&lt;p&gt;The most useful use case I have found for ternary operators is within angular directives such as ng-class and ng-style.&lt;/p&gt;
+&lt;p&gt;Ternary operators were added to Angular &lt;a href=&quot;https://github.com/angular/angular.js/commit/6798fec4390a72b7943a49505f8a245b6016c84b&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;1.1.5&lt;/a&gt; and can be used from version 1.1.5 and up.&lt;/p&gt;
+&lt;h3&gt;Using a ternary operator within ng-style&lt;/h3&gt;
+&lt;p&gt;In the example we wish to apply to highlight every third item in a list.&lt;/p&gt;
+&lt;p&gt;The list to display contains the first names of users of a website.&lt;/p&gt;
+&lt;p&gt;So we will initialise our angular app in the usual way&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var app = angular.module(&amp;#39;ternaryExample&amp;#39;, []);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;And the main controller contains a list of first names&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;app.controller(&amp;#39;MainCtrl&amp;#39;, function($scope) {
+  $scope.persons = [
+    &amp;#39;Allison&amp;#39;,
+    &amp;#39;Arthur&amp;#39;,
+    &amp;#39;Ana&amp;#39;,
+    &amp;#39;Alex&amp;#39;,
+    &amp;#39;Arlene&amp;#39;,
+    &amp;#39;Alberto&amp;#39;,
+    &amp;#39;Barry&amp;#39;,
+    &amp;#39;Bertha&amp;#39;,
+    &amp;#39;Bill&amp;#39;,
+    &amp;#39;Bonnie&amp;#39;,
+    &amp;#39;Bret&amp;#39;,
+    &amp;#39;Beryl&amp;#39;,
+    &amp;#39;Chantal&amp;#39;,
+    &amp;#39;Cristobal&amp;#39;,
+    &amp;#39;Claudette&amp;#39;,
+    &amp;#39;...
+    ];
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;To simply display the user names with a greeting we use a template within our controller attached to the document body.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; &amp;lt;body ng-controller=&amp;quot;MainCtrl&amp;quot;&amp;gt;
+    &amp;lt;div ng-repeat=&amp;quot;person in persons&amp;quot;&amp;gt;
+      &amp;lt;h4&amp;gt;
+      {% raw %}
+        Hello {{ person }}!
+      {% endraw %}
+      &amp;lt;/h4&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;By adding track by $index we can use the current array index in our code.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;person in persons track by $index&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;So how is this useful in a ternary operator where we want to apply a different style to every third person?&lt;/p&gt;
+&lt;p&gt;We can add one to $index, as it is a 0 based index, and then return either a green hex code value as the color if true&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;#39;#008141&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or a black hex code value if false&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;#39;#131313&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;based on a ternary expression that utilizes a modulus operator to evaluate if the current $index mod 3 returns 0 and is indeed a ‘third’ element in the array. &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;h4 ng-style=&amp;quot;{color : ($index + 1) % 3 == 0 ? &amp;#39;#008141&amp;#39; : &amp;#39;#131313&amp;#39;}&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Like so&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt; &amp;lt;body ng-controller=&amp;quot;MainCtrl&amp;quot;&amp;gt;
+    &amp;lt;div ng-repeat=&amp;quot;person in persons track by $index&amp;quot;&amp;gt;
+      &amp;lt;h4 ng-style=&amp;quot;{color : ($index + 1) % 3 == 0 ? &amp;#39;#008141&amp;#39; : &amp;#39;#131313&amp;#39;}&amp;quot;&amp;gt;
+        {% raw %}
+        Hello {{ person }}!
+        {% endraw %}
+      &amp;lt;/h4&amp;gt;
+    &amp;lt;/div&amp;gt;
+  &amp;lt;/body&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;A working demo of our example can be found on &lt;a href=&quot;http://codepen.io/NicholasMurray/pen/MajgQZ&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;codepen&lt;/a&gt;.&lt;/p&gt;
+&lt;h3&gt;Credits&lt;/h3&gt;
+&lt;p&gt;The ternary joke used in the meme I found &lt;a href=&quot;https://www.allegro.cc/forums/thread/611052/2&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;here&lt;/a&gt;&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Collabocats]]></title><description><![CDATA[Open for edits Taking inspiration from Phil Haacks  blog  I have added a edit link to my blog posts. Now every post in my blog has an edit…]]></description><link>http://www.itsmycodeblog.com//2015-4-3-collabocats/2015-4-3-collabocats/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-4-3-collabocats/2015-4-3-collabocats/</guid><pubDate>Mon, 04 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/collabocats.jpg&quot; alt=&quot;alt text &quot; title=&quot;Collabocats&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Open for edits&lt;/h1&gt;
+&lt;p&gt;Taking inspiration from Phil Haacks &lt;a href=&quot;http://haacked.com/archive/2013/12/02/dr-jekyll-and-mr-haack/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;blog&lt;/a&gt; I have added a edit link to my blog posts.&lt;/p&gt;
+&lt;p&gt;Now every post in my blog has an edit link that lets you edit the blog post directly in the browser and automatically sends me a pull request.&lt;/p&gt;
+&lt;p&gt;So if you see any mispelling feel free to correct it and send me a pal request.&lt;/p&gt;
+&lt;p&gt;I have added a Contributors page to list everyone that contributes a fox.&lt;/p&gt;
+&lt;p&gt;In advance, thanks!!!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AngularJS Service versus Factory]]></title><description><![CDATA[AngularJS has 5 ways to create services Provider - used by the other services except constant Factory - constructs a new service using a…]]></description><link>http://www.itsmycodeblog.com//2015-5-12-angularjs-service-v-factory/2015-5-12-angularjs-service-v-factory/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-5-12-angularjs-service-v-factory/2015-5-12-angularjs-service-v-factory/</guid><pubDate>Mon, 04 May 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/service-v-factory.png&quot; alt=&quot;alt text &quot; title=&quot;Service versus Factory&quot;&gt;&lt;/p&gt;
+&lt;p&gt;AngularJS has 5 ways to create services&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;Provider - used by the other services except constant&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Factory - constructs a new service using a function that returns an object&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Value - for storing simple values or objects&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Service - works the same a factory except as it is &lt;em&gt;newed&lt;/em&gt; internally it uses &lt;em&gt;this&lt;/em&gt; properties&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Constants - for providing configuration services&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;When I am using angular to construct a web app I create a folder called services and add my services there that are constructed using factory functions.&lt;/p&gt;
+&lt;p&gt;But why do we use factory functions instead of service functions?&lt;/p&gt;
+&lt;p&gt;John Papa says, as they are so similar, we should &lt;a href=&quot;https://github.com/johnpapa/angular-styleguide#style-y040&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;use a factory instead for consistency.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;In the angular source we can see that a service uses a factory internally&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;function factory(name, factoryFn, enforce) {
+    return provider(name, {
+      $get: enforce !== false ? enforceReturnValue(name, factoryFn) : factoryFn
+    });
+}
+
+function service(name, constructor) {
+    return factory(name, [&amp;#39;$injector&amp;#39;, function($injector) {
+      return $injector.instantiate(constructor);
+    }]);
+}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;The typical examples of a service and factory demonstrate basic functionality in which they look virtually the same.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/d4c16a38f65489d01c6a.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;But how do we make better use of a service and factory?&lt;/p&gt;
+&lt;p&gt;An example of an appropriate use of a services ability to return a new object, would be, where prototype inheritance would allow us to call methods from a base class as well as the child class.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/1706ed6e967fdf79e9a9.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Below is an example of an appropriate use of factory service, which is more suited, to returning data via the functions defined in the object it returns.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/3e14a8df444f38022b46.js&quot;&gt;&lt;/script&gt;</content:encoded></item><item><title><![CDATA[Testing CSS classes with Jasmine-JQuery]]></title><description><![CDATA[If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery. jasmine-jquery provides two extensions for the  Jasmine…]]></description><link>http://www.itsmycodeblog.com//2015-4-22-jasmine-jquery-testing-css/2015-4-22-jasmine-jquery-testing-css/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-4-22-jasmine-jquery-testing-css/2015-4-22-jasmine-jquery-testing-css/</guid><pubDate>Fri, 03 Apr 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/NmVNJdW.jpg,&quot; alt=&quot;alt text &quot; title=&quot;Now test your CSS classess&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;If you would like to test your CSS classes with Jasmine you can use Jasmine Jquery.&lt;/h1&gt;
+&lt;p&gt;jasmine-jquery provides two extensions for the &lt;a href=&quot;http://jasmine.github.io/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;Jasmine&lt;/a&gt; JavaScript Testing Framework:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;a set of custom matchers for jQuery framework&lt;/li&gt;
+&lt;li&gt;an API for handling HTML, CSS, and JSON fixtures in your specs&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Using the loadStyleFixtures or setStyleFixtures global shortcuts we can add the css we want to test either from a relative url&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  loadStyleFixtures(&amp;#39;css/stylesheet.css&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or append the classes directly to the document head&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  setStyleFixtures(&amp;#39;.btn-success { color: #fff; background-color: #5cb85c; border-color: #4cae4c; }&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then load the fixtures using the loadFixtures or setFixtures global shortcuts either from a relative url&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  loadFixtures(&amp;#39;templates/success.html&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or append the fixture directly to the document body&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  fixture = setFixtures(&amp;#39;&amp;lt;button type=&amp;quot;button&amp;quot; class=&amp;quot;btn btn-success&amp;quot;&amp;gt;Success&amp;lt;/button&amp;gt;&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Then use the custom matchers to retrieve the element you would like to test against&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  var successButton = fixture.find(&amp;#39;.btn-success&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;and then test against your expectation&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;  expect(successButton.css(&amp;#39;color&amp;#39;)).toEqual(&amp;#39;rgb(255, 255, 255)&amp;#39;);&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;You can see the test below working in this  &lt;a href=&quot;https://jsfiddle.net/Nicholas_Murray/2488cm7k/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;jsfiddle&lt;/a&gt;&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/ca68a50a7c6a3954d74a.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;with all tests passing&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 75%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot; src=&quot;https://jsfiddle.net/Nicholas_Murray/2488cm7k/embedded/result/&quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;</content:encoded></item><item><title><![CDATA[AngularJS - its turtles all the way down!]]></title><description><![CDATA[AngularJS - it’s directives all the way down data-ng-app The first part of learning AngularJS is nearly always adding the attribute ng-app…]]></description><link>http://www.itsmycodeblog.com//2015-3-23-directives-all-the-way-down/2015-3-23-directives-all-the-way-down/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-3-23-directives-all-the-way-down/2015-3-23-directives-all-the-way-down/</guid><pubDate>Mon, 23 Mar 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/turtles.jpg&quot; alt=&quot;alt text &quot; title=&quot;Turtles all the way down&quot;&gt;&lt;/p&gt;
+&lt;h2&gt;AngularJS - it’s directives all the way down&lt;/h2&gt;
+&lt;h2&gt;data-ng-app&lt;/h2&gt;
+&lt;p&gt;The first part of learning AngularJS is nearly always adding the attribute ng-app to your html that auto-bootstraps your AngularJS application.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	&amp;lt;html data-ng-app=&amp;quot;app&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;or &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	&amp;lt;body ng-app=&amp;quot;app&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;&lt;em&gt;You should of course use the data-* syntax if you want your html to be valid according to the &lt;a href=&quot;http://www.w3.org/TR/2011/WD-html5-20110525/elements.html#embedding-custom-non-visible-data-with-the-data-attributes&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;HTML5 specification&lt;/a&gt;.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Adding the data-ng-app attribute to a html element is creating a ngApp directive that tells angular that this element is to be the root of the application.&lt;/p&gt;
+&lt;h2&gt;MVC - ngModel ngView ngController&lt;/h2&gt;
+&lt;p&gt;AngularJS is built in a MVC software design pattern and the building blocks are ngModel ngView and ngController.&lt;/p&gt;
+&lt;h3&gt;ngModel&lt;/h3&gt;
+&lt;p&gt;The ngModel directive takes responsibility for managing and binding data to html elements such as a text input &lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;	&amp;lt;input type=&amp;quot;text&amp;quot; name=&amp;quot;email&amp;quot; data-ng-model=&amp;quot;data.email&amp;quot;&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;ngView&lt;/h3&gt;
+&lt;p&gt;The ngView directive is used by angular as a container to switch between views when used in conjunction with &lt;a href=&quot;https://docs.angularjs.org/api/ngRoute/service/$route&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;$route&lt;/a&gt; service.	&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;div ng-app=&amp;quot;app&amp;quot;&amp;gt;
+  	&amp;lt;ng-view&amp;gt;&amp;lt;/ng-view&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3&gt;ngController&lt;/h3&gt;
+&lt;p&gt;The ngController directive specifies a Controller class; the class contains business logic behind the application to decorate the scope with functions and values. You can view the example below running on this &lt;a href=&quot;http://codepen.io/NicholasMurray/pen/PwVZbP&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;codepen&lt;/a&gt;.&lt;/p&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;var app = angular.module(&amp;quot;app&amp;quot;, []);
+
+app.controller(&amp;#39;userCtrl&amp;#39;, function($scope) {
+   	$scope.user = {
+      		firstName: &amp;quot;&amp;quot;,
+      		lastName: &amp;quot;&amp;quot;,
+      		userName: function() {
+         		var user;
+         		user = $scope.user;
+         		return user.firstName + user.lastName;
+      		}
+   	};
+});&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;div class=&quot;gatsby-highlight&quot; data-language=&quot;text&quot;&gt;&lt;pre class=&quot;language-text&quot;&gt;&lt;code class=&quot;language-text&quot;&gt;&amp;lt;div data-ng-app=&amp;quot;app&amp;quot;&amp;gt;
+	&amp;lt;div data-ng-controller=&amp;quot;userCtrl&amp;quot;&amp;gt;
+		Enter first name: &amp;lt;input type=&amp;quot;text&amp;quot; data-ng-model=&amp;quot;user.firstName&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+		Enter last name: &amp;lt;input type=&amp;quot;text&amp;quot; data-ng-model=&amp;quot;user.lastName&amp;quot;&amp;gt;&amp;lt;br&amp;gt;
+		Your user name: {{user.userName()}}
+	&amp;lt;/div&amp;gt;
+&amp;lt;/div&amp;gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h2&gt;Directives all the way down&lt;/h2&gt;
+&lt;p&gt;There is a whole world of directives to &lt;a href=&quot;https://docs.angularjs.org/api/ng/directive&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;explore&lt;/a&gt; and if you can’t find a directive to suit your needs you can create your own &lt;a href=&quot;https://docs.angularjs.org/guide/directive&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;custom&lt;/a&gt; directives.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[So you want a simple PHP Server?]]></title><description><![CDATA[5 steps to create a simple PHP Server Step 1. Install PHP 5  http://php.net/manual/en/install.php Step 2. On a mac Open up a terminal and…]]></description><link>http://www.itsmycodeblog.com//2015-3-2-so-you-want-a-simple-php-server/2015-3-2-so-you-want-a-simple-php-server/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-3-2-so-you-want-a-simple-php-server/2015-3-2-so-you-want-a-simple-php-server/</guid><pubDate>Mon, 02 Mar 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/rtSu3eu.jpg,&quot; alt=&quot;alt text &quot; title=&quot;PHP Server Simples&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;5 steps to create a simple PHP Server&lt;/h1&gt;
+&lt;h2&gt;Step 1.&lt;/h2&gt;
+&lt;p&gt;Install PHP 5 &lt;a href=&quot;http://php.net/manual/en/install.php&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://php.net/manual/en/install.php&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Step 2.&lt;/h2&gt;
+&lt;p&gt;On a mac Open up a terminal and type:&lt;/p&gt;
+&lt;p&gt;$ cd Documents/somedir
+$ sudo php -S 127.0.0.1:80 -t .&lt;/p&gt;
+&lt;p&gt;On windows Open up the console and type:&lt;/p&gt;
+&lt;p&gt;c:\Users\CurrentFolder&gt;cd \Users\somedir
+c:\Users\CurrentFolder&gt;php -S 127.0.0.1:80 -t .&lt;/p&gt;
+&lt;h2&gt;Step 3.&lt;/h2&gt;
+&lt;p&gt;Create a new index.html page in somedir then visit &lt;a href=&quot;http://127.0.0.1:80&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://127.0.0.1:80&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Step 4.&lt;/h2&gt;
+&lt;p&gt;View the http requests in your terminal/console&lt;/p&gt;
+&lt;p&gt;PHP 5.5.14 Development Server started at Mon Mar  2 08:33:26 2015&lt;br&gt;
+Listening on &lt;a href=&quot;http://127.0.0.1:80&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://127.0.0.1:80&lt;/a&gt;&lt;br&gt;
+Document root is /../../../test&lt;br&gt;
+Press Ctrl-C to quit.&lt;br&gt;
+[Mon Mar  2 08:33:40 2015] 127.0.0.1:51466 [200]: /&lt;br&gt;
+[Mon Mar  2 08:33:40 2015] 127.0.0.1:51467 [200]: /lib/jasmine-1.3.1/jasmine.css&lt;br&gt;
+[Mon Mar  2 08:33:40 2015] 127.0.0.1:51468 [404]: /js/libs/require-2.1.5.min.js &lt;/p&gt;
+&lt;h2&gt;Step 5.&lt;/h2&gt;
+&lt;p&gt;There is no step 5. Simples!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[The Zen of Python]]></title><description><![CDATA[Computer languages should give more prominence to their core philosophy like Python The Zen of Python, by Tim Peters, is only one command…]]></description><link>http://www.itsmycodeblog.com//2015-2-28-the-zen-of-python/2015-2-28-the-zen-of-python/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-2-28-the-zen-of-python/2015-2-28-the-zen-of-python/</guid><pubDate>Sat, 28 Feb 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/zen-python.jpg&quot; alt=&quot;alt text &quot; title=&quot;The Zen of Python&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;Computer languages should give more prominence to their core philosophy like Python&lt;/h1&gt;
+&lt;p&gt;The Zen of Python, by Tim Peters, is only one command away&lt;/p&gt;
+&lt;p&gt;&lt;code class=&quot;language-text&quot;&gt;import this&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;Beautiful is better than ugly.&lt;/p&gt;
+&lt;p&gt;Explicit is better than implicit.&lt;/p&gt;
+&lt;p&gt;Simple is better than complex.&lt;/p&gt;
+&lt;p&gt;Complex is better than complicated.&lt;/p&gt;
+&lt;p&gt;Flat is better than nested.&lt;/p&gt;
+&lt;p&gt;Sparse is better than dense.&lt;/p&gt;
+&lt;p&gt;Readability counts.&lt;/p&gt;
+&lt;p&gt;Special cases aren’t special enough to break the rules.&lt;/p&gt;
+&lt;p&gt;Although practicality beats purity.&lt;/p&gt;
+&lt;p&gt;Errors should never pass silently.&lt;/p&gt;
+&lt;p&gt;Unless explicitly silenced.&lt;/p&gt;
+&lt;p&gt;In the face of ambiguity, refuse the temptation to guess.&lt;/p&gt;
+&lt;p&gt;There should be one— and preferably only one —obvious way to do it.&lt;/p&gt;
+&lt;p&gt;Although that way may not be obvious at first unless you’re Dutch.&lt;/p&gt;
+&lt;p&gt;Now is better than never.&lt;/p&gt;
+&lt;p&gt;Although never is often better than &lt;em&gt;right&lt;/em&gt; now.&lt;/p&gt;
+&lt;p&gt;If the implementation is hard to explain, it’s a bad idea.&lt;/p&gt;
+&lt;p&gt;If the implementation is easy to explain, it may be a good idea.&lt;/p&gt;
+&lt;p&gt;Namespaces are one honking great idea — let’s do more of those!&lt;/p&gt;</content:encoded></item><item><title><![CDATA[AngularJS Jasmine Spies and Fakes]]></title><description><![CDATA[One of the great things about angular is it’s testability. Say we have a directive that uses geolocation to display this information to the…]]></description><link>http://www.itsmycodeblog.com//2015-2-18-angularjs-jsamine-spies-and-fakes/2015-2-18-angularjs-jsamine-spies-and-fakes/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-2-18-angularjs-jsamine-spies-and-fakes/2015-2-18-angularjs-jsamine-spies-and-fakes/</guid><pubDate>Wed, 18 Feb 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/spiesandfakes.jpg&quot; alt=&quot;alt text &quot; title=&quot;AngularJS Jasmine Spies and Fakes&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;One of the great things about angular is it’s testability.&lt;/h1&gt;
+&lt;p&gt;Say we have a directive that uses geolocation to display this information to the user if it is available
+and to display a message if it is not available.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/a522f0fae5eb654c9a5a.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;So how can we test it using Jasmine and ensure that our test will work regardless if geolocation is
+available during our testing? We create a spy on the geolocation function and return a fake object instead.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/baeb1de0d4fcffe2fbe9.js&quot;&gt;&lt;/script&gt;
+&lt;p&gt;Similarly we can return a fake error object to test that our directive acts correctly if geolocation
+is not available.&lt;/p&gt;
+&lt;script src=&quot;https://gist.github.com/NicholasMurray/78f1c7be22715622f4ff.js&quot;&gt;&lt;/script&gt;</content:encoded></item><item><title><![CDATA[Psst! Wanna Monkey Patch?]]></title><description><![CDATA[If you ever wanted to Monkey Patch Javascript here’s how… Step 1. Pop open your javascript console, alt+cmd+i (mac) / ctrl_shift+i (pc) for…]]></description><link>http://www.itsmycodeblog.com//2015-2-7-psst-wanna-monkey-patch/2015-2-7-psst-wanna-monkey-patch/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2015-2-7-psst-wanna-monkey-patch/2015-2-7-psst-wanna-monkey-patch/</guid><pubDate>Sat, 07 Feb 2015 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/monkeypatch.jpg&quot; alt=&quot;alt text &quot; title=&quot;Psst! Wanna Monkey Patch?&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;If you ever wanted to Monkey Patch Javascript here’s how…&lt;/h1&gt;
+&lt;h2&gt;Step 1.&lt;/h2&gt;
+&lt;p&gt;Pop open your javascript console, alt+cmd+i (mac) / ctrl_shift+i (pc) for dev tools then select the console tab.&lt;/p&gt;
+&lt;h2&gt;Step 2.&lt;/h2&gt;
+&lt;p&gt;Let’s monkey path console.log to use a function that alerts instead.&lt;/p&gt;
+&lt;p&gt;Type console.log = function(message) { alert(message) }; and hit return&lt;/p&gt;
+&lt;h2&gt;Step 3.&lt;/h2&gt;
+&lt;p&gt;Now let’s use our monkey patched console.log.&lt;/p&gt;
+&lt;p&gt;Type console.log(‘Hello Monkey Patched World!’);&lt;/p&gt;
+&lt;h2&gt;Step 4.&lt;/h2&gt;
+&lt;p&gt;Press return and now we can are now alerted our console.log ‘Hello Monkey Patched World!’ instead.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Unit Testing arrays with QUnit]]></title><description><![CDATA[How to test Array equality When testing arrays with QUnit you may wish to assert that one array is equal to another array. Qunit provides…]]></description><link>http://www.itsmycodeblog.com//2014-4-4-unit-testing-arrays-with-qunit/2014-4-4-unit-testing-arrays-with-qunit/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2014-4-4-unit-testing-arrays-with-qunit/2014-4-4-unit-testing-arrays-with-qunit/</guid><pubDate>Fri, 04 Apr 2014 01:01:01 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;/images/comparingpears.png&quot; alt=&quot;alt text &quot; title=&quot;Are these pears the same as these pears&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;How to test Array equality&lt;/h1&gt;
+&lt;p&gt;When testing arrays with QUnit you may wish to assert that one array is equal to another array.&lt;/p&gt;
+&lt;p&gt;Qunit provides the equal( actual, expected, message ) method for asserting that actual value is equal to the expected value.&lt;/p&gt;
+&lt;p&gt;so what happens in the following test scenario&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 75%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot; src=&quot;http://www.unittest.it/embed/QxQx1Bj/1/unittestcode/&quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;this…&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 75%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot; src=&quot;http://www.unittest.it/embed/QxQx1Bj/1/unittestresult/&quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;It fails horribly onscreen with an error from the sourceStackTrace() output from within QUnit.push&lt;/p&gt;
+&lt;p&gt;So how can we test arrays with QUnit?&lt;/p&gt;
+&lt;p&gt;We can use the deepEqual() assert method. &lt;/p&gt;
+&lt;p&gt;Qunit provides the deepEqual( actual, expected, message ) method for a deep recursive comparison, working on primitive types, arrays, objects, regular expressions, dates and functions.&lt;/p&gt;
+&lt;p&gt;So let’s test with deepEqual instead&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 75%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot; src=&quot;http://www.unittest.it/embed/75hM6Wq/1/unittestcode/&quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;It passes&lt;/p&gt;
+&lt;div&gt;
+          &lt;div
+            class=&quot;gatsby-resp-iframe-wrapper&quot;
+            style=&quot;padding-bottom: 87.5%; position: relative; height: 0; overflow: hidden;margin-bottom: 1.0725rem&quot;
+          &gt;
+            &lt;iframe style=&quot;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          &quot; src=&quot;http://www.unittest.it/embed/75hM6Wq/1/unittestresult/&quot;&gt;&lt;/iframe&gt;
+          &lt;/div&gt;
+          &lt;/div&gt;
+&lt;p&gt;due to the implementation of the deepEqual() method there is a call innerEquiv which recursively compares each item within the array&lt;/p&gt;</content:encoded></item><item><title><![CDATA[So you want a simple HTTPServer?]]></title><description><![CDATA[5 steps to create a simple HTTP Server with python Step 1. Install Python 2.7  https://wiki.python.org/moin/BeginnersGuide/Download Step…]]></description><link>http://www.itsmycodeblog.com//2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver/</link><guid isPermaLink="false">http://www.itsmycodeblog.com//2014-3-3-so-you-want-a-simple-httpserver/2014-3-3-so-you-want-a-simple-httpserver/</guid><pubDate>Fri, 04 Apr 2014 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;&lt;img src=&quot;https://i.imgur.com/gdzl8OD.jpg,&quot; alt=&quot;alt text &quot; title=&quot;Python simpleHTTPServer Simples&quot;&gt;&lt;/p&gt;
+&lt;h1&gt;5 steps to create a simple HTTP Server with python&lt;/h1&gt;
+&lt;h2&gt;Step 1.&lt;/h2&gt;
+&lt;p&gt;Install Python 2.7 &lt;a href=&quot;https://wiki.python.org/moin/BeginnersGuide/Download&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;https://wiki.python.org/moin/BeginnersGuide/Download&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Step 2.&lt;/h2&gt;
+&lt;p&gt;On a mac Open up a terminal and type:&lt;/p&gt;
+&lt;p&gt;$ cd Documents/somedir
+$ python -m SimpleHTTPServer&lt;/p&gt;
+&lt;p&gt;On windows Open up the console and type:&lt;/p&gt;
+&lt;p&gt;c:\Users\CurrentFolder&gt;cd \Users\somedir
+c:\Users\CurrentFolder&gt;python -m SimpleHTTPServer&lt;/p&gt;
+&lt;h2&gt;Step 3.&lt;/h2&gt;
+&lt;p&gt;Create a new index.html page in somedir then visit &lt;a href=&quot;http://127.0.0.1:8000/&quot; target=&quot;_blank&quot; rel=&quot;nofollow&quot;&gt;http://127.0.0.1:8000/&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;Step 4.&lt;/h2&gt;
+&lt;p&gt;View the http requests in your terminal/console&lt;/p&gt;
+&lt;p&gt;Serving HTTP on 0.0.0.0 port 8000 …&lt;br&gt;
+127.0.0.1 - - [15/Feb/2014 14:13:45] “GET / HTTP/1.1” 200 -&lt;br&gt;
+127.0.0.1 - - [15/Feb/2014 14:18:38] “GET / HTTP/1.1” 200 -&lt;br&gt;
+127.0.0.1 - - [15/Feb/2014 14:18:39] “GET /hello_world.gif HTTP/1.1” 200 -&lt;/p&gt;
+&lt;h2&gt;Step 5.&lt;/h2&gt;
+&lt;p&gt;There is no step 5. Simples!&lt;/p&gt;</content:encoded></item></channel></rss>
