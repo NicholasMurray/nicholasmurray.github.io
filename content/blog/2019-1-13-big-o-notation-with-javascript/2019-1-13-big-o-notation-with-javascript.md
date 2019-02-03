@@ -3,15 +3,6 @@ title: Big-O notation with Javascript
 date: '2019-01-13T00:00:00.000Z'
 ---
 
-// https://lankydanblog.com/2017/04/23/learning-big-o-notation-with-on-complexity/
-// https://kuanhsuh.github.io/Javascript-Algorithm.html
-// https://developerinsider.co/big-o-notation-explained-with-examples/
-// https://medium.freecodecamp.org/all-you-need-to-know-about-big-o-notation-to-crack-your-next-coding-interview-9d575e7eec4
-// https://rob-bell.net/2009/06/a-beginners-guide-to-big-o-notation/
-// https://yourbasic.org/algorithms/time-complexity-explained/
-// https://medium.com/cesars-tech-insights/big-o-notation-javascript-25c79f50b19b
-
-
 ![alt text ](/images/jeff-fielitz-120506-unsplash.jpg "Big O notation with Javascript")
 Photo by Jeff Fielitz on Unsplash
 
