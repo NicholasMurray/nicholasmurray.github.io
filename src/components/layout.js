@@ -1,4 +1,6 @@
 import React from "react"
+import { IconContext } from "react-icons"
+import { FaStackOverflow, FaTwitter, FaGithub } from "react-icons/fa"
 import { Link } from "gatsby"
 
 import { rhythm, scale } from "../utils/typography"
@@ -61,10 +63,53 @@ class Layout extends React.Component {
       >
         <header>{header}</header>
         <main>{children}</main>
-        <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+        <footer
+          style={{
+            marginTop: rhythm(1),
+          }}
+        >
+          <div
+            style={{
+              display: `flex`,
+              justifyContent: `center`,
+              padding: `1rem 0`,
+            }}
+          >
+            <IconContext.Provider
+              value={{ color: `#666`, size: rhythm(1.5) }}
+            >
+              <a 
+                style={{
+                  marginRight: rhythm(1),
+                  boxShadow: `none`,
+                }}
+                href="http://github.com/nicholasmurray">
+                  <FaGithub />
+              </a> 
+              <a 
+                style={{
+                  marginRight: rhythm(1),
+                  boxShadow: `none`,
+                }}
+                href="http://twitter.com/theemurray"><FaTwitter />
+              </a>
+              <a 
+              style={{
+                  marginRight: rhythm(1),
+                  boxShadow: `none`,
+                }}
+                href="http://stackoverflow.com/users/124966/nicholas-murray"><FaStackOverflow />
+              </a>
+            </IconContext.Provider>
+          </div>
+          <div>
+            <p>
+              © {new Date().getFullYear()}, Built now with
+              {` `}
+              <a href="https://www.gatsbyjs.org">Gatsby</a>
+            </p>
+
+          </div>
         </footer>
       </div>
     )
