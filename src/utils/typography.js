@@ -3,6 +3,15 @@ import Wordpress2016 from "typography-theme-wordpress-2016"
 
 Wordpress2016.overrideThemeStyles = () => {
   return {
+    "body,h1,h2,h3,h4,h5,h6,p": {
+      fontFamily: 'Helvetica Neue,Helvetica,Arial,sans-serif',
+    },
+    "h1,h2,h3,h4,h5,h6": {
+      marginTop: '2rem',
+    },
+    "span.gatsby-resp-image-wrapper": {
+      maxWidth: '100% !important',
+    },
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },

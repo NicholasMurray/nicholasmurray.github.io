@@ -1,4 +1,5 @@
 import React from "react"
+import { FaRegCalendarAlt } from "react-icons/fa"
 import { Link, graphql } from "gatsby"
 
 import Bio from "../components/bio"
@@ -23,7 +24,7 @@ class BlogPostTemplate extends React.Component {
             <h1
               style={{
                 marginTop: rhythm(1),
-                marginBottom: 0,
+                marginBottom: rhythm(1),
               }}
             >
               {post.frontmatter.title}
@@ -31,14 +32,28 @@ class BlogPostTemplate extends React.Component {
             <p
               style={{
                 ...scale(-1 / 5),
+                color: `#666`,
                 display: `block`,
+                fontStyle: `italic`,
                 marginBottom: rhythm(1),
               }}
             >
+              <FaRegCalendarAlt
+                style={{
+                  fontSize: `1.3rem`,
+                  marginRight: `0.5rem`,
+                  marginBottom: `-2px`
+                }}
+              />
               {post.frontmatter.date}
             </p>
           </header>
-          <section dangerouslySetInnerHTML={{ __html: post.html }} />
+          <section 
+            style={{
+              marginTop: rhythm(1),
+              marginBottom: rhythm(1),
+            }}
+            dangerouslySetInnerHTML={{ __html: post.html }} />
           <hr
             style={{
               marginBottom: rhythm(1),
